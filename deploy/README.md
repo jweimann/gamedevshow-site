@@ -13,9 +13,20 @@ podcast sites.
 
 ---
 
-## Path A — GitHub Pages (recommended)
+## Path A — GitHub Pages  ← CHOSEN
 
-One repo, one push, free certificate. Best if the source can be public.
+One repo, one push, free certificate.
+
+**A correction to the plan before anything is run: Pages cannot serve from `/site`.**
+GitHub's own documentation is explicit that a branch's publishing source is either the
+repository root or a `/docs` folder, and nothing else. So the two real options are a
+`gh-pages` branch holding the contents of `site/` at its root, or renaming `site/` to
+`docs/`.
+
+**Taking the `gh-pages` branch.** It keeps generated output off `main`, so the repo
+still shows the four scripts and the two files a human edits rather than 178 generated
+pages, and `git subtree push` regenerates the branch from `site/` every time. Renaming
+to `docs/` would work equally well for the browser and worse for reading the repo.
 
 **1. Jason: sign in and create the repo.** This machine has no `gh` and no GitHub
 session, so this step is his.
@@ -35,12 +46,10 @@ git subtree push --prefix site origin gh-pages
 
 Then in the repo: Settings → Pages → Source = `gh-pages`, folder = `/`.
 
-**3. Custom domain.** `deploy/github-pages/CNAME` is ready; it must sit at the root of
-whatever branch/folder Pages serves. Copy it in before the push:
-
-```bash
-cp deploy/github-pages/CNAME site/CNAME
-```
+**3. Custom domain.** `build_site.py` writes `site/CNAME` containing `gamedev.show`, so
+it is regenerated with the site rather than added by hand. A hand-added file would
+survive today and disappear the first time anyone cleaned `site/` before a rebuild,
+taking the domain with it.
 
 Then Settings → Pages → Custom domain = `gamedev.show`, and tick "Enforce HTTPS" once
 the certificate is issued (a few minutes).
@@ -54,11 +63,14 @@ records, and nothing else:
 | A | @ | 185.199.109.153 | Automatic |
 | A | @ | 185.199.110.153 | Automatic |
 | A | @ | 185.199.111.153 | Automatic |
-| CNAME | www | `<username>.github.io.` | Automatic |
+| CNAME | www | `<his-github-user>.github.io.` | Automatic |
 
-Those four apex addresses are GitHub's published Pages set. Verify them against
-GitHub's own docs at the time of setup rather than trusting this table; they change
-rarely but they do change.
+Checked against GitHub's Pages documentation on 2026-09-08 and unchanged. Four AAAA
+records also exist for IPv6 (`2606:50c0:8000::153` through `...8003::153`) and are
+optional; add them only if the apex should answer over IPv6.
+
+Re-verify before setting these if any time has passed. The addresses are GitHub's to
+change, and a stale apex record is a site that silently serves someone else.
 
 ---
 

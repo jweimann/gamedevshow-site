@@ -588,6 +588,13 @@ def main():
         with open(os.path.join(SITE, "e", ep["id"] + ".html"), "w", encoding="utf-8") as handle:
             handle.write(build_episode(ep, tags_by_id, neighbours))
 
+    # GitHub Pages reads the custom domain from a CNAME file in the published output, and
+    # it has to be regenerated with the site: a hand-added one would survive today and
+    # vanish the first time somebody cleaned site/ before a rebuild, taking the domain
+    # with it.
+    with open(os.path.join(SITE, "CNAME"), "w", encoding="utf-8", newline="\n") as handle:
+        handle.write("gamedev.show\n")
+
     index_kb = os.path.getsize(os.path.join(SITE, "index.html")) / 1024
     print("site/index.html  %.0f KB  (%d episodes, %d tags in the filter bar)"
           % (index_kb, len(episodes), sum(1 for t in tags if t["episodes"])))
