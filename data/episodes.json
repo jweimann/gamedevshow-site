@@ -33059,6 +33059,78 @@
    "order": 159
   },
   {
+   "id": "feed-163",
+   "title": "#163 - GDC Predictions and Preview",
+   "number": 163,
+   "date": "2024-03-10",
+   "duration": 6760,
+   "views": null,
+   "summary": null,
+   "youtube": null,
+   "thumbnail": null,
+   "guests": [],
+   "cohosts": [],
+   "tags": {},
+   "has_transcript": false,
+   "transcript_cues": 0,
+   "in_feed": true,
+   "feed_title": "#163 - GDC Predictions and Preview",
+   "audio_only": true,
+   "audio": "https://anchor.fm/s/e4e835e8/podcast/play/83838513/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2024-2-10%2F370423418-44100-2-32daae9eb499d.mp3",
+   "listen_link": "https://creators.spotify.com/pod/profile/gamedevshow/episodes/163---GDC-Predictions-and-Preview-e2gt23h",
+   "curation": "include",
+   "curation_reason": "Published to the podcast feed only; never uploaded to YouTube.",
+   "order": 160
+  },
+  {
+   "id": "feed-164",
+   "title": "#164 - Google AI Game Generation and Game Engines",
+   "number": 164,
+   "date": "2024-03-10",
+   "duration": 4874,
+   "views": null,
+   "summary": null,
+   "youtube": null,
+   "thumbnail": null,
+   "guests": [],
+   "cohosts": [],
+   "tags": {},
+   "has_transcript": false,
+   "transcript_cues": 0,
+   "in_feed": true,
+   "feed_title": "#164 - Google AI Game Generation and Game Engines",
+   "audio_only": true,
+   "audio": "https://anchor.fm/s/e4e835e8/podcast/play/83842195/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2024-2-10%2F370433170-44100-2-9a5a17dea618a.mp3",
+   "listen_link": "https://creators.spotify.com/pod/profile/gamedevshow/episodes/164---Google-AI-Game-Generation-and-Game-Engines-e2gt5mj",
+   "curation": "include",
+   "curation_reason": "Published to the podcast feed only; never uploaded to YouTube.",
+   "order": 161
+  },
+  {
+   "id": "feed-165",
+   "title": "#165 - AI, GDC, GameDev Resume Reviews",
+   "number": 165,
+   "date": "2024-03-11",
+   "duration": 7699,
+   "views": null,
+   "summary": null,
+   "youtube": null,
+   "thumbnail": null,
+   "guests": [],
+   "cohosts": [],
+   "tags": {},
+   "has_transcript": false,
+   "transcript_cues": 0,
+   "in_feed": true,
+   "feed_title": "#165 - AI, GDC, GameDev Resume Reviews",
+   "audio_only": true,
+   "audio": "https://anchor.fm/s/e4e835e8/podcast/play/83842709/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2024-2-10%2F370434864-44100-2-b9d98390db3a5.mp3",
+   "listen_link": "https://creators.spotify.com/pod/profile/gamedevshow/episodes/165---AI--GDC--GameDev-Resume-Reviews-e2gt66l",
+   "curation": "include",
+   "curation_reason": "Published to the podcast feed only; never uploaded to YouTube.",
+   "order": 162
+  },
+  {
    "id": "xQeDCAR05v8",
    "title": "Why I Stopped Using Event Buses in Unity \u2013 Developer Debate!",
    "number": null,
@@ -33182,7 +33254,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "A developer debate episode, 91 minutes.",
-   "order": 160
+   "order": 163
   },
   {
    "id": "Jx9IuyVcVRM",
@@ -33388,7 +33460,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "The most recent episode, May 2025, 93 minutes.",
-   "order": 161
+   "order": 164
   }
  ],
  "duplicates": [
@@ -33705,22 +33777,28 @@
   {
    "title": "#165 - AI, GDC, GameDev Resume Reviews",
    "number": 165,
-   "pub_date": "Mon, 11 Mar 2024 18:19:29 GMT",
-   "link": "https://podcasters.spotify.com/pod/show/gamedevshow/episodes/165---AI--GDC--GameDev-Resume-Reviews-e2gt66l",
+   "date": "2024-03-11",
+   "duration": 7699,
+   "link": "https://creators.spotify.com/pod/profile/gamedevshow/episodes/165---AI--GDC--GameDev-Resume-Reviews-e2gt66l",
+   "audio": "https://anchor.fm/s/e4e835e8/podcast/play/83842709/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2024-2-10%2F370434864-44100-2-b9d98390db3a5.mp3",
    "guid": "c93620d2-8cca-49d2-8559-5710f0ad37d4"
   },
   {
    "title": "#164 - Google AI Game Generation and Game Engines",
    "number": 164,
-   "pub_date": "Sun, 10 Mar 2024 23:44:36 GMT",
-   "link": "https://podcasters.spotify.com/pod/show/gamedevshow/episodes/164---Google-AI-Game-Generation-and-Game-Engines-e2gt5mj",
+   "date": "2024-03-10",
+   "duration": 4874,
+   "link": "https://creators.spotify.com/pod/profile/gamedevshow/episodes/164---Google-AI-Game-Generation-and-Game-Engines-e2gt5mj",
+   "audio": "https://anchor.fm/s/e4e835e8/podcast/play/83842195/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2024-2-10%2F370433170-44100-2-9a5a17dea618a.mp3",
    "guid": "350e1d8e-be74-4300-8455-4e27a4ccf46c"
   },
   {
    "title": "#163 - GDC Predictions and Preview",
    "number": 163,
-   "pub_date": "Sun, 10 Mar 2024 23:28:18 GMT",
-   "link": "https://podcasters.spotify.com/pod/show/gamedevshow/episodes/163---GDC-Predictions-and-Preview-e2gt23h",
+   "date": "2024-03-10",
+   "duration": 6760,
+   "link": "https://creators.spotify.com/pod/profile/gamedevshow/episodes/163---GDC-Predictions-and-Preview-e2gt23h",
+   "audio": "https://anchor.fm/s/e4e835e8/podcast/play/83838513/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2024-2-10%2F370423418-44100-2-32daae9eb499d.mp3",
    "guid": "12912063-5500-4afe-9b3b-f2079cead670"
   }
  ]

@@ -154,6 +154,9 @@ select{font:inherit;padding:9px 10px;border:1px solid var(--rule);background:var
 .tg{font-family:var(--f-mono);font-size:.7rem;color:var(--signal);background:var(--signal-soft);
   padding:2px 7px;border-radius:2px;border:0;cursor:pointer}
 .tg:hover{text-decoration:underline}
+.audioflag{color:var(--tally);background:none;border:1px solid var(--tally);cursor:default}
+.audioflag:hover{text-decoration:none}
+audio{width:100%;margin-top:4px}
 .guest{font-family:var(--f-mono);font-size:.7rem;color:var(--muted)}
 .guest b{color:var(--ink);font-weight:600}
 .empty{padding:60px 0;text-align:center;color:var(--muted)}
@@ -261,6 +264,7 @@ def build_index(episodes, tags, stats):
         # Filters and row chips carry only what the episode is about, not every topic
         # that came up in two hours.
         "T": sorted(t for t, d in ep["tags"].items() if d.get("primary")),
+        "a": 1 if ep.get("audio_only") else 0,
     } for ep in episodes]
     labels = {t["id"]: t["label"] for t in tags}
 
@@ -377,12 +381,13 @@ function render(){
     ).join('');
     const guests = (ep.g||[]).length
       ? '<span class="guest">with <b>' + ep.g.join('</b>, <b>') + '</b></span>' : '';
+    const audio = ep.a ? '<span class="tg audioflag">audio only</span>' : '';
     row.innerHTML =
       '<div class="cell-date">' + nice(ep.d) + '</div>' +
       '<div class="cell-no">' + (ep.n != null ? '#' + ep.n : '') + '</div>' +
       '<div class="cell-main"><a class="t" href="e/' + ep.i + '.html">' +
         ep.t.replace(/&/g,'&amp;').replace(/</g,'&lt;') + '</a>' +
-        '<div class="meta">' + guests + tags + '</div></div>' +
+        '<div class="meta">' + guests + audio + tags + '</div></div>' +
       '<div class="cell-run">' + run(ep.r) + '</div>';
     frag.appendChild(row);
   }
@@ -445,6 +450,23 @@ def build_episode(ep, tags_by_id, neighbours):
               if ep["guests"] else "<li class='hits'>No guest credited</li>")
     cohosts = "".join('<li><a href="%s">%s</a></li>' % (e(c["link"]), e(c["name"]))
                       for c in ep.get("cohosts") or [])
+    # Three episodes went out on the podcast feed and were never uploaded to YouTube, so
+    # they get the feed's own audio rather than a video embed, and say what they are.
+    if ep.get("audio_only"):
+        player = (
+            '<div style="border:1px solid var(--rule);background:var(--surface);padding:18px">'
+            '<p class="tally" style="margin:0 0 10px">Audio only &middot; never on YouTube</p>'
+            '<audio controls preload="none" src="%s"></audio>'
+            '<p class="srcnote" style="margin-top:14px">This episode went out on the podcast '
+            'feed only, so there is no video and no view count. '
+            '<a href="%s">Open it on Spotify</a>.</p></div>'
+            % (e(ep.get("audio") or ""), e(ep.get("listen_link") or SHOW["spotify"])))
+    else:
+        player = ('<iframe class="player" src="https://www.youtube-nocookie.com/embed/%s" '
+                  'title="%s" loading="lazy" allowfullscreen '
+                  'allow="accelerometer; clipboard-write; encrypted-media; '
+                  'picture-in-picture"></iframe>' % (e(ep["id"]), e(ep["title"])))
+
     prev_ep, next_ep = neighbours
     nav = []
     if prev_ep:
@@ -458,12 +480,10 @@ def build_episode(ep, tags_by_id, neighbours):
 <p style="padding-top:28px"><a class="back" href="../index.html">&larr; All episodes</a></p>
 <p class="tally">%(no)s%(date)s</p>
 <h1>%(title)s</h1>
-<div class="epmeta"><span>%(runtime)s</span><span>%(views)s views</span>%(feed)s</div>
+<div class="epmeta"><span>%(runtime)s</span>%(views)s%(feed)s</div>
 <div class="epgrid">
   <div>
-    <iframe class="player" src="https://www.youtube-nocookie.com/embed/%(id)s"
-      title="%(title)s" loading="lazy" allowfullscreen
-      allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"></iframe>
+    %(player)s
     %(summary)s
     <h3 style="font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;
       text-transform:uppercase;color:var(--muted);margin:30px 0 4px">What this episode covers</h3>
@@ -473,7 +493,7 @@ def build_episode(ep, tags_by_id, neighbours):
   </div>
   <aside class="aside">
     <section><h3>Listen</h3><ul>
-      <li><a href="%(youtube)s">Watch on YouTube</a></li>
+      %(watch)s
       <li><a href="%(spotify)s">Spotify</a></li>
       <li><a href="%(apple)s">Apple Podcasts</a></li>
     </ul></section>
@@ -487,14 +507,20 @@ def build_episode(ep, tags_by_id, neighbours):
         "date": e(ep["date"] or ""),
         "title": e(ep["title"]),
         "runtime": runtime(ep["duration"]),
-        "views": thousands(ep["views"]),
+        "views": "" if ep.get("audio_only") else "<span>%s views</span>" % thousands(ep["views"]),
         "feed": '<span>Also on the podcast feed</span>' if ep["in_feed"] else "",
         "id": e(ep["id"]),
+        "player": player,
         "summary": ('<p style="margin-top:18px">%s</p>' % e(ep["summary"])) if ep.get("summary") else "",
-        "stamps": ("".join(stamps) or "<p class='hits'>No captions were available for this episode.</p>")
+        "stamps": ("".join(stamps) or
+                   ("<p class='hits'>Audio-only episodes have no captions to read, so this "
+                    "one carries no topics.</p>" if ep.get("audio_only")
+                    else "<p class='hits'>No captions were available for this episode.</p>"))
                   + ('<p class="srcnote" style="margin-top:16px">Also mentioned: %s</p>'
                      % ", ".join(also) if also else ""),
-        "youtube": e(ep["youtube"]),
+        "watch": ('<li><a href="%s">Open on Spotify</a></li>' % e(ep.get("listen_link") or SHOW["spotify"]))
+                 if ep.get("audio_only")
+                 else '<li><a href="%s">Watch on YouTube</a></li>' % e(ep["youtube"]),
         "spotify": SHOW["spotify"],
         "apple": SHOW["apple"],
         "guests": guests,

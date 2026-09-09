@@ -255,6 +255,29 @@ def curation():
         return {c["id"]: c for c in tomllib.load(handle).get("entry", [])}
 
 
+ITUNES = {"itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd"}
+
+
+def _feed_date(pub):
+    """RFC-2822 pubDate to an ISO date, so feed episodes sort beside YouTube ones."""
+    if not pub:
+        return None
+    try:
+        from email.utils import parsedate_to_datetime
+        return parsedate_to_datetime(pub).date().isoformat()
+    except (TypeError, ValueError):
+        return None
+
+
+def _feed_duration(text):
+    if not text:
+        return None
+    parts = [int(p) for p in text.split(":") if p.isdigit()]
+    while len(parts) < 3:
+        parts.insert(0, 0)
+    return parts[0] * 3600 + parts[1] * 60 + parts[2]
+
+
 def rss_items():
     path = os.path.join(DATA, "raw", "feed.xml")
     if not os.path.exists(path):
@@ -267,11 +290,18 @@ def rss_items():
         match = re.search(r"#(\d{1,3})", title)
         if match:
             number = int(match.group(1))
+        enclosure = item.find("enclosure")
+        # The feed still points at podcasters.spotify.com, which now redirects to
+        # creators.spotify.com; sending people straight to the live address saves the hop.
+        link = (item.findtext("link") or "").replace(
+            "podcasters.spotify.com/pod/show/", "creators.spotify.com/pod/profile/")
         out.append({
             "title": title,
             "number": number,
-            "pub_date": item.findtext("pubDate"),
-            "link": item.findtext("link"),
+            "date": _feed_date(item.findtext("pubDate")),
+            "duration": _feed_duration(item.findtext("itunes:duration", namespaces=ITUNES)),
+            "link": link,
+            "audio": enclosure.get("url") if enclosure is not None else None,
             "guid": item.findtext("guid"),
         })
     return out
@@ -362,9 +392,39 @@ def main():
     for i, episode in enumerate(live, 1):
         episode["order"] = i
 
-    # Episodes the feed has that YouTube does not, so nothing is silently dropped.
+    # Episodes the feed has and YouTube does not. "Every episode" has to include them, so
+    # they join the catalogue as audio-only records rather than sitting in a footnote.
+    # They carry no captions, so they earn no tags, and the page says so instead of
+    # implying the show did not cover anything that day.
     known = {e["number"] for e in episodes if e["number"]}
     feed_only = [i for i in feed if i["number"] and i["number"] not in known]
+    for item in feed_only:
+        live.append({
+            "id": "feed-%d" % item["number"],
+            "title": item["title"],
+            "number": item["number"],
+            "date": item["date"],
+            "duration": item["duration"],
+            "views": None,
+            "summary": None,
+            "youtube": None,
+            "thumbnail": None,
+            "guests": [],
+            "cohosts": [],
+            "tags": {},
+            "has_transcript": False,
+            "transcript_cues": 0,
+            "in_feed": True,
+            "feed_title": item["title"],
+            "audio_only": True,
+            "audio": item["audio"],
+            "listen_link": item["link"],
+            "curation": "include",
+            "curation_reason": "Published to the podcast feed only; never uploaded to YouTube.",
+        })
+    live.sort(key=lambda e: (e["date"] or "0000-00-00", e["id"]))
+    for i, episode in enumerate(live, 1):
+        episode["order"] = i
 
     # Chip counts follow the filters, so they count the episodes a topic is ABOUT.
     counts = {}
