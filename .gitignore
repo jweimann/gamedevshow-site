@@ -2,3 +2,7 @@ data/raw/
 data/transcripts/
 node_modules/
 *.err
+
+# Frame grabs and clips pulled for reading stream-tile names: scratch, re-fetchable,
+# and video excerpts have no business in a public repo.
+data/frames/
