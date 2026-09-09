@@ -137,6 +137,7 @@ select{font:inherit;padding:9px 10px;border:1px solid var(--rule);background:var
 .panel{margin:12px 0 0;font-size:.88rem;color:var(--muted)}
 .panel b{color:var(--ink);font-weight:600}
 .panel a{color:var(--signal);text-decoration:none}
+.panel .chan{color:var(--muted)}
 .panel a:hover{text-decoration:underline}
 .clear{background:none;border:0;color:var(--tally);font:inherit;font-size:.82rem;
   cursor:pointer;padding:4px 2px;text-decoration:underline}
@@ -303,9 +304,26 @@ def build_index(episodes, tags, stats):
         for t in top_topics)
 
     regulars, _guests = roster()
-    panel_html = ", ".join(
-        ('<a href="%s">%s</a>' % (e(p["link"]), e(p["name"]))) if p.get("link")
-        else e(p["name"]) for p in regulars)
+    def credit(p):
+        """Name, then the channel they go by, linked only where a channel is known."""
+        who = e(p["name"])
+        chan = p.get("channel")
+        url = p.get("link") or p.get("site")
+        # "Jason Storey Jason Storey" - when someone's channel is just their name, the
+        # channel adds nothing, so the name itself becomes the link.
+        if chan and chan.strip().lower() == p["name"].strip().lower():
+            chan = None
+        if chan and url:
+            return '%s <span class="chan">&middot; <a href="%s">%s</a></span>' % (
+                who, e(url), e(chan))
+        if chan:
+            return '%s <span class="chan">&middot; %s</span>' % (who, e(chan))
+        if url:
+            return '<a href="%s">%s</a>' % (e(url), who)
+        return who
+
+    panel_html = ", ".join(credit(p) for p in regulars)
+    guest_html = ", ".join(credit(p) for p in _guests)
 
     body = """%(mast)s
 <main class="wrap">
@@ -324,6 +342,7 @@ def build_index(episodes, tags, stats):
     </div>
     <div class="chips" id="chips">%(chips)s</div>
     <p class="panel"><b>The regular panel:</b> %(panel)s</p>
+    %(guestline)s
     <p class="srcnote" style="margin:8px 0 0;border:0;padding:0">The panel rotates and is
     only credited on some episodes, so "Who's on" filters by the people an episode's own
     title or credits name &mdash; not everyone who was in the room that night.</p>
@@ -353,6 +372,8 @@ table of game developers.</footer>
         "chips": "".join(chips),
         "guests": guest_options,
         "panel": panel_html,
+        "guestline": ('<p class="panel"><b>Guests so far:</b> %s</p>'
+                      % guest_html) if guest_html else "",
         "topics": topics_html,
         "built": stats["built"], "episodes": stats["episodes"],
         "contact": SHOW["contact"],

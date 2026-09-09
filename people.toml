@@ -1,92 +1,112 @@
 # Who is on The Game Dev Show.
 #
-# JASON: THIS IS THE FILE TO EDIT. Add, remove or rename anyone; re-run build_data.py and
-# build_site.py. Nothing here is inferred - every name is one you gave us or one written
-# into an episode's own credits.
+# JASON: THIS IS THE FILE TO EDIT. Add, remove or rename anyone; re-run build_site.py
+# (two seconds - no data rebuild needed). Nothing here is inferred: every name is one you
+# gave us, or one written into an episode's own credits or on screen in its stream tiles.
 #
-# WHY IT IS A FILE RATHER THAN SOMETHING DETECTED. Four ways of reading the panel out of
-# the episodes were tried and all four were wrong in ways that would not have shown on
-# the page:
+# `confirmed = false` keeps a person OFF the site while a question about them is open.
 #
-#   * mentions in captions      David is credited on all seven episodes whose description
-#                               names the panel, and is said aloud in one of them.
+# WHY THE ROSTER IS STATED RATHER THAN DETECTED. Four ways of reading the panel out of the
+# episodes were tried and all four were wrong in ways that would not have shown on the page:
+#
+#   * mentions in captions      David is credited on every episode whose description names
+#                               the panel and is said aloud in one of them.
 #   * full names in openings    The show reads a roll call of FIRST names, so pairing
-#                               adjacent capitals invented people: "Greg Andrew",
+#                               adjacent capitals invented people - "Greg Andrew",
 #                               "Powell Jason", and "Andrew Lana" out of an episode where
 #                               Andrew and Lana were both really there.
 #   * every credit line         Mostly Unity Asset Store products, and the two biggest
-#                               "credits" were a pasted footer that appears on videos that
-#                               are not even episodes.
+#                               "credits" were a pasted footer appearing on videos that are
+#                               not even episodes.
 #   * loose name aliases        "wolf" matched a game asset in eighteen episodes.
 #
-# So the roster is stated, not guessed. The regulars below are the panel; the site says
-# so once rather than pretending to know who sat in on which night.
+# And the CoHosts heading is boilerplate too: the six episodes carrying it credit the same
+# trio, while the stream tiles show Greg on all three sampled and David on none.
+#
+# CHANNELS. Every link below was resolved from the live channel page and cross-checked
+# against a name label read off a stream tile, so the channel matches the person. Where
+# no source gives a channel, the entry says so rather than guessing - a wrong channel link
+# on a public page is worse than no link.
 
 # --------------------------------------------------------------------- the regular panel
 
 [[person]]
-name = "Salim"
-role = "regular"
-
-[[person]]
 name = "Andrew"
 role = "regular"
+channel = "Infinity PBR • Magic Pig Games"
 link = "https://www.youtube.com/channel/UCzATh2-NC_xZSGnhZF-cFaw"
-note = "InfinityPBR"
+site = "https://infinitypbr.com"
+# Tiles label him both "Andrew - InfinityPBR.com" and "Magic Pig Games / Infinity PBR";
+# the channel carries both names, which is why the two labels are the same person.
 
 [[person]]
-name = "David (Warped Imagination)"
+name = "David"
 role = "regular"
+channel = "Warped Imagination"
 link = "https://www.youtube.com/c/WarpedImagination"
-aliases = ["Warped Imagination", "Daves New Video"]
 
 [[person]]
-name = "Pawel (NatureManufacture)"
+name = "Pawel"
 role = "regular"
+channel = "NatureManufacture"
 link = "https://www.youtube.com/@NatureManufacture"
-aliases = ["Pawel / NatureManufacture", "NatureManufacture"]
+site = "https://assetstore.unity.com/publishers/6887"
+# Tile reads "Pawel - Nature Manufacture".
+
+[[person]]
+name = "Jason Storey"
+role = "regular"
+channel = "Jason Storey"
+link = "https://www.youtube.com/c/JasonStorey"
+
+[[person]]
+name = "Greg Bradburn"
+role = "regular"
+channel = "Midnite Oil Software"
+link = "https://www.youtube.com/channel/UCbbOlBjl21q9kYlhprE_EDQ"
+# Full name and the "Midnite Oil" tag both read off the #151 tile: Greg "Midnite Oil"
+# Bradburn. The channel resolves to Midnite Oil Software LLC.
+
+[[person]]
+name = "Johnny"
+role = "regular"
+channel = "Turbo Makes Games"
+link = "https://www.youtube.com/c/TurboMakesGames"
+# Jason wrote "Jenny"; he has since confirmed that was a typo for Johnny.
+
+[[person]]
+name = "Salim"
+role = "regular"
+link_needed = true
+# No channel in any credit line, tile or feed string seen so far. Not guessed.
 
 [[person]]
 name = "Yorai"
 role = "regular"
 aliases = ["Yoriz0r"]
-
-[[person]]
-name = "Jason Storey"
-role = "regular"
-link = "https://www.youtube.com/c/JasonStorey"
-
-[[person]]
-name = "Greg"
-role = "regular"
-link = "https://www.youtube.com/channel/UCbbOlBjl21q9kYlhprE_EDQ"
-
-[[person]]
-name = "Johnny (TurboMakesGames)"
-role = "regular"
-link = "https://www.youtube.com/c/TurboMakesGames"
-aliases = ["TurboMakesGames", "Turbo Makes Games"]
-
-
-[[person]]
-name = "Jenny"
-role = "regular"
-confirmed = false
-note = """Jason listed "Greg and Jenny". Every other source says JOHNNY, and no source
-found so far says Jenny. "johnny" appears in 35 episodes, named as early as 00:12 in
-openings, and the stream tile on #151 at 45:00 reads "Johnny - Turbo Makes Games".
-"jenny" appears in ONE episode, three times, first at 1:55:00 - the shape of an
-auto-caption mishearing rather than a panellist. Held off the site until Jason confirms
-whether Jenny is a separate person or a typo for Johnny; set confirmed = true to show
-her, or delete this entry."""
+link_needed = true
+# Credited once as "Yorai's Animation Talk" with a streamable.com video, which is not a
+# channel. Not guessed.
 
 # Jason Weimann hosts every episode and is deliberately absent: a filter entry that
 # matches everything filters nothing.
 
 # ------------------------------------------------------------------------------- guests
 #
-# One-off guests, added when a source actually names them. The captions cannot supply
-# this - the show does not introduce guests by full name - so these come from an
-# episode's title, its credits, or Jason. Names he has mentioned but which no source
-# here can place: Lana, Michael Wolf, Brian. Add them with `episodes = ["<video id>"]`
-# once the dates are known and they will appear on those episodes.
+# One-off guests. The captions cannot supply these - the show does not introduce guests by
+# full name - so they come from an episode's title, its credits, or the name label on its
+# stream tile. The frame pass adds more; each needs a channel before it is linked.
+
+[[person]]
+name = "Lana Lux"
+role = "guest"
+link_needed = true
+# Read off the tile on 2023-04-14 (tYB8NSOLcI0). Jason named her as a guest; the captions
+# never carry her surname.
+
+[[person]]
+name = "Corvalis Cohen"
+role = "guest"
+channel = "Powercore2000"
+link_needed = true
+# Tile on #153 reads "Corvalis Cohen - Powercore2000". Channel name known, URL not yet.
