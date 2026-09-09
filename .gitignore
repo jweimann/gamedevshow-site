@@ -1,0 +1,4 @@
+data/raw/
+data/transcripts/
+node_modules/
+*.err
