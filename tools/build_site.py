@@ -134,6 +134,10 @@ select{font:inherit;padding:9px 10px;border:1px solid var(--rule);background:var
 .chip[aria-pressed="true"] .n{color:rgba(255,255,255,.75)}
 .grouplabel{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;
   text-transform:uppercase;color:var(--muted);align-self:center;margin-right:2px}
+.panel{margin:12px 0 0;font-size:.88rem;color:var(--muted)}
+.panel b{color:var(--ink);font-weight:600}
+.panel a{color:var(--signal);text-decoration:none}
+.panel a:hover{text-decoration:underline}
 .clear{background:none;border:0;color:var(--tally);font:inherit;font-size:.82rem;
   cursor:pointer;padding:4px 2px;text-decoration:underline}
 
@@ -239,6 +243,20 @@ week's news, recorded live with a rotating table of developers. %(episodes)s epi
 </div></header>""" % stats
 
 
+def roster():
+    """The panel, as stated in people.toml. Read here rather than in build_data because
+    it is a display fact, not a derived one - which also means editing the roster costs a
+    two-second site rebuild instead of a three-minute retag."""
+    import tomllib
+    path = os.path.join(ROOT, "people.toml")
+    if not os.path.exists(path):
+        return [], []
+    with open(path, "rb") as handle:
+        people = tomllib.load(handle).get("person", [])
+    return ([p for p in people if p.get("role") == "regular"],
+            [p for p in people if p.get("role") == "guest"])
+
+
 def build_index(episodes, tags, stats):
     groups = {}
     for tag in tags:
@@ -283,6 +301,11 @@ def build_index(episodes, tags, stats):
         % (e(t["label"]), t["episodes"], thousands(t["views"]))
         for t in top_topics)
 
+    regulars, _guests = roster()
+    panel_html = ", ".join(
+        ('<a href="%s">%s</a>' % (e(p["link"]), e(p["name"]))) if p.get("link")
+        else e(p["name"]) for p in regulars)
+
     body = """%(mast)s
 <main class="wrap">
   <section class="controls" aria-label="Filter episodes">
@@ -299,10 +322,10 @@ def build_index(episodes, tags, stats):
       <button class="clear" id="clear" type="button" hidden>Reset</button>
     </div>
     <div class="chips" id="chips">%(chips)s</div>
-    <p class="srcnote" style="margin:10px 0 0;border:0;padding:0">Who's on lists the people
-    credited in an episode's title or its co-host block. The panel rotates and is not
-    credited on every episode, so this names who is on the record rather than everyone who
-    was in the room.</p>
+    <p class="panel"><b>The regular panel:</b> %(panel)s</p>
+    <p class="srcnote" style="margin:8px 0 0;border:0;padding:0">The panel rotates and is
+    only credited on some episodes, so "Who's on" filters by the people an episode's own
+    title or credits name &mdash; not everyone who was in the room that night.</p>
   </section>
   <section class="rundown" id="rundown" aria-live="polite"></section>
 
@@ -328,6 +351,7 @@ table of game developers.</footer>
         "mast": masthead(stats),
         "chips": "".join(chips),
         "guests": guest_options,
+        "panel": panel_html,
         "topics": topics_html,
         "built": stats["built"], "episodes": stats["episodes"],
         "contact": SHOW["contact"],
