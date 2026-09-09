@@ -579,14 +579,21 @@ def main():
     }
 
     os.makedirs(os.path.join(SITE, "e"), exist_ok=True)
-    with open(os.path.join(SITE, "index.html"), "w", encoding="utf-8") as handle:
-        handle.write(build_index(episodes, tags, stats))
+    written = set()
+
+    def write(relative, text):
+        path = os.path.join(SITE, relative)
+        with open(path, "w", encoding="utf-8") as handle:
+            handle.write(text)
+        written.add(os.path.normcase(os.path.abspath(path)))
+
+    write("index.html", build_index(episodes, tags, stats))
 
     for i, ep in enumerate(episodes):
         neighbours = (episodes[i - 1] if i else None,
                       episodes[i + 1] if i + 1 < len(episodes) else None)
-        with open(os.path.join(SITE, "e", ep["id"] + ".html"), "w", encoding="utf-8") as handle:
-            handle.write(build_episode(ep, tags_by_id, neighbours))
+        write(os.path.join("e", ep["id"] + ".html"),
+              build_episode(ep, tags_by_id, neighbours))
 
     # GitHub Pages reads the custom domain from a CNAME file in the published output, and
     # it has to be regenerated with the site: a hand-added one would survive today and
@@ -594,6 +601,25 @@ def main():
     # with it.
     with open(os.path.join(SITE, "CNAME"), "w", encoding="utf-8", newline="\n") as handle:
         handle.write("gamedev.show\n")
+    written.add(os.path.normcase(os.path.abspath(os.path.join(SITE, "CNAME"))))
+
+    # PRUNE WHAT THIS RUN DID NOT WRITE. Generating without deleting meant every episode
+    # ever dropped from the catalogue kept its page: thirty of them shipped to the live
+    # site, including the uploads Jason had just decided were not the show. Unlinked, but
+    # publicly reachable and indexable, which is not what "removed from the site" means.
+    removed = []
+    for folder, _dirs, files in os.walk(SITE):
+        for name in files:
+            path = os.path.abspath(os.path.join(folder, name))
+            if os.path.normcase(path) not in written:
+                os.remove(path)
+                removed.append(os.path.relpath(path, SITE))
+    if removed:
+        print("pruned %d file(s) the build no longer produces:" % len(removed))
+        for name in sorted(removed)[:8]:
+            print("   ", name)
+        if len(removed) > 8:
+            print("    ... and %d more" % (len(removed) - 8))
 
     index_kb = os.path.getsize(os.path.join(SITE, "index.html")) / 1024
     print("site/index.html  %.0f KB  (%d episodes, %d tags in the filter bar)"
