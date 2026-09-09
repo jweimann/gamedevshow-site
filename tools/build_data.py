@@ -290,7 +290,25 @@ def main():
         })
 
     episodes.sort(key=lambda e: (e["date"] or "0000-00-00", e["id"]))
-    for i, episode in enumerate(episodes, 1):
+
+    # The same stream is occasionally uploaded twice - once titled properly and once as a
+    # bare date - and the catalogue showed both. Same day AND a runtime within half a
+    # minute is the same recording; two different shows on one day (which happens ten
+    # times here) differ by many minutes, so the window has to be tight or real episodes
+    # get swallowed. The copy with fewer views is folded into the one people watched, and
+    # it stays in the data marked rather than deleted.
+    for i, episode in enumerate(episodes):
+        if episode.get("duplicate_of"):
+            continue
+        for other in episodes[i + 1:]:
+            if other["date"] != episode["date"] or other.get("duplicate_of"):
+                continue
+            if abs((other["duration"] or 0) - (episode["duration"] or 0)) <= 30:
+                keep, drop = sorted((episode, other), key=lambda x: -(x["views"] or 0))
+                drop["duplicate_of"] = keep["id"]
+
+    live = [e for e in episodes if not e.get("duplicate_of")]
+    for i, episode in enumerate(live, 1):
         episode["order"] = i
 
     # Episodes the feed has that YouTube does not, so nothing is silently dropped.
@@ -298,7 +316,7 @@ def main():
     feed_only = [i for i in feed if i["number"] and i["number"] not in known]
 
     counts = {}
-    for episode in episodes:
+    for episode in live:
         for tag_id in episode["tags"]:
             entry = counts.setdefault(tag_id, {"episodes": 0, "views": 0})
             entry["episodes"] += 1
@@ -319,14 +337,16 @@ def main():
     tag_out.sort(key=lambda t: (-t["demand_score"], -t["episodes"]))
 
     os.makedirs(DATA, exist_ok=True)
-    json.dump({"episodes": episodes, "feed_only": feed_only},
+    json.dump({"episodes": live,
+               "duplicates": [e for e in episodes if e.get("duplicate_of")],
+               "feed_only": feed_only},
               open(os.path.join(DATA, "episodes.json"), "w", encoding="utf-8"), indent=1)
     json.dump(tag_out, open(os.path.join(DATA, "tags.json"), "w", encoding="utf-8"), indent=1)
 
-    tagged = sum(1 for e in episodes if e["tags"])
-    with_tx = sum(1 for e in episodes if e["has_transcript"])
+    tagged = sum(1 for e in live if e["tags"])
+    with_tx = sum(1 for e in live if e["has_transcript"])
     print("episodes: %d  with captions: %d  tagged: %d  feed-only (not on YouTube): %d"
-          % (len(episodes), with_tx, tagged, len(feed_only)))
+          % (len(live), with_tx, tagged, len(feed_only)))
     print("date range: %s to %s" % (episodes[0]["date"], episodes[-1]["date"]) if episodes else "")
     print("guests on %d episodes; co-hosts credited on %d"
           % (sum(1 for e in episodes if e["guests"]), sum(1 for e in episodes if e["cohosts"])))

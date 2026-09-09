@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Game Dev Show #48 - Unity GameDev at the Superbowl, Best Questions, &amp; Lightning Sales | The Game Dev Show</title>
+<meta name="description" content="The Game Dev Show, 2022-02-06. Game Dev Show #48 - Unity GameDev at the Superbowl, Best Questions, &amp; Lightning Sales">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#edf0ef; --surface:#ffffff; --ink:#10171a; --muted:#66767a;
+  --rule:#d3dad8; --tally:#c8102e; --signal:#1f6f6b; --signal-soft:#e4efed;
+  --shadow:0 1px 2px rgba(16,23,26,.06);
+  --f-display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --f-body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0e1416; --surface:#161e21; --ink:#e6ecea; --muted:#8ca0a4;
+    --rule:#263134; --tally:#ff6b7a; --signal:#58bdb6; --signal-soft:#152927;
+    --shadow:0 1px 2px rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0e1416; --surface:#161e21; --ink:#e6ecea; --muted:#8ca0a4;
+  --rule:#263134; --tally:#ff6b7a; --signal:#58bdb6; --signal-soft:#152927;
+  --shadow:0 1px 2px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* ---------- masthead: the show's own figures, stated plainly ---------- */
+.mast{border-bottom:2px solid var(--ink);padding:40px 0 0}
+.tally{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-mono);
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--tally)}
+.tally::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--tally)}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.6rem,7vw,5.2rem);
+  line-height:.95;letter-spacing:-.02em;margin:14px 0 0;text-wrap:balance}
+.standfirst{max-width:60ch;color:var(--muted);font-size:1.06rem;margin:16px 0 0}
+.figures{display:flex;flex-wrap:wrap;gap:0;margin:32px 0 0;border-top:1px solid var(--rule)}
+.figure{flex:1 1 150px;padding:14px 20px 18px;border-right:1px solid var(--rule)}
+.figure:last-child{border-right:0}
+.figure b{display:block;font-family:var(--f-mono);font-weight:600;font-size:1.7rem;
+  letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.figure span{display:block;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);margin-top:2px}
+.listen{display:flex;flex-wrap:wrap;gap:8px;padding:16px 0 22px}
+.listen a{font-family:var(--f-mono);font-size:.8rem;text-decoration:none;padding:7px 13px;
+  border:1px solid var(--rule);background:var(--surface);border-radius:2px}
+.listen a:hover{border-color:var(--ink)}
+
+/* ---------- controls ---------- */
+.controls{position:sticky;top:0;z-index:20;background:var(--paper);
+  border-bottom:1px solid var(--rule);padding:14px 0 12px}
+.searchrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+input[type=search]{flex:1 1 260px;min-width:0;font:inherit;padding:9px 12px;
+  border:1px solid var(--rule);background:var(--surface);color:var(--ink);border-radius:2px}
+input[type=search]:focus-visible,select:focus-visible,button:focus-visible,
+summary:focus-visible,a:focus-visible{outline:2px solid var(--tally);outline-offset:2px}
+select{font:inherit;padding:9px 10px;border:1px solid var(--rule);background:var(--surface);
+  color:var(--ink);border-radius:2px}
+.count{font-family:var(--f-mono);font-size:.82rem;color:var(--muted);
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chip{font-family:var(--f-mono);font-size:.76rem;padding:5px 10px;border:1px solid var(--rule);
+  background:var(--surface);color:var(--ink);border-radius:2px;cursor:pointer}
+.chip .n{color:var(--muted);margin-left:6px;font-variant-numeric:tabular-nums}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--tally);border-color:var(--tally);color:#fff}
+.chip[aria-pressed="true"] .n{color:rgba(255,255,255,.75)}
+.grouplabel{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);align-self:center;margin-right:2px}
+.clear{background:none;border:0;color:var(--tally);font:inherit;font-size:.82rem;
+  cursor:pointer;padding:4px 2px;text-decoration:underline}
+
+/* ---------- the rundown ---------- */
+.rundown{margin:0;padding:26px 0 0}
+.row{display:grid;grid-template-columns:88px 52px 1fr 78px;gap:16px;align-items:baseline;
+  padding:13px 0;border-bottom:1px solid var(--rule)}
+.row:hover{background:var(--surface)}
+.cell-date,.cell-no,.cell-run{font-family:var(--f-mono);font-size:.8rem;
+  font-variant-numeric:tabular-nums;color:var(--muted)}
+.cell-no{color:var(--tally);font-weight:600}
+.cell-run{text-align:right}
+.cell-main a.t{font-family:var(--f-display);font-weight:600;font-size:1.06rem;
+  line-height:1.28;text-decoration:none;display:inline-block}
+.cell-main a.t:hover{text-decoration:underline;text-decoration-color:var(--tally);
+  text-underline-offset:3px}
+.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:6px}
+.tg{font-family:var(--f-mono);font-size:.7rem;color:var(--signal);background:var(--signal-soft);
+  padding:2px 7px;border-radius:2px;border:0;cursor:pointer}
+.tg:hover{text-decoration:underline}
+.guest{font-family:var(--f-mono);font-size:.7rem;color:var(--muted)}
+.guest b{color:var(--ink);font-weight:600}
+.empty{padding:60px 0;text-align:center;color:var(--muted)}
+
+/* ---------- sponsor block ---------- */
+.sponsor{margin:64px 0 0;border-top:2px solid var(--ink);padding:34px 0 70px}
+.sponsor h2{font-family:var(--f-display);font-size:2rem;margin:0 0 6px;letter-spacing:-.01em}
+.sponsor .note{color:var(--muted);max-width:62ch}
+.srcnote{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);
+  border-left:2px solid var(--rule);padding-left:10px;margin:22px 0 0}
+.topics{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:0 26px;
+  margin:22px 0 0;padding:0;list-style:none}
+.topics li{display:flex;justify-content:space-between;gap:12px;padding:7px 0;
+  border-bottom:1px solid var(--rule);font-size:.9rem}
+.topics .v{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+footer{border-top:1px solid var(--rule);padding:22px 0 40px;color:var(--muted);font-size:.84rem}
+
+/* ---------- episode page ---------- */
+.back{font-family:var(--f-mono);font-size:.78rem;text-decoration:none;color:var(--muted)}
+.ep h1{font-size:clamp(1.9rem,4.4vw,3rem);margin-top:10px}
+.epmeta{display:flex;flex-wrap:wrap;gap:18px;font-family:var(--f-mono);font-size:.82rem;
+  color:var(--muted);margin:14px 0 0;font-variant-numeric:tabular-nums}
+.epgrid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(240px,.85fr);gap:44px;
+  margin:34px 0 0}
+@media (max-width:860px){.epgrid{grid-template-columns:1fr;gap:28px}
+  .row{grid-template-columns:74px 1fr;gap:6px 12px}
+  .cell-run{text-align:left;grid-column:1}
+  .cell-main{grid-column:1 / -1}}
+.player{width:100%;aspect-ratio:16/9;border:1px solid var(--rule);background:#000}
+.evtag{border-bottom:1px solid var(--rule)}
+.evtag summary{cursor:pointer;padding:11px 0;display:flex;justify-content:space-between;
+  gap:12px;align-items:baseline;list-style:none}
+.evtag summary::-webkit-details-marker{display:none}
+.evtag summary::after{content:"+";font-family:var(--f-mono);color:var(--muted)}
+.evtag[open] summary::after{content:"\2212"}
+.evtag .name{font-weight:600}
+.evtag .hits{font-family:var(--f-mono);font-size:.76rem;color:var(--muted)}
+.stamps{display:flex;flex-wrap:wrap;gap:6px;padding:0 0 14px}
+.stamps a{font-family:var(--f-mono);font-size:.76rem;text-decoration:none;padding:3px 8px;
+  border:1px solid var(--rule);border-radius:2px;background:var(--surface)}
+.stamps a:hover{border-color:var(--tally);color:var(--tally)}
+.stamps a.peak{border-color:var(--tally);color:var(--tally)}
+.aside h3{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 8px;font-weight:600}
+.aside section{margin:0 0 26px}
+.aside ul{margin:0;padding:0;list-style:none}
+.aside li{padding:4px 0;font-size:.92rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;
+  transition:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap ep">
+<p style="padding-top:28px"><a class="back" href="../index.html">&larr; All episodes</a></p>
+<p class="tally">Episode #48 &middot; 2022-02-06</p>
+<h1>Game Dev Show #48 - Unity GameDev at the Superbowl, Best Questions, &amp; Lightning Sales</h1>
+<div class="epmeta"><span>2h 46m</span><span>3,893 views</span></div>
+<div class="epgrid">
+  <div>
+    <iframe class="player" src="https://www.youtube-nocookie.com/embed/TtLm0h2SBfA"
+      title="Game Dev Show #48 - Unity GameDev at the Superbowl, Best Questions, &amp; Lightning Sales" loading="lazy" allowfullscreen
+      allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"></iframe>
+    <p style="margin-top:18px">Talking Game Development, C#, and Unity3D!</p>
+    <h3 style="font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;
+      text-transform:uppercase;color:var(--muted);margin:30px 0 4px">What this episode covers</h3>
+    <p class="srcnote" style="margin:0 0 14px">Topics are taken from the episode's own
+    captions. Open one to jump to the moments where it comes up.</p>
+    <details class="evtag"><summary><span class="name">Unity</span><span class="hits">212 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=116s" class="peak"><b>Main run &middot; 1:56</b></a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=116s">1:56</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=206s">3:26</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=308s">5:08</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=414s">6:54</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=517s">8:37</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=611s">10:11</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=794s">13:14</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=974s">16:14</a></div></details><details class="evtag"><summary><span class="name">VR &amp; AR</span><span class="hits">204 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=8486s" class="peak"><b>Main run &middot; 2:21:26</b></a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=192s">3:12</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=709s">11:49</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=1021s">17:01</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=1320s">22:00</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=1532s">25:32</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=1759s">29:19</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=1930s">32:10</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=2208s">36:48</a></div></details><details class="evtag"><summary><span class="name">Art pipeline</span><span class="hits">108 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=4591s" class="peak"><b>Main run &middot; 1:16:31</b></a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=4591s">1:16:31</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=4888s">1:21:28</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=4981s">1:23:01</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=5096s">1:24:56</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=5521s">1:32:01</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=6714s">1:51:54</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=6818s">1:53:38</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=6926s">1:55:26</a></div></details><details class="evtag"><summary><span class="name">Rendering</span><span class="hits">65 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=7633s" class="peak"><b>Main run &middot; 2:07:13</b></a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=1378s">22:58</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=2318s">38:38</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=2496s">41:36</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=3100s">51:40</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=6031s">1:40:31</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=7633s">2:07:13</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=7733s">2:08:53</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=8046s">2:14:06</a></div></details><details class="evtag"><summary><span class="name">Animation</span><span class="hits">30 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=4581s" class="peak"><b>Main run &middot; 1:16:21</b></a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=4581s">1:16:21</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=4805s">1:20:05</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=5020s">1:23:40</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=7003s">1:56:43</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=7217s">2:00:17</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=7494s">2:04:54</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=7996s">2:13:16</a></div></details><details class="evtag"><summary><span class="name">Audio</span><span class="hits">30 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=5557s" class="peak"><b>Main run &middot; 1:32:37</b></a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=5554s">1:32:34</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=5680s">1:34:40</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=5915s">1:38:35</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=6151s">1:42:31</a></div></details><details class="evtag"><summary><span class="name">Shaders</span><span class="hits">26 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=7462s" class="peak"><b>Main run &middot; 2:04:22</b></a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=3770s">1:02:50</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=6799s">1:53:19</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=6954s">1:55:54</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=7462s">2:04:22</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=7665s">2:07:45</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=7768s">2:09:28</a></div></details><details class="evtag"><summary><span class="name">Industry news</span><span class="hits">21 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=8220s" class="peak"><b>Main run &middot; 2:17:00</b></a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=3363s">56:03</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=3485s">58:05</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=8220s">2:17:00</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=8402s">2:20:02</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=8587s">2:23:07</a></div></details><details class="evtag"><summary><span class="name">Game jams</span><span class="hits">16 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=5798s" class="peak"><b>Main run &middot; 1:36:38</b></a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=5798s">1:36:38</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=5889s">1:38:09</a></div></details><details class="evtag"><summary><span class="name">Unreal Engine</span><span class="hits">15 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=826s" class="peak"><b>Main run &middot; 13:46</b></a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=826s">13:46</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=976s">16:16</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=1702s">28:22</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=2004s">33:24</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=3117s">51:57</a></div></details><details class="evtag"><summary><span class="name">Editor tooling</span><span class="hits">15 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=317s" class="peak"><b>Main run &middot; 5:17</b></a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=317s">5:17</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=447s">7:27</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=6370s">1:46:10</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=6830s">1:53:50</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=7600s">2:06:40</a></div></details><details class="evtag"><summary><span class="name">Performance &amp; optimisation</span><span class="hits">13 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=5478s" class="peak"><b>Main run &middot; 1:31:18</b></a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=3734s">1:02:14</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=5478s">1:31:18</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=6101s">1:41:41</a></div></details><details class="evtag"><summary><span class="name">Careers &amp; hiring</span><span class="hits">12 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=4373s" class="peak"><b>Main run &middot; 1:12:53</b></a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=2200s">36:40</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=4373s">1:12:53</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=4948s">1:22:28</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=8548s">2:22:28</a></div></details><details class="evtag"><summary><span class="name">Architecture &amp; patterns</span><span class="hits">10 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=3613s" class="peak"><b>Main run &middot; 1:00:13</b></a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=359s">5:59</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=3613s">1:00:13</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=3867s">1:04:27</a></div></details><details class="evtag"><summary><span class="name">Console &amp; PC platforms</span><span class="hits">9 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=3534s" class="peak"><b>Main run &middot; 58:54</b></a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=3534s">58:54</a></div></details><details class="evtag"><summary><span class="name">Multiplayer &amp; netcode</span><span class="hits">8 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=9250s" class="peak"><b>Main run &middot; 2:34:10</b></a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=9250s">2:34:10</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=9419s">2:36:59</a></div></details><details class="evtag"><summary><span class="name">Mobile</span><span class="hits">6 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=4792s" class="peak"><b>Main run &middot; 1:19:52</b></a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=4792s">1:19:52</a><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA&t=5236s">1:27:16</a></div></details>
+  </div>
+  <aside class="aside">
+    <section><h3>Listen</h3><ul>
+      <li><a href="https://www.youtube.com/watch?v=TtLm0h2SBfA">Watch on YouTube</a></li>
+      <li><a href="https://open.spotify.com/show/2aVmqZDsjGOQjC7gR44u1F">Spotify</a></li>
+      <li><a href="https://podcasts.apple.com/us/podcast/the-game-dev-show/id1727884433">Apple Podcasts</a></li>
+    </ul></section>
+    <section><h3>Guests</h3><ul><li class='hits'>No guest credited</li></ul></section>
+    
+  </aside>
+</div>
+<p style="display:flex;justify-content:space-between;gap:20px;margin:44px 0 60px"><a class="back" href="iYCp7r6mCWY.html">&larr; Game Dev Show #47 - HARDEST gamedev / unity3</a><a class="back" href="EaZ7Q9INRuo.html">CUPID &amp; Making new Game Dev Friends! - Game  &rarr;</a></p>
+</main>
+</body>
+</html>

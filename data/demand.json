@@ -1,0 +1,598 @@
+{
+  "unity": {
+    "measured": true,
+    "prefix": "unity game d",
+    "rank": 0,
+    "suggestions": [
+      "unity game development",
+      "unity game development tutorial",
+      "unity game dev",
+      "unity game devlog",
+      "unity game design",
+      "unity game development with ai",
+      "unity game design tutorial",
+      "unity game development 2d",
+      "unity game development 3d",
+      "unity game development tips"
+    ],
+    "own_completions": null,
+    "score": 100.0,
+    "phrase": "unity game development"
+  },
+  "unreal": {
+    "measured": true,
+    "prefix": "unreal engin",
+    "rank": 5,
+    "suggestions": [
+      "unreal engine 5",
+      "unreal engine",
+      "unreal engine mario",
+      "unreal engine 5 tutorial",
+      "unreal engine 6",
+      "unreal engine tutorial",
+      "unreal engine ocarina of time",
+      "unreal engine 5.7",
+      "unreal engine 5 beginner tutorial",
+      "unreal engine zelda"
+    ],
+    "own_completions": null,
+    "score": 50.0,
+    "phrase": "unreal engine tutorial"
+  },
+  "godot": {
+    "measured": true,
+    "prefix": "godot engin",
+    "rank": 0,
+    "suggestions": [
+      "godot engine tutorial",
+      "godot engine",
+      "godot engine 2d game tutorial",
+      "godot engine 3d",
+      "godot engine games",
+      "godot engine 4",
+      "godot engine 4 mobile tutorial",
+      "godot engine 2d",
+      "godot engine fps",
+      "godot engine review"
+    ],
+    "own_completions": null,
+    "score": 100.0,
+    "phrase": "godot engine tutorial"
+  },
+  "dots-ecs": {
+    "measured": true,
+    "prefix": "unit",
+    "rank": null,
+    "suggestions": [
+      "united states",
+      "united 93",
+      "united stand",
+      "unity",
+      "united 93 movie",
+      "united nations",
+      "united in grief",
+      "unitedgamer",
+      "united states of smash",
+      "united states of whatever"
+    ],
+    "own_completions": 10,
+    "score": 20,
+    "phrase": "unity ecs"
+  },
+  "architecture": {
+    "measured": true,
+    "prefix": "game programm",
+    "rank": 1,
+    "suggestions": [
+      "game programming",
+      "game programming patterns",
+      "game programming c++",
+      "game programmer",
+      "game programming for beginners",
+      "game programming python",
+      "game programmer day in the life",
+      "game programming course",
+      "game programming tutorial",
+      "game programmer portfolio"
+    ],
+    "own_completions": null,
+    "score": 90.0,
+    "phrase": "game programming patterns"
+  },
+  "testing": {
+    "measured": true,
+    "prefix": "unit testin",
+    "rank": null,
+    "suggestions": [
+      "unit testing",
+      "unit testing python",
+      "unit testing java",
+      "unit testing c#",
+      "unit testing in software testing",
+      "unit testing javascript",
+      "unit testing react",
+      "unit testing in spring boot",
+      "unit testing with jest",
+      "unit testing explained"
+    ],
+    "own_completions": 2,
+    "score": 4,
+    "phrase": "unit testing in unity"
+  },
+  "source-control": {
+    "measured": true,
+    "prefix": "git for game ",
+    "rank": 0,
+    "suggestions": [
+      "git for game development",
+      "git game",
+      "git game videolar\u0131",
+      "git game \u015fark\u0131s\u0131",
+      "git game \u015fark\u0131lar\u0131",
+      "git walkthrough",
+      "git lernen"
+    ],
+    "own_completions": null,
+    "score": 100.0,
+    "phrase": "git for game development"
+  },
+  "tooling": {
+    "measured": true,
+    "prefix": "unity edi",
+    "rank": 5,
+    "suggestions": [
+      "unity editor",
+      "unity editor tutorial",
+      "unity editor installation failed",
+      "unity editor scripting",
+      "unity edit audio",
+      "unity editor tools",
+      "unity editor not installing",
+      "unity editor 7",
+      "unity editor application install failed",
+      "unity editor download"
+    ],
+    "own_completions": null,
+    "score": 50.0,
+    "phrase": "unity editor tools"
+  },
+  "performance": {
+    "measured": true,
+    "prefix": "unity performanc",
+    "rank": 2,
+    "suggestions": [
+      "unity performance",
+      "unity performance side markers",
+      "unity performance optimization",
+      "unity performance tips",
+      "unity performance profiler",
+      "unity performance testing",
+      "unity performance in america's got talent",
+      "unity performance on britain's got talent",
+      "unity performance dance"
+    ],
+    "own_completions": null,
+    "score": 77.8,
+    "phrase": "unity performance optimization"
+  },
+  "rendering": {
+    "measured": true,
+    "prefix": "unity renderi",
+    "rank": 1,
+    "suggestions": [
+      "unity rendering",
+      "unity rendering pipeline",
+      "unity rendering layer",
+      "unity rendering tutorial",
+      "unity rendering debugger",
+      "unity rendering path",
+      "unity rendering optimization",
+      "unity pixelated rendering",
+      "unity stylized rendering",
+      "unity deferred rendering"
+    ],
+    "own_completions": null,
+    "score": 90.0,
+    "phrase": "unity rendering pipeline"
+  },
+  "shaders": {
+    "measured": true,
+    "prefix": "unity sha",
+    "rank": 1,
+    "suggestions": [
+      "unity shaders",
+      "unity shader graph",
+      "unity shaindy plotzker",
+      "unity shader tutorial",
+      "unity shader graph tutorial",
+      "unity shader graph water",
+      "unity shaders explained",
+      "unity shader graph outline",
+      "unity shader 2d",
+      "unity shader code"
+    ],
+    "own_completions": null,
+    "score": 90.0,
+    "phrase": "unity shader graph"
+  },
+  "physics": {
+    "measured": true,
+    "prefix": "unity physic",
+    "rank": 2,
+    "suggestions": [
+      "unity physics",
+      "unity physics based movement",
+      "unity physics tutorial",
+      "unity physics engine",
+      "unity physics game",
+      "unity physics material",
+      "unity physics character controller",
+      "unity physical animation",
+      "unity physics grab",
+      "unity physics simulation"
+    ],
+    "own_completions": null,
+    "score": 80.0,
+    "phrase": "unity physics tutorial"
+  },
+  "navigation-ai": {
+    "measured": true,
+    "prefix": "unity pat",
+    "rank": 0,
+    "suggestions": [
+      "unity pathfinding",
+      "unity pathfinding 3d",
+      "unity pathfinding 2d",
+      "unity path tracing",
+      "unity pathways",
+      "unity pattern",
+      "unity patrolling enemy",
+      "unity path follow",
+      "unity patch",
+      "unity patch system"
+    ],
+    "own_completions": null,
+    "score": 100.0,
+    "phrase": "unity pathfinding"
+  },
+  "multiplayer": {
+    "measured": true,
+    "prefix": "unity multipla",
+    "rank": 1,
+    "suggestions": [
+      "unity multiplayer",
+      "unity multiplayer tutorial",
+      "unity multiplayer code monkey",
+      "unity multiplayer fps",
+      "unity multiplayer services",
+      "unity multiplayer game",
+      "unity multiplayer play mode",
+      "unity multiplayer fps tutorial",
+      "unity multiplayer steam",
+      "unity multiplayer lobby"
+    ],
+    "own_completions": null,
+    "score": 90.0,
+    "phrase": "unity multiplayer tutorial"
+  },
+  "animation": {
+    "measured": true,
+    "prefix": "unity animat",
+    "rank": 3,
+    "suggestions": [
+      "unity animation",
+      "unity animation tutorial",
+      "unity animation controller",
+      "unity animation rigging",
+      "unity animation 2d",
+      "unity animation events",
+      "unity animation layers",
+      "unity animator controller tutorial",
+      "unity animation blending",
+      "unity animation curves"
+    ],
+    "own_completions": null,
+    "score": 70.0,
+    "phrase": "unity animation rigging"
+  },
+  "audio": {
+    "measured": true,
+    "prefix": "game audi",
+    "rank": 5,
+    "suggestions": [
+      "game audio not working obs",
+      "game audio",
+      "game audio obs",
+      "game audio test",
+      "game audiobook",
+      "game audio design",
+      "game audio not working on xbox one headset",
+      "game audition",
+      "game audio delay obs",
+      "game audio latency"
+    ],
+    "own_completions": null,
+    "score": 50.0,
+    "phrase": "game audio design"
+  },
+  "art-pipeline": {
+    "measured": true,
+    "prefix": "blender to un",
+    "rank": 4,
+    "suggestions": [
+      "blender to unreal engine 5",
+      "blender to unity",
+      "blender to unreal",
+      "blender to unreal engine 5 workflow",
+      "blender to unity workflow",
+      "blender to unity animation",
+      "blender to unity vrchat",
+      "blender to unreal workflow",
+      "blender to unreal engine 5 character",
+      "blender to unreal engine 5 animation"
+    ],
+    "own_completions": null,
+    "score": 60.0,
+    "phrase": "blender to unity workflow"
+  },
+  "procedural": {
+    "measured": true,
+    "prefix": "procedural gen",
+    "rank": 5,
+    "suggestions": [
+      "procedural generation",
+      "procedural generation unity",
+      "procedural generation godot",
+      "procedural generation roblox",
+      "procedural generation unreal engine 5",
+      "procedural generation games",
+      "procedural generation dungeon",
+      "procedural generation unity 2d",
+      "procedural generation gamemaker",
+      "procedural generation blender"
+    ],
+    "own_completions": null,
+    "score": 50.0,
+    "phrase": "procedural generation games"
+  },
+  "level-design": {
+    "measured": true,
+    "prefix": "level desig",
+    "rank": 6,
+    "suggestions": [
+      "level design",
+      "level design unreal engine 5",
+      "level design tips",
+      "level design unity",
+      "level design blender",
+      "level design godot",
+      "level design tutorial",
+      "level design in games",
+      "level design ue5",
+      "level design unreal engine"
+    ],
+    "own_completions": null,
+    "score": 40.0,
+    "phrase": "level design tutorial"
+  },
+  "game-design": {
+    "measured": true,
+    "prefix": "game design f",
+    "rank": 1,
+    "suggestions": [
+      "game design for beginners",
+      "game design fundamentals",
+      "game design for kids",
+      "game design full course",
+      "game design fnaf",
+      "game design fun",
+      "game design fighting games",
+      "game design flow",
+      "game design flowchart",
+      "game design figma"
+    ],
+    "own_completions": null,
+    "score": 90.0,
+    "phrase": "game design fundamentals"
+  },
+  "ui-ux": {
+    "measured": true,
+    "prefix": "unity ui",
+    "rank": 1,
+    "suggestions": [
+      "unity ui",
+      "unity ui toolkit",
+      "unity ui tutorial",
+      "unity ui toolkit tutorial",
+      "unity ui animation",
+      "unity ui builder",
+      "unity ui design",
+      "unity ui tutorial 2d",
+      "unity ui button",
+      "unity ui canvas"
+    ],
+    "own_completions": null,
+    "score": 90.0,
+    "phrase": "unity ui toolkit"
+  },
+  "vr-ar": {
+    "measured": true,
+    "prefix": "vr game de",
+    "rank": 0,
+    "suggestions": [
+      "vr game development",
+      "vr game dev",
+      "vr game devlog",
+      "vr game design",
+      "vr game development unity",
+      "vr game development unreal engine",
+      "vr game dentist",
+      "vr game destroy city",
+      "vr game death",
+      "vr game development for beginners"
+    ],
+    "own_completions": null,
+    "score": 100.0,
+    "phrase": "vr game development"
+  },
+  "mobile": {
+    "measured": true,
+    "prefix": "mobile game ",
+    "rank": 4,
+    "suggestions": [
+      "mobile game ads",
+      "mobile game ads be like",
+      "mobile game tier list",
+      "mobile game controller",
+      "mobile game development",
+      "mobile game gameplay",
+      "mobile game reviews",
+      "mobile game of the year 2025",
+      "mobile game recommendations",
+      "mobile game lost media"
+    ],
+    "own_completions": null,
+    "score": 60.0,
+    "phrase": "mobile game development"
+  },
+  "console": {
+    "measured": true,
+    "prefix": "console game ",
+    "rank": 7,
+    "suggestions": [
+      "console game 7",
+      "console game sharing ps5",
+      "console game of the year",
+      "console game frog",
+      "console game room setup",
+      "console game emulator",
+      "console gaming setup",
+      "console game development",
+      "console game collection",
+      "console game sharing ps5 not working"
+    ],
+    "own_completions": null,
+    "score": 30.0,
+    "phrase": "console game development"
+  },
+  "ai-tools": {
+    "measured": true,
+    "prefix": "ai tools for ga",
+    "rank": 0,
+    "suggestions": [
+      "ai tools for game development",
+      "ai tools for gaming",
+      "ai tools for game design",
+      "ai tools for game dev",
+      "ai tools for game art",
+      "ai tools for gaming video editing",
+      "ai tool for garden design",
+      "free ai tools for game development",
+      "ai tools for making games",
+      "ai tools for video game development"
+    ],
+    "own_completions": null,
+    "score": 100.0,
+    "phrase": "ai tools for game development"
+  },
+  "careers": {
+    "measured": true,
+    "prefix": "how to become a ",
+    "rank": null,
+    "suggestions": [
+      "how to become a hacker in 99 nights in the forest",
+      "how to become a millionaire",
+      "how to become a youtuber",
+      "how to become a content creator",
+      "how to become a real estate agent",
+      "how to become a firefighter",
+      "how to become a pilot",
+      "how to become a clipper",
+      "how to become a hacker",
+      "how to become a voice actor"
+    ],
+    "own_completions": 10,
+    "score": 20,
+    "phrase": "how to become a game developer"
+  },
+  "marketing": {
+    "measured": true,
+    "prefix": "indie game ",
+    "rank": null,
+    "suggestions": [
+      "indie game trailer",
+      "indie game awards",
+      "indie game dev",
+      "indie game devlog",
+      "indie game development",
+      "indie game the movie",
+      "indie game clinic",
+      "indie game music",
+      "indie game awards 2025",
+      "indie game recommendations"
+    ],
+    "own_completions": 6,
+    "score": 12,
+    "phrase": "indie game marketing"
+  },
+  "monetisation": {
+    "measured": true,
+    "prefix": "game mone",
+    "rank": 2,
+    "suggestions": [
+      "game money",
+      "game money man",
+      "game monetization",
+      "game money cash clothes",
+      "game money lax",
+      "game money sound effect",
+      "game money instrumental",
+      "game money making apps",
+      "gamemonetize",
+      "game money \ud83d\udcb0"
+    ],
+    "own_completions": null,
+    "score": 80.0,
+    "phrase": "game monetization"
+  },
+  "game-jams": {
+    "measured": true,
+    "prefix": "game ja",
+    "rank": 4,
+    "suggestions": [
+      "game jam",
+      "game jam devlog",
+      "game jam 2025",
+      "game jam 2024",
+      "game jam tips",
+      "game jam roblox",
+      "game jazz",
+      "game jam pro",
+      "game jazz music",
+      "game jams for beginners"
+    ],
+    "own_completions": null,
+    "score": 60.0,
+    "phrase": "game jam tips"
+  },
+  "industry-news": {
+    "measured": true,
+    "prefix": "game indu",
+    "rank": 1,
+    "suggestions": [
+      "game industry",
+      "game industry news",
+      "game industry is dying",
+      "game industry layoffs",
+      "game industry crash",
+      "game industry collapse",
+      "game industry podcast",
+      "game industry jobs",
+      "game industry 2025",
+      "game industria"
+    ],
+    "own_completions": null,
+    "score": 90.0,
+    "phrase": "game industry news"
+  }
+}
