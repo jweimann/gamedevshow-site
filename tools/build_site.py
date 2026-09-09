@@ -272,10 +272,16 @@ def build_index(episodes, tags, stats):
     # Sponsor block: every number here is computed from public YouTube data, and the note
     # under it says so. Nothing about listeners or demographics is claimed, because
     # nobody has given us any.
-    top_topics = [t for t in tags if t["episodes"]][:12]
+    # Episode count and views, not the demand proxy. Ranking a phrase against its own
+    # prefix saturates - six topics scored 100 and Godot's twelve episodes sat beside
+    # Unity's on the same number, which tells a sponsor nothing and invites the question
+    # of what the score even is. Both figures here are public and neither saturates.
+    # Demand survives only as the internal order of the chip bar.
+    top_topics = sorted([t for t in tags if t["episodes"]],
+                        key=lambda t: -t["views"])[:12]
     topics_html = "".join(
-        '<li><span>%s</span><span class="v">%d eps &middot; demand %s</span></li>'
-        % (e(t["label"]), t["episodes"], ("%g" % t["demand_score"]))
+        '<li><span>%s</span><span class="v">%d eps &middot; %s views</span></li>'
+        % (e(t["label"]), t["episodes"], thousands(t["views"]))
         for t in top_topics)
 
     body = """%(mast)s
