@@ -253,8 +253,9 @@ def roster():
         return [], []
     with open(path, "rb") as handle:
         people = tomllib.load(handle).get("person", [])
-    return ([p for p in people if p.get("role") == "regular"],
-            [p for p in people if p.get("role") == "guest"])
+    shown = [p for p in people if p.get("confirmed", True)]
+    return ([p for p in shown if p.get("role") == "regular"],
+            [p for p in shown if p.get("role") == "guest"])
 
 
 def build_index(episodes, tags, stats):

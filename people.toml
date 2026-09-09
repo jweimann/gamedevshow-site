@@ -67,6 +67,19 @@ role = "regular"
 link = "https://www.youtube.com/c/TurboMakesGames"
 aliases = ["TurboMakesGames", "Turbo Makes Games"]
 
+
+[[person]]
+name = "Jenny"
+role = "regular"
+confirmed = false
+note = """Jason listed "Greg and Jenny". Every other source says JOHNNY, and no source
+found so far says Jenny. "johnny" appears in 35 episodes, named as early as 00:12 in
+openings, and the stream tile on #151 at 45:00 reads "Johnny - Turbo Makes Games".
+"jenny" appears in ONE episode, three times, first at 1:55:00 - the shape of an
+auto-caption mishearing rather than a panellist. Held off the site until Jason confirms
+whether Jenny is a separate person or a typo for Johnny; set confirmed = true to show
+her, or delete this entry."""
+
 # Jason Weimann hosts every episode and is deliberately absent: a filter entry that
 # matches everything filters nothing.
 
