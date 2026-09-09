@@ -196,6 +196,7 @@ footer{border-top:1px solid var(--rule);padding:22px 0 40px;color:var(--muted);f
 .stamps a{font-family:var(--f-mono);font-size:.76rem;text-decoration:none;padding:3px 8px;
   border:1px solid var(--rule);border-radius:2px;background:var(--surface)}
 .stamps a:hover{border-color:var(--tally);color:var(--tally)}
+.stamps a.peak{border-color:var(--tally);color:var(--tally)}
 .aside h3{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
   color:var(--muted);margin:0 0 8px;font-weight:600}
 .aside section{margin:0 0 26px}
@@ -418,14 +419,21 @@ def build_episode(ep, tags_by_id, neighbours):
         tag = tags_by_id.get(tag_id)
         if not tag:
             continue
-        links = "".join(
-            '<a href="%s&t=%ds">%s</a>' % (e(ep["youtube"]), hit["t"], hms(hit["t"]))
-            for hit in detail["evidence"])
+        # The densest ten minutes is where the topic is actually gone into, so it leads;
+        # the scattered mentions follow it. That is the difference between "they said
+        # shaders once" and "there is a shader segment at 32 minutes".
+        links = []
+        if detail.get("peak_at") is not None and detail.get("peak", 0) >= 4:
+            links.append('<a href="%s&t=%ds" class="peak"><b>Main run &middot; %s</b></a>'
+                         % (e(ep["youtube"]), detail["peak_at"], hms(detail["peak_at"])))
+        links += ['<a href="%s&t=%ds">%s</a>' % (e(ep["youtube"]), hit["t"], hms(hit["t"]))
+                  for hit in detail["evidence"]]
         stamps.append(
             '<details class="evtag"><summary><span class="name">%s</span>'
             '<span class="hits">%d mentions</span></summary>'
             '<div class="stamps">%s</div></details>'
-            % (e(tag["label"]), detail["hits"], links or "<span class='hits'>&mdash;</span>"))
+            % (e(tag["label"]), detail["hits"],
+               "".join(links) or "<span class='hits'>&mdash;</span>"))
 
     guests = ("".join("<li>%s</li>" % e(g) for g in ep["guests"])
               if ep["guests"] else "<li class='hits'>No guest credited</li>")
