@@ -234,7 +234,13 @@ def cohosts(description):
                 break
             continue
         url, name = match.group(1), match.group(2)
-        name = re.sub(r"\s*\((.*?)\)\s*$", "", name).strip()  # drop "(MPG / InfinityPBR)"
+        # The block is not only people: it also credits a co-host's GAME with a Steam
+        # link, which listed "Highland Panic" as a person. Co-hosts are credited with
+        # their YouTube channel, so that is what makes a line a person.
+        if "youtube.com" not in url.lower():
+            continue
+        name = name.strip(" -–—:!").strip()          # "Warped Imagination (David) -"
+        name = re.sub(r"\s*\([^)]*\)\s*$", "", name).strip()  # "(MPG / InfinityPBR)"
         name = re.sub(r"^(subscribe to|follow)\s+", "", name, flags=re.I).strip(" !:-")
         if 2 < len(name) < 40 and not name.lower().startswith("http"):
             if not any(c["name"].lower() == name.lower() for c in out):
