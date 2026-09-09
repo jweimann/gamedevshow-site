@@ -273,6 +273,12 @@ def summary(description):
 # AI news short - and "most watched" sorted them to the top for a sponsor to click first.
 IS_SHOW = re.compile(r"game\s*dev\s*show|gamedevshow|\bgds\b|#\s*\d", re.I)
 
+# A clip cut from an episode keeps the episode's title, so the title rule alone let a
+# three-minute cut of "Game Dev Show #22" count as an episode a week after the real 3h12
+# one. Nothing this short is a live show, so a show-titled upload under ten minutes stops
+# being automatic and needs a line in curation.toml like any other judgement call.
+MIN_EPISODE_SECONDS = 600
+
 
 def curation():
     path = os.path.join(ROOT, "curation.toml")
@@ -412,9 +418,13 @@ def main():
         if entry:
             episode["curation"] = entry["decision"]
             episode["curation_reason"] = entry.get("reason")
-        elif IS_SHOW.search(episode["title"]):
+        elif IS_SHOW.search(episode["title"]) and (episode["duration"] or 0) >= MIN_EPISODE_SECONDS:
             episode["curation"] = "include"
             episode["curation_reason"] = "Titled as the show."
+        elif IS_SHOW.search(episode["title"]):
+            episode["curation"] = "unreviewed"
+            episode["curation_reason"] = ("Titled as the show but under ten minutes, so "
+                                          "probably a clip. Needs a line in curation.toml.")
         else:
             # New strays default OUT and are reported, so the numbers cannot quietly
             # inflate again the next time the playlists gain something odd.

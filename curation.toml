@@ -232,3 +232,11 @@ id = "nRw2xiW8yKg"
 title = "LIVE - TableTop RPG Development in Unity3D - Hex Setup & Battlesystem"
 decision = "include"
 reason = "The same live development run."
+
+# --------------------------------------------------- clips that carry an episode's title
+
+[[entry]]
+id = "xMnhJ7e-jkw"
+title = "Game Dev Show #22 - How to make a game"
+decision = "exclude"
+reason = "A three-minute clip cut from #22 and posted a week later under the same title. The real #22 (uIwqkfwKUrA) runs 3h12 with 20,054 views; this one has 614."

@@ -5664,28 +5664,6 @@
    "order": 24
   },
   {
-   "id": "xMnhJ7e-jkw",
-   "title": "Game Dev Show #22 - How to make a game",
-   "number": 22,
-   "date": "2021-08-22",
-   "duration": 187,
-   "views": 614,
-   "summary": "Talking Game Development, C#, and Unity3D!",
-   "youtube": "https://www.youtube.com/watch?v=xMnhJ7e-jkw",
-   "thumbnail": "https://i.ytimg.com/vi/xMnhJ7e-jkw/hqdefault.jpg",
-   "guests": [],
-   "cohosts": [],
-   "people": [],
-   "tags": {},
-   "has_transcript": true,
-   "transcript_cues": 190,
-   "in_feed": false,
-   "feed_title": null,
-   "curation": "include",
-   "curation_reason": "Titled as the show.",
-   "order": 25
-  },
-  {
    "id": "vmDCBNeMk5w",
    "title": "Game Dev Show #24 - 6 years in the industry",
    "number": 24,
@@ -5818,7 +5796,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 26
+   "order": 25
   },
   {
    "id": "tFNrZEhMX1g",
@@ -6049,7 +6027,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 27
+   "order": 26
   },
   {
    "id": "KqsFnnLdO70",
@@ -6196,7 +6174,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 28
+   "order": 27
   },
   {
    "id": "LTfYdiIxMJA",
@@ -6451,7 +6429,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 29
+   "order": 28
   },
   {
    "id": "hzxE8usiQYs",
@@ -6718,7 +6696,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 30
+   "order": 29
   },
   {
    "id": "FiEyXi_b4XU",
@@ -6941,7 +6919,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 31
+   "order": 30
   },
   {
    "id": "vpwEs0gjCPs",
@@ -7244,7 +7222,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 32
+   "order": 31
   },
   {
    "id": "jxjGt9pv4pY",
@@ -7451,7 +7429,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 33
+   "order": 32
   },
   {
    "id": "iKY2RiF7WVw",
@@ -7874,7 +7852,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 34
+   "order": 33
   },
   {
    "id": "mOdPAPXIJKo",
@@ -8109,7 +8087,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 35
+   "order": 34
   },
   {
    "id": "SwGW3hugDhc",
@@ -8480,7 +8458,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 36
+   "order": 35
   },
   {
    "id": "8NrsvIg0Q6E",
@@ -8599,7 +8577,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 37
+   "order": 36
   },
   {
    "id": "uP7vPKs0rrE",
@@ -8730,7 +8708,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 38
+   "order": 37
   },
   {
    "id": "jx7J8eRNG9A",
@@ -9077,7 +9055,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 39
+   "order": 38
   },
   {
    "id": "LAPiLiQs3TU",
@@ -9316,7 +9294,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 40
+   "order": 39
   },
   {
    "id": "OIDdmgqAt6E",
@@ -9395,7 +9373,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 41
+   "order": 40
   },
   {
    "id": "2FAUAii6qGo",
@@ -9542,7 +9520,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 42
+   "order": 41
   },
   {
    "id": "bpPjxrE8HII",
@@ -9769,7 +9747,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 43
+   "order": 42
   },
   {
    "id": "FirdPV_9JnA",
@@ -10044,7 +10022,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 44
+   "order": 43
   },
   {
    "id": "_45gLN440X4",
@@ -10287,7 +10265,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 45
+   "order": 44
   },
   {
    "id": "pDGgjHrk5jI",
@@ -10370,7 +10348,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 46
+   "order": 45
   },
   {
    "id": "I9fNR6vT5Mc",
@@ -10521,7 +10499,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 47
+   "order": 46
   },
   {
    "id": "iYCp7r6mCWY",
@@ -10968,7 +10946,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 48
+   "order": 47
   },
   {
    "id": "TtLm0h2SBfA",
@@ -11287,7 +11265,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 49
+   "order": 48
   },
   {
    "id": "EaZ7Q9INRuo",
@@ -11574,7 +11552,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 50
+   "order": 49
   },
   {
    "id": "EnWEn0yFib0",
@@ -11737,7 +11715,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 51
+   "order": 50
   },
   {
    "id": "QV6IQMVi2gw",
@@ -11860,7 +11838,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 52
+   "order": 51
   },
   {
    "id": "hlYUfThbtIA",
@@ -12039,7 +12017,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 53
+   "order": 52
   },
   {
    "id": "2Yto1HxBBpE",
@@ -12330,7 +12308,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 54
+   "order": 53
   },
   {
    "id": "G6J9s5U86d8",
@@ -12697,7 +12675,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 55
+   "order": 54
   },
   {
    "id": "KaT4JH5BRqU",
@@ -13072,7 +13050,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 56
+   "order": 55
   },
   {
    "id": "picD5RzwQwc",
@@ -13355,7 +13333,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 57
+   "order": 56
   },
   {
    "id": "-IQO5HzLId0",
@@ -13630,7 +13608,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 58
+   "order": 57
   },
   {
    "id": "wLirKjI_-UI",
@@ -14005,7 +13983,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 59
+   "order": 58
   },
   {
    "id": "iiIdB1Nh4Rs",
@@ -14116,7 +14094,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "A live build episode, 25k views.",
-   "order": 60
+   "order": 59
   },
   {
    "id": "Fy2WH59Q1rk",
@@ -14527,7 +14505,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 61
+   "order": 60
   },
   {
    "id": "Xra9RmlY7vM",
@@ -14854,7 +14832,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 62
+   "order": 61
   },
   {
    "id": "2oyBYgLQu7Q",
@@ -15057,7 +15035,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 63
+   "order": 62
   },
   {
    "id": "5wOHI73-98Y",
@@ -15360,7 +15338,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 64
+   "order": 63
   },
   {
    "id": "KEIz2pmbi5g",
@@ -15550,7 +15528,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "A guest interview with Jeri Ellsworth of Tilt Five, 145 minutes.",
-   "order": 65
+   "order": 64
   },
   {
    "id": "DtX3Ru0Ffg0",
@@ -15889,7 +15867,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 66
+   "order": 65
   },
   {
    "id": "nRw2xiW8yKg",
@@ -15928,7 +15906,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "The same live development run.",
-   "order": 67
+   "order": 66
   },
   {
    "id": "Vi6UcHyO3RM",
@@ -16111,7 +16089,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 68
+   "order": 67
   },
   {
    "id": "4nR4lzlsye4",
@@ -16158,7 +16136,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "A live development episode.",
-   "order": 69
+   "order": 68
   },
   {
    "id": "Yqfz1RG3HSI",
@@ -16417,7 +16395,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 70
+   "order": 69
   },
   {
    "id": "XYp4wWcjq1M",
@@ -16439,7 +16417,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "A live coding episode, 80 minutes.",
-   "order": 71
+   "order": 70
   },
   {
    "id": "B81hTTkgew8",
@@ -16598,7 +16576,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 72
+   "order": 71
   },
   {
    "id": "dcvfptKu4Cg",
@@ -16785,7 +16763,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 73
+   "order": 72
   },
   {
    "id": "E_Cxyv_X-pY",
@@ -17084,7 +17062,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 74
+   "order": 73
   },
   {
    "id": "PUxRIc8TaXU",
@@ -17539,7 +17517,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 75
+   "order": 74
   },
   {
    "id": "yFoEH-wSmdc",
@@ -17630,7 +17608,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "A careers episode.",
-   "order": 76
+   "order": 75
   },
   {
    "id": "peQexmgs9Xc",
@@ -17941,7 +17919,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 77
+   "order": 76
   },
   {
    "id": "eIw3TXJRVXU",
@@ -18360,7 +18338,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 78
+   "order": 77
   },
   {
    "id": "gKKjcLmmH0M",
@@ -18511,7 +18489,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 79
+   "order": 78
   },
   {
    "id": "uql-PiG1l7A",
@@ -18818,7 +18796,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 80
+   "order": 79
   },
   {
    "id": "eIfv0vEYynQ",
@@ -18869,7 +18847,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "A community meetup episode.",
-   "order": 81
+   "order": 80
   },
   {
    "id": "FoA8TleUe3I",
@@ -19164,7 +19142,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 82
+   "order": 81
   },
   {
    "id": "-7UPXmP0lis",
@@ -19399,7 +19377,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 83
+   "order": 82
   },
   {
    "id": "jeUT0NRwqM4",
@@ -19606,7 +19584,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 84
+   "order": 83
   },
   {
    "id": "8TUEBYK0q5k",
@@ -19749,7 +19727,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 85
+   "order": 84
   },
   {
    "id": "qGAvAMKpCJo",
@@ -19827,7 +19805,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "An interview with Unity's UI team. Short, and genuinely the show.",
-   "order": 86
+   "order": 85
   },
   {
    "id": "vRwhSn6ikiI",
@@ -20074,7 +20052,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 87
+   "order": 86
   },
   {
    "id": "V3UrSEnk5bo",
@@ -20280,7 +20258,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "An interview with Unity's CEO. Forty minutes, but the single best credential the show has.",
-   "order": 88
+   "order": 87
   },
   {
    "id": "KWG9XUso-0I",
@@ -20407,7 +20385,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 89
+   "order": 88
   },
   {
    "id": "IVy7atDUjBM",
@@ -20798,7 +20776,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 90
+   "order": 89
   },
   {
    "id": "REy_Kw5pyOQ",
@@ -21053,7 +21031,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 91
+   "order": 90
   },
   {
    "id": "bpeMUkMDY7o",
@@ -21292,7 +21270,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 92
+   "order": 91
   },
   {
    "id": "qdvpPQhQw9U",
@@ -21499,7 +21477,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 93
+   "order": 92
   },
   {
    "id": "RlPfFkjUsQU",
@@ -21590,7 +21568,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 94
+   "order": 93
   },
   {
    "id": "2siC0MZiK2E",
@@ -21773,7 +21751,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 95
+   "order": 94
   },
   {
    "id": "e6YHZAE08Xc",
@@ -21976,7 +21954,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 96
+   "order": 95
   },
   {
    "id": "wD54T6dQP1U",
@@ -22199,7 +22177,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 97
+   "order": 96
   },
   {
    "id": "MPNNS2le-Wk",
@@ -22330,7 +22308,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 98
+   "order": 97
   },
   {
    "id": "mJSuH2wKX08",
@@ -22605,7 +22583,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 99
+   "order": 98
   },
   {
    "id": "K2zAuIBKXWo",
@@ -22760,7 +22738,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 100
+   "order": 99
   },
   {
    "id": "AYLwqGSeiPs",
@@ -22955,7 +22933,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 101
+   "order": 100
   },
   {
    "id": "KZ74dOJ512A",
@@ -23266,7 +23244,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 102
+   "order": 101
   },
   {
    "id": "kxZEYnJMgv8",
@@ -23401,7 +23379,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 103
+   "order": 102
   },
   {
    "id": "PLMn5Hj7LMs",
@@ -23600,7 +23578,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 104
+   "order": 103
   },
   {
    "id": "yAHALpZeoGQ",
@@ -23735,7 +23713,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 105
+   "order": 104
   },
   {
    "id": "v3S5dN1PFE0",
@@ -23930,7 +23908,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 106
+   "order": 105
   },
   {
    "id": "zEDFqgIngzI",
@@ -24229,7 +24207,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 107
+   "order": 106
   },
   {
    "id": "EH9Ao_WfLD8",
@@ -24404,7 +24382,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 108
+   "order": 107
   },
   {
    "id": "tYB8NSOLcI0",
@@ -24579,7 +24557,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 109
+   "order": 108
   },
   {
    "id": "E230gKf4zSI",
@@ -24746,7 +24724,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 110
+   "order": 109
   },
   {
    "id": "Lamki0uL5gI",
@@ -24965,7 +24943,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 111
+   "order": 110
   },
   {
    "id": "D7xCnWOR5kw",
@@ -25032,7 +25010,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "A game-jam showcase episode.",
-   "order": 112
+   "order": 111
   },
   {
    "id": "rJndSQeeZs0",
@@ -25123,7 +25101,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 113
+   "order": 112
   },
   {
    "id": "9KHU0mEGCgY",
@@ -25342,7 +25320,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 114
+   "order": 113
   },
   {
    "id": "pg-xWwoKtgA",
@@ -25741,7 +25719,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 115
+   "order": 114
   },
   {
    "id": "yqUx3IaocpU",
@@ -25964,7 +25942,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 116
+   "order": 115
   },
   {
    "id": "mX3dS0vAp2k",
@@ -26139,7 +26117,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 117
+   "order": 116
   },
   {
    "id": "wX4xtwBy1Fc",
@@ -26370,7 +26348,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 118
+   "order": 117
   },
   {
    "id": "LBVqkqJFjRQ",
@@ -26525,7 +26503,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 119
+   "order": 118
   },
   {
    "id": "osWIsdIJK60",
@@ -26600,7 +26578,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "The same live build-and-Q&A run, 98 minutes.",
-   "order": 120
+   "order": 119
   },
   {
    "id": "CwDjVD03rZk",
@@ -26743,7 +26721,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "A live build-and-Q&A episode with the panel, 109 minutes.",
-   "order": 121
+   "order": 120
   },
   {
    "id": "csn9BS7q64s",
@@ -26938,7 +26916,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 122
+   "order": 121
   },
   {
    "id": "vLAN5k9L8DE",
@@ -27189,7 +27167,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 123
+   "order": 122
   },
   {
    "id": "30caybIhUzw",
@@ -27348,7 +27326,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 124
+   "order": 123
   },
   {
    "id": "SmbFi_JHmEg",
@@ -27415,7 +27393,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 125
+   "order": 124
   },
   {
    "id": "hcSlTz6nom8",
@@ -27498,7 +27476,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 126
+   "order": 125
   },
   {
    "id": "EVn-p0AoqHM",
@@ -27649,7 +27627,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 127
+   "order": 126
   },
   {
    "id": "LWGMgR7iAQ4",
@@ -27888,7 +27866,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "A 190-minute panel show, the longest thing in the catalogue.",
-   "order": 128
+   "order": 127
   },
   {
    "id": "Tlk8ZYyQJ_I",
@@ -28027,7 +28005,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 129
+   "order": 128
   },
   {
    "id": "Y5gYCVmDZU8",
@@ -28049,7 +28027,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 130
+   "order": 129
   },
   {
    "id": "PLoq8WqCwfk",
@@ -28192,7 +28170,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "The panel show, on the runtime-fee story. 18k views.",
-   "order": 131
+   "order": 130
   },
   {
    "id": "nKGGEdLTQyg",
@@ -28315,7 +28293,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 132
+   "order": 131
   },
   {
    "id": "Mj1DqaQlZCs",
@@ -28526,7 +28504,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 133
+   "order": 132
   },
   {
    "id": "qyLcI5O9iUY",
@@ -28555,7 +28533,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "The same booking, and the most-watched genuine episode at 56k.",
-   "order": 134
+   "order": 133
   },
   {
    "id": "2hCb5K6gskw",
@@ -28729,7 +28707,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "A full interview with Unity's Create president. Flagship booking.",
-   "order": 135
+   "order": 134
   },
   {
    "id": "XaTJvvUZAYY",
@@ -28880,7 +28858,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 136
+   "order": 135
   },
   {
    "id": "Lj68kNBgOqM",
@@ -29079,7 +29057,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 137
+   "order": 136
   },
   {
    "id": "NRkwFKDjvqk",
@@ -29254,7 +29232,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 138
+   "order": 137
   },
   {
    "id": "9z9AuUQqv5k",
@@ -29413,7 +29391,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 139
+   "order": 138
   },
   {
    "id": "lMQBJ4siD8Y",
@@ -29492,7 +29470,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 140
+   "order": 139
   },
   {
    "id": "tC-jFUlGRdw",
@@ -29675,7 +29653,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 141
+   "order": 140
   },
   {
    "id": "wCM61B-JmyE",
@@ -29882,7 +29860,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 142
+   "order": 141
   },
   {
    "id": "27oZ45nZxJs",
@@ -30206,7 +30184,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 143
+   "order": 142
   },
   {
    "id": "Mf4VsPd9YWI",
@@ -30426,7 +30404,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 144
+   "order": 143
   },
   {
    "id": "EoemD9vP-x8",
@@ -30726,7 +30704,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 145
+   "order": 144
   },
   {
    "id": "ZMzJKIg142w",
@@ -30902,7 +30880,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 146
+   "order": 145
   },
   {
    "id": "lGjsZzcwZx0",
@@ -31178,7 +31156,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 147
+   "order": 146
   },
   {
    "id": "HznhPBvysi8",
@@ -31430,7 +31408,7 @@
    "feed_title": "#154 - New Years New GameDev! BIG SHOW",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 148
+   "order": 147
   },
   {
    "id": "DPI5erwS2pE",
@@ -31648,7 +31626,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "A live episode with a co-host, 106 minutes.",
-   "order": 149
+   "order": 148
   },
   {
    "id": "e_dwwbREY58",
@@ -31915,7 +31893,7 @@
    "feed_title": "#155 - GameDev in 2024",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 150
+   "order": 149
   },
   {
    "id": "JUr1g-XE_g0",
@@ -32070,7 +32048,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "An industry episode on the 2024 layoffs.",
-   "order": 151
+   "order": 150
   },
   {
    "id": "aGZnhCvB8Ak",
@@ -32181,7 +32159,7 @@
    "feed_title": "#156 - AI Ban Removed from Steam",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 152
+   "order": 151
   },
   {
    "id": "BkrQPEQObhM",
@@ -32344,7 +32322,7 @@
    "feed_title": "#157 - Unity GameDev, Inworld AI, & 2024",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 153
+   "order": 152
   },
   {
    "id": "Mg1SzVrHTjI",
@@ -32423,7 +32401,7 @@
    "feed_title": "#158 - Dungeons & Dragons, Digital Tools, AI Art & the Clippers",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 154
+   "order": 153
   },
   {
    "id": "J0Yoq56cLcA",
@@ -32682,7 +32660,7 @@
    "feed_title": "#159 - Palworld, Apple, & AI Music",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 155
+   "order": 154
   },
   {
    "id": "VzzkuFVpcxQ",
@@ -32893,7 +32871,7 @@
    "feed_title": "#160 - Why DEVS need to Cheat in games!",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 156
+   "order": 155
   },
   {
    "id": "OeHH79oczyI",
@@ -33056,7 +33034,7 @@
    "feed_title": "#161 - Live Events - Educational Games - New Unity API - Disneys new Epic stake",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 157
+   "order": 156
   },
   {
    "id": "ufu9fT2yonY",
@@ -33243,7 +33221,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 158
+   "order": 157
   },
   {
    "id": "n_kEAGdHF6A",
@@ -33341,7 +33319,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "A guest interview with Dan Baker.",
-   "order": 159
+   "order": 158
   },
   {
    "id": "feed-163",
@@ -33366,7 +33344,7 @@
    "listen_link": "https://creators.spotify.com/pod/profile/gamedevshow/episodes/163---GDC-Predictions-and-Preview-e2gt23h",
    "curation": "include",
    "curation_reason": "Published to the podcast feed only; never uploaded to YouTube.",
-   "order": 160
+   "order": 159
   },
   {
    "id": "feed-164",
@@ -33391,7 +33369,7 @@
    "listen_link": "https://creators.spotify.com/pod/profile/gamedevshow/episodes/164---Google-AI-Game-Generation-and-Game-Engines-e2gt5mj",
    "curation": "include",
    "curation_reason": "Published to the podcast feed only; never uploaded to YouTube.",
-   "order": 161
+   "order": 160
   },
   {
    "id": "feed-165",
@@ -33416,7 +33394,7 @@
    "listen_link": "https://creators.spotify.com/pod/profile/gamedevshow/episodes/165---AI--GDC--GameDev-Resume-Reviews-e2gt66l",
    "curation": "include",
    "curation_reason": "Published to the podcast feed only; never uploaded to YouTube.",
-   "order": 162
+   "order": 161
   },
   {
    "id": "xQeDCAR05v8",
@@ -33543,7 +33521,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "A developer debate episode, 91 minutes.",
-   "order": 163
+   "order": 162
   },
   {
    "id": "Jx9IuyVcVRM",
@@ -33750,7 +33728,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "The most recent episode, May 2025, 93 minutes.",
-   "order": 164
+   "order": 163
   }
  ],
  "duplicates": [
@@ -33963,6 +33941,15 @@
    "duration": 1960,
    "decision": "exclude",
    "reason": "Not game development. Channel commentary from April 2020, and on its own it sets the site's start year and 408k of the view total."
+  },
+  {
+   "id": "xMnhJ7e-jkw",
+   "title": "Game Dev Show #22 - How to make a game",
+   "date": "2021-08-22",
+   "views": 614,
+   "duration": 187,
+   "decision": "exclude",
+   "reason": "A three-minute clip cut from #22 and posted a week later under the same title. The real #22 (uIwqkfwKUrA) runs 3h12 with 20,054 views; this one has 614."
   },
   {
    "id": "IGBsHYoyaGg",
