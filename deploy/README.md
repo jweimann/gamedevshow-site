@@ -105,6 +105,40 @@ which is what makes the bare domain work without Route 53.
 
 ---
 
+## When a new episode goes out
+
+```bash
+python tools/refresh.py        # add --dry-run first to see what it would pick up
+```
+
+That is the whole thing. It re-fetches both YouTube playlists and the podcast feed,
+collects metadata and captions for anything new, rebuilds the data and the site, and
+prints the new episode count and anything waiting on a decision.
+
+**The fetch has to come first, which is why this is a script and not a list of
+commands.** `collect.py` takes its list of videos from the playlist dumps in
+`data/raw/`, and those are files from the day they were fetched. Running
+`collect → build_data → build_site` on its own would find nothing new and faithfully
+rebuild yesterday's site, with no error to notice.
+
+### Title the episode so the rule catches it
+
+`refresh.py` never edits `curation.toml`. An episode is picked up automatically when
+its title carries **an episode number or the show's name** — `#166`, `Episode 166`, or
+anything containing `Game Dev Show`. The feed's last number is **#165**, so the next one
+is **#166**.
+
+An upload titled without either — the way "Why I Stopped Using Event Buses in Unity"
+was — is not wrong, it just cannot be placed by rule. It will be listed under "NEEDS A
+DECISION" and stay off the site until a line is added to `curation.toml`. That is the
+design: the alternative is a channel livestream quietly becoming an episode.
+
+### The recency line
+
+The masthead says "and counting" only when the newest episode is less than twelve months
+old. It is off today because the newest is 17 May 2025. It turns itself on when a newer
+episode lands; nothing needs editing.
+
 ## Re-publishing after a content change
 
 ```bash
