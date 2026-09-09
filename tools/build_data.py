@@ -220,6 +220,22 @@ def summary(description):
     return None
 
 
+# An upload whose title carries an episode number or the show's name is an episode; every
+# other upload needs a human call, which lives in curation.toml. Without this the
+# playlists' strays counted as episodes and carried 58% of the view total, so the three
+# most-watched "episodes" on the site were a Mike Rowe commentary, a TV-news clip and an
+# AI news short - and "most watched" sorted them to the top for a sponsor to click first.
+IS_SHOW = re.compile(r"game\s*dev\s*show|gamedevshow|\bgds\b|#\s*\d", re.I)
+
+
+def curation():
+    path = os.path.join(ROOT, "curation.toml")
+    if not os.path.exists(path):
+        return {}
+    with open(path, "rb") as handle:
+        return {c["id"]: c for c in tomllib.load(handle).get("entry", [])}
+
+
 def rss_items():
     path = os.path.join(DATA, "raw", "feed.xml")
     if not os.path.exists(path):
@@ -307,7 +323,23 @@ def main():
                 keep, drop = sorted((episode, other), key=lambda x: -(x["views"] or 0))
                 drop["duplicate_of"] = keep["id"]
 
-    live = [e for e in episodes if not e.get("duplicate_of")]
+    curated = curation()
+    for episode in episodes:
+        entry = curated.get(episode["id"])
+        if entry:
+            episode["curation"] = entry["decision"]
+            episode["curation_reason"] = entry.get("reason")
+        elif IS_SHOW.search(episode["title"]):
+            episode["curation"] = "include"
+            episode["curation_reason"] = "Titled as the show."
+        else:
+            # New strays default OUT and are reported, so the numbers cannot quietly
+            # inflate again the next time the playlists gain something odd.
+            episode["curation"] = "unreviewed"
+            episode["curation_reason"] = "Not titled as the show and not yet reviewed."
+
+    live = [e for e in episodes
+            if not e.get("duplicate_of") and e["curation"] == "include"]
     for i, episode in enumerate(live, 1):
         episode["order"] = i
 
@@ -339,6 +371,11 @@ def main():
     os.makedirs(DATA, exist_ok=True)
     json.dump({"episodes": live,
                "duplicates": [e for e in episodes if e.get("duplicate_of")],
+               "not_episodes": [{"id": e["id"], "title": e["title"], "date": e["date"],
+                                 "views": e["views"], "duration": e["duration"],
+                                 "decision": e["curation"], "reason": e["curation_reason"]}
+                                for e in episodes
+                                if e["curation"] != "include" and not e.get("duplicate_of")],
                "feed_only": feed_only},
               open(os.path.join(DATA, "episodes.json"), "w", encoding="utf-8"), indent=1)
     json.dump(tag_out, open(os.path.join(DATA, "tags.json"), "w", encoding="utf-8"), indent=1)
@@ -347,6 +384,9 @@ def main():
     with_tx = sum(1 for e in live if e["has_transcript"])
     print("episodes: %d  with captions: %d  tagged: %d  feed-only (not on YouTube): %d"
           % (len(live), with_tx, tagged, len(feed_only)))
+    print("not episodes: %d excluded, %d unreviewed"
+          % (sum(1 for e in episodes if e["curation"] == "exclude"),
+             sum(1 for e in episodes if e["curation"] == "unreviewed")))
     print("date range: %s to %s" % (episodes[0]["date"], episodes[-1]["date"]) if episodes else "")
     print("guests on %d episodes; co-hosts credited on %d"
           % (sum(1 for e in episodes if e["guests"]), sum(1 for e in episodes if e["cohosts"])))

@@ -296,10 +296,11 @@ def build_index(episodes, tags, stats):
     engine, buy the tooling and pick the asset store bundle. Episodes run long and get
     watched long, and the back catalogue keeps earning views years after the stream ends.</p>
     <ul class="topics">%(topics)s</ul>
-    <p class="srcnote">Every figure on this page is public YouTube data for the episodes
-    listed, counted on %(built)s. Demand is a search-interest proxy: where YouTube's own
-    autocomplete ranks that topic's phrase. Listener numbers and download figures are not
-    shown because they are not public &mdash; ask and we will send them.</p>
+    <p class="srcnote">Every figure on this page is public YouTube data for the %(episodes)s
+    episodes listed, counted on %(built)s. The channel's non-episode uploads are not
+    counted here, so these are the show's own numbers rather than the channel's. Listener
+    and download figures are not shown because they are not public &mdash; ask and we
+    will send them.</p>
     <p class="note" style="margin-top:22px">Talk to us: <a href="mailto:%(contact)s">%(contact)s</a></p>
   </section>
 </main>
@@ -312,7 +313,7 @@ table of game developers.</footer>
         "chips": "".join(chips),
         "guests": guest_options,
         "topics": topics_html,
-        "built": stats["built"],
+        "built": stats["built"], "episodes": stats["episodes"],
         "contact": SHOW["contact"],
         "payload": json.dumps(payload, separators=(",", ":")),
         "labels": json.dumps(labels, separators=(",", ":")),

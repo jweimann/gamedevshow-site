@@ -1,0 +1,234 @@
+# What counts as an episode.
+#
+# JASON: THIS FILE IS A PROPOSAL AND NEEDS YOUR EYE. Change any `decision` to "include"
+# or "exclude" and re-run build_data.py and build_site.py. Nothing here deletes anything;
+# an excluded upload stays in the data and is listed at the bottom of the site's data
+# file, it just does not count as an episode or feed the figures.
+#
+# WHY THIS EXISTS. Both YouTube playlists carry uploads that are not the show. Left in,
+# they inflated the numbers a sponsor reads: 35 unnumbered entries held 998k of the
+# 1.72M views, and the three most-watched things on the site were a Mike Rowe commentary,
+# a two-minute TV-news clip and an AI news short. "Most watched" sorted them to the top,
+# so the first thing a sponsor clicked was not the podcast.
+#
+# Anything whose title carries an episode number or the show's name is an episode
+# automatically and is not listed here. What follows is every upload that does not, with
+# a call and the reason for it. A duration rule alone would have cut the Unity CEO
+# interview at 40 minutes while keeping a 71-minute office vlog, so these are judged one
+# at a time.
+
+# ---------------------------------------------------------------- not the show at all
+
+[[entry]]
+id = "5iXUHFZogmI"
+title = "The Dirty Con Job Of Mike Rowe"
+decision = "exclude"
+reason = "Not game development. Channel commentary from April 2020, and on its own it sets the site's start year and 408k of the view total."
+
+[[entry]]
+id = "w5Kneg9x9xg"
+title = "MUST WATCH! How TV News Is ACTIVELY Baiting You | The Problem With Jon Stewart"
+decision = "exclude"
+reason = "Not game development, and two minutes long. 224k views, second most-watched thing in the catalogue."
+
+[[entry]]
+id = "IGBsHYoyaGg"
+title = "Monster Test Prototype 3 13 22"
+decision = "exclude"
+reason = "An eight-minute test upload, 126 views."
+
+[[entry]]
+id = "iUIjiKtILUc"
+title = "Every Unity Developer should use this Now!"
+decision = "exclude"
+reason = "A nine-minute tutorial short, not a live show. 42k views would skew the averages."
+
+[[entry]]
+id = "DnF4WzM5LPU"
+title = "Unbelievable AI Breakthrough: Interactive AI Characters in a Videogame"
+decision = "exclude"
+reason = "A 24-minute news piece rather than an episode. 100k views, third most-watched."
+
+[[entry]]
+id = "pBZKh-hxOeE"
+title = "Unity | Dev Days of Summer Sale!"
+decision = "exclude"
+reason = "A sale promotion, not an episode."
+
+# ------------------------------------------------- livestreams that are not the podcast
+
+[[entry]]
+id = "1DYA3M_Lym4"
+title = "Redecorating the office More Scifi"
+decision = "exclude"
+reason = "An office livestream. Long, but not the show and not about game development."
+
+[[entry]]
+id = "MwmpFE5jpdc"
+title = "GAMEBLAST - Scifi Tourism Game Dev #unity3d | Destinations & Redesigned BG"
+decision = "exclude"
+reason = "A solo build stream under a different banner (GAMEBLAST), not the panel show."
+
+[[entry]]
+id = "XImqkM7slfI"
+title = "GAMEBLAST - Scifi Tourism Game Dev #unity3d"
+decision = "exclude"
+reason = "Same GAMEBLAST build-stream series."
+
+[[entry]]
+id = "0GwIkVpjhoo"
+title = "Creating a Scifi Game in a Week - It's almost done - Come join & Win!"
+decision = "exclude"
+reason = "Part of the same solo build-along week rather than an episode."
+
+[[entry]]
+id = "oWUZQrr-uK0"
+title = "Learning C# by Developing Games with Unity"
+decision = "exclude"
+reason = "A teaching stream, not the panel show."
+
+[[entry]]
+id = "jhqZdWTd3So"
+title = "GRAND OPENING GIVEAWAY - Pro Pass & $2k Worth of GameDev Stuff"
+decision = "exclude"
+reason = "A giveaway stream."
+
+# ------------------------------------------------- the show under a different title
+
+[[entry]]
+id = "pdrVGJZ00qE"
+title = "Episode 7 - Multiplayer & Unity3D Live"
+decision = "include"
+reason = "A numbered episode; the title just says Episode rather than Game Dev Show."
+
+[[entry]]
+id = "PLoq8WqCwfk"
+title = "LIVE | Let's talk about the Unity Changes"
+decision = "include"
+reason = "The panel show, on the runtime-fee story. 18k views."
+
+[[entry]]
+id = "2hCb5K6gskw"
+title = "Unity Create President answers 24 Questions | Q&A w/ Marc Whitten"
+decision = "include"
+reason = "A full interview with Unity's Create president. Flagship booking."
+
+[[entry]]
+id = "qyLcI5O9iUY"
+title = "Unity's Marc Whitten - Answers Unity Price Policy"
+decision = "include"
+reason = "The same booking, and the most-watched genuine episode at 56k."
+
+[[entry]]
+id = "V3UrSEnk5bo"
+title = "Talking with Unity CEO John Riccitiello - GameDev, Unity, and the future"
+decision = "include"
+reason = "An interview with Unity's CEO. Forty minutes, but the single best credential the show has."
+
+[[entry]]
+id = "qGAvAMKpCJo"
+title = "Unity Dev Blitz Days - Talking with Unity's UI Team - LIVE"
+decision = "include"
+reason = "An interview with Unity's UI team. Short, and genuinely the show."
+
+[[entry]]
+id = "KEIz2pmbi5g"
+title = "YOU should GET one of these! - Jeri Ellsworth | Tilt Five | GameDev"
+decision = "include"
+reason = "A guest interview with Jeri Ellsworth of Tilt Five, 145 minutes."
+
+[[entry]]
+id = "LWGMgR7iAQ4"
+title = "AI GameDev Day - PreEvent Show"
+decision = "include"
+reason = "A 190-minute panel show, the longest thing in the catalogue."
+
+[[entry]]
+id = "pC0oXzhjG3g"
+title = "The Story of Storey"
+decision = "include"
+reason = "A feature on co-host Jason Storey."
+
+[[entry]]
+id = "n_kEAGdHF6A"
+title = "Building Games that Push the Limits w/ Dan Baker"
+decision = "include"
+reason = "A guest interview with Dan Baker."
+
+[[entry]]
+id = "JUr1g-XE_g0"
+title = "Layoffs - How my first GameJob lasted 3 weeks & what's happening now"
+decision = "include"
+reason = "An industry episode on the 2024 layoffs."
+
+[[entry]]
+id = "DPI5erwS2pE"
+title = "50 GameDev Ideas & Some Clarifications - Live with Jason Storey!"
+decision = "include"
+reason = "A live episode with a co-host, 106 minutes."
+
+[[entry]]
+id = "Jx9IuyVcVRM"
+title = "Vital Unity Tools, Event Bus Wrap-up, Simple big app, & AI"
+decision = "include"
+reason = "The most recent episode, May 2025, 93 minutes."
+
+[[entry]]
+id = "xQeDCAR05v8"
+title = "Why I Stopped Using Event Buses in Unity - Developer Debate!"
+decision = "include"
+reason = "A developer debate episode, 91 minutes."
+
+[[entry]]
+id = "D7xCnWOR5kw"
+title = "Ukraine Winter Game Jam: 12 games LIVE!"
+decision = "include"
+reason = "A game-jam showcase episode."
+
+[[entry]]
+id = "yFoEH-wSmdc"
+title = "GameDev Mastermind Groups & Jobs"
+decision = "include"
+reason = "A careers episode."
+
+[[entry]]
+id = "eIfv0vEYynQ"
+title = "Live GameDev Meetup - Randomness | XR Simulation | Meet Other GameDevs"
+decision = "include"
+reason = "A community meetup episode."
+
+[[entry]]
+id = "CwDjVD03rZk"
+title = "Building a Role Playing Game LIVE | Adding key Assets #unity3d + Q&A"
+decision = "include"
+reason = "A live build-and-Q&A episode with the panel, 109 minutes."
+
+[[entry]]
+id = "osWIsdIJK60"
+title = "Coding a Role Playing Game LIVE #unity3d + Q&A"
+decision = "include"
+reason = "The same live build-and-Q&A run, 98 minutes."
+
+[[entry]]
+id = "iiIdB1Nh4Rs"
+title = "LIVE & Easy - Building a Unity Multiplayer game in an hour"
+decision = "include"
+reason = "A live build episode, 25k views."
+
+[[entry]]
+id = "XYp4wWcjq1M"
+title = "LIVE - GameState Management - Adding Character Selection"
+decision = "include"
+reason = "A live coding episode, 80 minutes."
+
+[[entry]]
+id = "4nR4lzlsye4"
+title = "Undead Priest Healer - LIVE - TableTop RPG Development in Unity3D"
+decision = "include"
+reason = "A live development episode."
+
+[[entry]]
+id = "nRw2xiW8yKg"
+title = "LIVE - TableTop RPG Development in Unity3D - Hex Setup & Battlesystem"
+decision = "include"
+reason = "The same live development run."

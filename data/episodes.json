@@ -1,41 +1,6 @@
 {
  "episodes": [
   {
-   "id": "5iXUHFZogmI",
-   "title": "The Dirty Con Job Of Mike Rowe",
-   "number": null,
-   "date": "2020-04-12",
-   "duration": 1960,
-   "views": 408459,
-   "summary": null,
-   "youtube": "https://www.youtube.com/watch?v=5iXUHFZogmI",
-   "thumbnail": "https://i.ytimg.com/vi/5iXUHFZogmI/hqdefault.jpg",
-   "guests": [],
-   "cohosts": [],
-   "tags": {
-    "monetisation": {
-     "hits": 6,
-     "peak": 6,
-     "peak_at": 1779,
-     "evidence": [
-      {
-       "t": 1779,
-       "term": "funding"
-      },
-      {
-       "t": 1869,
-       "term": "funding"
-      }
-     ]
-    }
-   },
-   "has_transcript": true,
-   "transcript_cues": 1701,
-   "in_feed": false,
-   "feed_title": null,
-   "order": 1
-  },
-  {
    "id": "fMADGO47h4Q",
    "title": "The Game Dev Show - Episode #1 - The FIRST",
    "number": 1,
@@ -221,7 +186,9 @@
    "transcript_cues": 3540,
    "in_feed": true,
    "feed_title": "#1 - The First",
-   "order": 2
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 1
   },
   {
    "id": "bC7qmJ5jxAg",
@@ -385,7 +352,9 @@
    "transcript_cues": 3806,
    "in_feed": false,
    "feed_title": null,
-   "order": 3
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 2
   },
   {
    "id": "HLPUeH4LaYE",
@@ -610,7 +579,9 @@
    "transcript_cues": 11413,
    "in_feed": true,
    "feed_title": "#2 - Veteran AAA Game Designer",
-   "order": 4
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 3
   },
   {
    "id": "Y4JKqi2UxdI",
@@ -834,7 +805,9 @@
    "transcript_cues": 6983,
    "in_feed": true,
    "feed_title": "#3 - Game Design & GDDs",
-   "order": 5
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 4
   },
   {
    "id": "omLivgyUS9E",
@@ -1229,7 +1202,9 @@
    "transcript_cues": 11182,
    "in_feed": false,
    "feed_title": null,
-   "order": 6
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 5
   },
   {
    "id": "28Fb8kP4YOk",
@@ -1598,7 +1573,9 @@
    "transcript_cues": 11799,
    "in_feed": false,
    "feed_title": null,
-   "order": 7
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 6
   },
   {
    "id": "LuEwBPOw0NY",
@@ -2037,7 +2014,9 @@
    "transcript_cues": 9603,
    "in_feed": false,
    "feed_title": null,
-   "order": 8
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 7
   },
   {
    "id": "pdrVGJZ00qE",
@@ -2461,7 +2440,9 @@
    "transcript_cues": 8929,
    "in_feed": false,
    "feed_title": null,
-   "order": 9
+   "curation": "include",
+   "curation_reason": "A numbered episode; the title just says Episode rather than Game Dev Show.",
+   "order": 8
   },
   {
    "id": "ziot86pdcyY",
@@ -2890,7 +2871,9 @@
    "transcript_cues": 12371,
    "in_feed": false,
    "feed_title": null,
-   "order": 10
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 9
   },
   {
    "id": "5RBqOzVXP2w",
@@ -3253,7 +3236,9 @@
    "transcript_cues": 11697,
    "in_feed": false,
    "feed_title": null,
-   "order": 11
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 10
   },
   {
    "id": "oVGzUFwIdy4",
@@ -3574,7 +3559,9 @@
    "transcript_cues": 11871,
    "in_feed": false,
    "feed_title": null,
-   "order": 12
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 11
   },
   {
    "id": "CQbw6XbTVX0",
@@ -3933,7 +3920,9 @@
    "transcript_cues": 11882,
    "in_feed": false,
    "feed_title": null,
-   "order": 13
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 12
   },
   {
    "id": "w2UMb7pqh5g",
@@ -3952,7 +3941,9 @@
    "transcript_cues": 0,
    "in_feed": false,
    "feed_title": null,
-   "order": 14
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 13
   },
   {
    "id": "OOcStYUYhRc",
@@ -4374,7 +4365,9 @@
    "transcript_cues": 11106,
    "in_feed": false,
    "feed_title": null,
-   "order": 15
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 14
   },
   {
    "id": "4QGe3s3ic7A",
@@ -4689,7 +4682,9 @@
    "transcript_cues": 8895,
    "in_feed": false,
    "feed_title": null,
-   "order": 16
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 15
   },
   {
    "id": "hpHxqfp9jOY",
@@ -4903,7 +4898,9 @@
    "transcript_cues": 6462,
    "in_feed": false,
    "feed_title": null,
-   "order": 17
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 16
   },
   {
    "id": "6iOMlMam9xw",
@@ -5262,7 +5259,9 @@
    "transcript_cues": 11843,
    "in_feed": false,
    "feed_title": null,
-   "order": 18
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 17
   },
   {
    "id": "pC0oXzhjG3g",
@@ -5483,7 +5482,9 @@
    "transcript_cues": 2748,
    "in_feed": false,
    "feed_title": null,
-   "order": 19
+   "curation": "include",
+   "curation_reason": "A feature on co-host Jason Storey.",
+   "order": 18
   },
   {
    "id": "TUT2vOO6tds",
@@ -5830,7 +5831,9 @@
    "transcript_cues": 12589,
    "in_feed": false,
    "feed_title": null,
-   "order": 20
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 19
   },
   {
    "id": "ruAM2PKLw0o",
@@ -6245,7 +6248,9 @@
    "transcript_cues": 12004,
    "in_feed": false,
    "feed_title": null,
-   "order": 21
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 20
   },
   {
    "id": "YZ7gdx3gAgs",
@@ -6645,7 +6650,9 @@
    "transcript_cues": 12019,
    "in_feed": false,
    "feed_title": null,
-   "order": 22
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 21
   },
   {
    "id": "VLJV50TCQts",
@@ -7003,7 +7010,9 @@
    "transcript_cues": 10132,
    "in_feed": false,
    "feed_title": null,
-   "order": 23
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 22
   },
   {
    "id": "uIwqkfwKUrA",
@@ -7235,7 +7244,9 @@
    "transcript_cues": 10889,
    "in_feed": false,
    "feed_title": null,
-   "order": 24
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 23
   },
   {
    "id": "1cNB89BQY5k",
@@ -7585,7 +7596,9 @@
    "transcript_cues": 8433,
    "in_feed": false,
    "feed_title": null,
-   "order": 25
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 24
   },
   {
    "id": "xMnhJ7e-jkw",
@@ -7604,7 +7617,9 @@
    "transcript_cues": 190,
    "in_feed": false,
    "feed_title": null,
-   "order": 26
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 25
   },
   {
    "id": "vmDCBNeMk5w",
@@ -7763,7 +7778,9 @@
    "transcript_cues": 9059,
    "in_feed": false,
    "feed_title": null,
-   "order": 27
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 26
   },
   {
    "id": "tFNrZEhMX1g",
@@ -8140,7 +8157,9 @@
    "transcript_cues": 9372,
    "in_feed": false,
    "feed_title": null,
-   "order": 28
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 27
   },
   {
    "id": "KqsFnnLdO70",
@@ -8401,7 +8420,9 @@
    "transcript_cues": 9172,
    "in_feed": false,
    "feed_title": null,
-   "order": 29
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 28
   },
   {
    "id": "LTfYdiIxMJA",
@@ -8705,7 +8726,9 @@
    "transcript_cues": 6800,
    "in_feed": false,
    "feed_title": null,
-   "order": 30
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 29
   },
   {
    "id": "hzxE8usiQYs",
@@ -9103,7 +9126,9 @@
    "transcript_cues": 11072,
    "in_feed": false,
    "feed_title": null,
-   "order": 31
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 30
   },
   {
    "id": "FiEyXi_b4XU",
@@ -9377,7 +9402,9 @@
    "transcript_cues": 10271,
    "in_feed": false,
    "feed_title": null,
-   "order": 32
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 31
   },
   {
    "id": "vpwEs0gjCPs",
@@ -9802,7 +9829,9 @@
    "transcript_cues": 10406,
    "in_feed": false,
    "feed_title": null,
-   "order": 33
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 32
   },
   {
    "id": "jxjGt9pv4pY",
@@ -10071,7 +10100,9 @@
    "transcript_cues": 10700,
    "in_feed": false,
    "feed_title": null,
-   "order": 34
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 33
   },
   {
    "id": "iKY2RiF7WVw",
@@ -10561,7 +10592,9 @@
    "transcript_cues": 10705,
    "in_feed": false,
    "feed_title": null,
-   "order": 35
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 34
   },
   {
    "id": "mOdPAPXIJKo",
@@ -10851,7 +10884,9 @@
    "transcript_cues": 9851,
    "in_feed": false,
    "feed_title": null,
-   "order": 36
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 35
   },
   {
    "id": "SwGW3hugDhc",
@@ -11366,7 +11401,9 @@
    "transcript_cues": 10165,
    "in_feed": false,
    "feed_title": null,
-   "order": 37
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 36
   },
   {
    "id": "8NrsvIg0Q6E",
@@ -11578,7 +11615,9 @@
    "transcript_cues": 5869,
    "in_feed": false,
    "feed_title": null,
-   "order": 38
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 37
   },
   {
    "id": "uP7vPKs0rrE",
@@ -11877,7 +11916,9 @@
    "transcript_cues": 10026,
    "in_feed": false,
    "feed_title": null,
-   "order": 39
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 38
   },
   {
    "id": "jx7J8eRNG9A",
@@ -12240,7 +12281,9 @@
    "transcript_cues": 10139,
    "in_feed": false,
    "feed_title": null,
-   "order": 40
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 39
   },
   {
    "id": "LAPiLiQs3TU",
@@ -12530,7 +12573,9 @@
    "transcript_cues": 10458,
    "in_feed": false,
    "feed_title": null,
-   "order": 41
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 40
   },
   {
    "id": "OIDdmgqAt6E",
@@ -12793,7 +12838,9 @@
    "transcript_cues": 10540,
    "in_feed": false,
    "feed_title": null,
-   "order": 42
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 41
   },
   {
    "id": "2FAUAii6qGo",
@@ -13092,7 +13139,9 @@
    "transcript_cues": 11060,
    "in_feed": false,
    "feed_title": null,
-   "order": 43
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 42
   },
   {
    "id": "bpPjxrE8HII",
@@ -13413,7 +13462,9 @@
    "transcript_cues": 9529,
    "in_feed": false,
    "feed_title": null,
-   "order": 44
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 43
   },
   {
    "id": "FirdPV_9JnA",
@@ -13769,7 +13820,9 @@
    "transcript_cues": 10677,
    "in_feed": false,
    "feed_title": null,
-   "order": 45
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 44
   },
   {
    "id": "_45gLN440X4",
@@ -14126,7 +14179,9 @@
    "transcript_cues": 10176,
    "in_feed": false,
    "feed_title": null,
-   "order": 46
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 45
   },
   {
    "id": "pDGgjHrk5jI",
@@ -14238,7 +14293,9 @@
    "transcript_cues": 3680,
    "in_feed": false,
    "feed_title": null,
-   "order": 47
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 46
   },
   {
    "id": "I9fNR6vT5Mc",
@@ -14496,7 +14553,9 @@
    "transcript_cues": 8875,
    "in_feed": false,
    "feed_title": null,
-   "order": 48
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 47
   },
   {
    "id": "iYCp7r6mCWY",
@@ -15017,7 +15076,9 @@
    "transcript_cues": 10886,
    "in_feed": false,
    "feed_title": null,
-   "order": 49
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 48
   },
   {
    "id": "TtLm0h2SBfA",
@@ -15480,7 +15541,9 @@
    "transcript_cues": 9672,
    "in_feed": false,
    "feed_title": null,
-   "order": 50
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 49
   },
   {
    "id": "EaZ7Q9INRuo",
@@ -15849,7 +15912,9 @@
    "transcript_cues": 10180,
    "in_feed": false,
    "feed_title": null,
-   "order": 51
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 50
   },
   {
    "id": "EnWEn0yFib0",
@@ -16156,7 +16221,9 @@
    "transcript_cues": 10087,
    "in_feed": false,
    "feed_title": null,
-   "order": 52
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 51
   },
   {
    "id": "QV6IQMVi2gw",
@@ -16374,7 +16441,9 @@
    "transcript_cues": 8435,
    "in_feed": false,
    "feed_title": null,
-   "order": 53
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 52
   },
   {
    "id": "hlYUfThbtIA",
@@ -16700,7 +16769,9 @@
    "transcript_cues": 10432,
    "in_feed": false,
    "feed_title": null,
-   "order": 54
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 53
   },
   {
    "id": "2Yto1HxBBpE",
@@ -17047,45 +17118,9 @@
    "transcript_cues": 10097,
    "in_feed": false,
    "feed_title": null,
-   "order": 55
-  },
-  {
-   "id": "IGBsHYoyaGg",
-   "title": "Monster Test Prototype 3 13 22",
-   "number": null,
-   "date": "2022-03-13",
-   "duration": 538,
-   "views": 126,
-   "summary": "There are still some issues with lighting. Almost ready to send the first demo to testers.",
-   "youtube": "https://www.youtube.com/watch?v=IGBsHYoyaGg",
-   "thumbnail": "https://i.ytimg.com/vi/IGBsHYoyaGg/hqdefault.jpg",
-   "guests": [],
-   "cohosts": [],
-   "tags": {},
-   "has_transcript": true,
-   "transcript_cues": 44,
-   "in_feed": false,
-   "feed_title": null,
-   "order": 56
-  },
-  {
-   "id": "w5Kneg9x9xg",
-   "title": "MUST WATCH! How TV News Is ACTIVELY Baiting You | The Problem With Jon Stewart | Apple TV+",
-   "number": null,
-   "date": "2022-03-16",
-   "duration": 146,
-   "views": 224287,
-   "summary": "The Problem With Jon Stewart is now streaming on Apple TV+",
-   "youtube": "https://www.youtube.com/watch?v=w5Kneg9x9xg",
-   "thumbnail": "https://i.ytimg.com/vi/w5Kneg9x9xg/hqdefault.jpg",
-   "guests": [],
-   "cohosts": [],
-   "tags": {},
-   "has_transcript": true,
-   "transcript_cues": 122,
-   "in_feed": false,
-   "feed_title": null,
-   "order": 57
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 54
   },
   {
    "id": "G6J9s5U86d8",
@@ -17579,7 +17614,9 @@
    "transcript_cues": 10062,
    "in_feed": false,
    "feed_title": null,
-   "order": 58
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 55
   },
   {
    "id": "KaT4JH5BRqU",
@@ -18077,76 +18114,9 @@
    "transcript_cues": 9793,
    "in_feed": false,
    "feed_title": null,
-   "order": 59
-  },
-  {
-   "id": "iUIjiKtILUc",
-   "title": "Every Unity Developer should use this Now!",
-   "number": null,
-   "date": "2022-03-31",
-   "duration": 594,
-   "views": 41861,
-   "summary": "0:00 - Why you should care about this Unity tool",
-   "youtube": "https://www.youtube.com/watch?v=iUIjiKtILUc",
-   "thumbnail": "https://i.ytimg.com/vi/iUIjiKtILUc/hqdefault.jpg",
-   "guests": [],
-   "cohosts": [],
-   "tags": {
-    "unity": {
-     "hits": 14,
-     "peak": 14,
-     "peak_at": 0,
-     "evidence": [
-      {
-       "t": 0,
-       "term": "unity"
-      },
-      {
-       "t": 459,
-       "term": "unity"
-      },
-      {
-       "t": 585,
-       "term": "unity"
-      }
-     ]
-    },
-    "navigation-ai": {
-     "hits": 9,
-     "peak": 9,
-     "peak_at": 181,
-     "evidence": [
-      {
-       "t": 181,
-       "term": "a star"
-      },
-      {
-       "t": 388,
-       "term": "nav mesh"
-      }
-     ]
-    },
-    "industry-news": {
-     "hits": 9,
-     "peak": 9,
-     "peak_at": 5,
-     "evidence": [
-      {
-       "t": 5,
-       "term": "gdc"
-      },
-      {
-       "t": 549,
-       "term": "gdc"
-      }
-     ]
-    }
-   },
-   "has_transcript": true,
-   "transcript_cues": 568,
-   "in_feed": false,
-   "feed_title": null,
-   "order": 60
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 56
   },
   {
    "id": "picD5RzwQwc",
@@ -18500,7 +18470,9 @@
    "transcript_cues": 10529,
    "in_feed": false,
    "feed_title": null,
-   "order": 61
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 57
   },
   {
    "id": "-IQO5HzLId0",
@@ -18951,7 +18923,9 @@
    "transcript_cues": 10019,
    "in_feed": false,
    "feed_title": null,
-   "order": 62
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 58
   },
   {
    "id": "wLirKjI_-UI",
@@ -19403,7 +19377,9 @@
    "transcript_cues": 9124,
    "in_feed": false,
    "feed_title": null,
-   "order": 63
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 59
   },
   {
    "id": "iiIdB1Nh4Rs",
@@ -19519,7 +19495,9 @@
    "transcript_cues": 3534,
    "in_feed": false,
    "feed_title": null,
-   "order": 64
+   "curation": "include",
+   "curation_reason": "A live build episode, 25k views.",
+   "order": 60
   },
   {
    "id": "Fy2WH59Q1rk",
@@ -19980,7 +19958,9 @@
    "transcript_cues": 10429,
    "in_feed": false,
    "feed_title": null,
-   "order": 65
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 61
   },
   {
    "id": "Xra9RmlY7vM",
@@ -20431,7 +20411,9 @@
    "transcript_cues": 10460,
    "in_feed": false,
    "feed_title": null,
-   "order": 66
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 62
   },
   {
    "id": "2oyBYgLQu7Q",
@@ -20673,7 +20655,9 @@
    "transcript_cues": 6791,
    "in_feed": false,
    "feed_title": null,
-   "order": 67
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 63
   },
   {
    "id": "5wOHI73-98Y",
@@ -21115,7 +21099,9 @@
    "transcript_cues": 10605,
    "in_feed": false,
    "feed_title": null,
-   "order": 68
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 64
   },
   {
    "id": "KEIz2pmbi5g",
@@ -21404,7 +21390,9 @@
    "transcript_cues": 8395,
    "in_feed": false,
    "feed_title": null,
-   "order": 69
+   "curation": "include",
+   "curation_reason": "A guest interview with Jeri Ellsworth of Tilt Five, 145 minutes.",
+   "order": 65
   },
   {
    "id": "DtX3Ru0Ffg0",
@@ -21891,145 +21879,9 @@
    "transcript_cues": 9799,
    "in_feed": false,
    "feed_title": null,
-   "order": 70
-  },
-  {
-   "id": "jhqZdWTd3So",
-   "title": "GRAND OPENING GIVEAWAY - Pro Pass & $2k Worth of GameDev Stuff",
-   "number": null,
-   "date": "2022-05-23",
-   "duration": 5185,
-   "views": 3563,
-   "summary": "Talking Game Development, C#, and Unity3D!",
-   "youtube": "https://www.youtube.com/watch?v=jhqZdWTd3So",
-   "thumbnail": "https://i.ytimg.com/vi/jhqZdWTd3So/hqdefault.jpg",
-   "guests": [],
-   "cohosts": [],
-   "tags": {
-    "unity": {
-     "hits": 26,
-     "peak": 9,
-     "peak_at": 3861,
-     "evidence": [
-      {
-       "t": 314,
-       "term": "unity"
-      },
-      {
-       "t": 448,
-       "term": "unity"
-      },
-      {
-       "t": 923,
-       "term": "unity"
-      },
-      {
-       "t": 2142,
-       "term": "unity"
-      },
-      {
-       "t": 3861,
-       "term": "unity"
-      },
-      {
-       "t": 4040,
-       "term": "unity"
-      },
-      {
-       "t": 4324,
-       "term": "unity"
-      }
-     ]
-    },
-    "performance": {
-     "hits": 18,
-     "peak": 9,
-     "peak_at": 252,
-     "evidence": [
-      {
-       "t": 252,
-       "term": "performance"
-      },
-      {
-       "t": 2149,
-       "term": "performance"
-      },
-      {
-       "t": 3869,
-       "term": "performance"
-      }
-     ]
-    },
-    "physics": {
-     "hits": 11,
-     "peak": 11,
-     "peak_at": 4277,
-     "evidence": [
-      {
-       "t": 4277,
-       "term": "physics"
-      }
-     ]
-    },
-    "multiplayer": {
-     "hits": 10,
-     "peak": 7,
-     "peak_at": 3800,
-     "evidence": [
-      {
-       "t": 264,
-       "term": "multiplayer"
-      },
-      {
-       "t": 3800,
-       "term": "networking"
-      }
-     ]
-    },
-    "audio": {
-     "hits": 18,
-     "peak": 12,
-     "peak_at": 267,
-     "evidence": [
-      {
-       "t": 267,
-       "term": "audio"
-      },
-      {
-       "t": 362,
-       "term": "audio"
-      },
-      {
-       "t": 504,
-       "term": "audio"
-      },
-      {
-       "t": 3617,
-       "term": "audio"
-      },
-      {
-       "t": 3802,
-       "term": "audio"
-      }
-     ]
-    },
-    "vr-ar": {
-     "hits": 6,
-     "peak": 6,
-     "peak_at": 1482,
-     "evidence": [
-      {
-       "t": 1482,
-       "term": "vr"
-      }
-     ]
-    }
-   },
-   "has_transcript": true,
-   "transcript_cues": 3758,
-   "in_feed": false,
-   "feed_title": null,
-   "order": 71
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 66
   },
   {
    "id": "nRw2xiW8yKg",
@@ -22101,7 +21953,9 @@
    "transcript_cues": 2962,
    "in_feed": false,
    "feed_title": null,
-   "order": 72
+   "curation": "include",
+   "curation_reason": "The same live development run.",
+   "order": 67
   },
   {
    "id": "Vi6UcHyO3RM",
@@ -22405,7 +22259,9 @@
    "transcript_cues": 7822,
    "in_feed": false,
    "feed_title": null,
-   "order": 73
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 68
   },
   {
    "id": "4nR4lzlsye4",
@@ -22486,7 +22342,9 @@
    "transcript_cues": 3226,
    "in_feed": false,
    "feed_title": null,
-   "order": 74
+   "curation": "include",
+   "curation_reason": "A live development episode.",
+   "order": 69
   },
   {
    "id": "Yqfz1RG3HSI",
@@ -22776,7 +22634,9 @@
    "transcript_cues": 8571,
    "in_feed": false,
    "feed_title": null,
-   "order": 75
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 70
   },
   {
    "id": "XYp4wWcjq1M",
@@ -22902,7 +22762,9 @@
    "transcript_cues": 4083,
    "in_feed": false,
    "feed_title": null,
-   "order": 76
+   "curation": "include",
+   "curation_reason": "A live coding episode, 80 minutes.",
+   "order": 71
   },
   {
    "id": "B81hTTkgew8",
@@ -23235,7 +23097,9 @@
    "transcript_cues": 9240,
    "in_feed": false,
    "feed_title": null,
-   "order": 77
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 72
   },
   {
    "id": "dcvfptKu4Cg",
@@ -23543,7 +23407,9 @@
    "transcript_cues": 10095,
    "in_feed": false,
    "feed_title": null,
-   "order": 78
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 73
   },
   {
    "id": "E_Cxyv_X-pY",
@@ -23898,7 +23764,9 @@
    "transcript_cues": 8024,
    "in_feed": false,
    "feed_title": null,
-   "order": 79
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 74
   },
   {
    "id": "PUxRIc8TaXU",
@@ -24441,7 +24309,9 @@
    "transcript_cues": 10522,
    "in_feed": false,
    "feed_title": null,
-   "order": 80
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 75
   },
   {
    "id": "yFoEH-wSmdc",
@@ -24537,7 +24407,9 @@
    "transcript_cues": 3321,
    "in_feed": false,
    "feed_title": null,
-   "order": 81
+   "curation": "include",
+   "curation_reason": "A careers episode.",
+   "order": 76
   },
   {
    "id": "peQexmgs9Xc",
@@ -24946,7 +24818,9 @@
    "transcript_cues": 10904,
    "in_feed": false,
    "feed_title": null,
-   "order": 82
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 77
   },
   {
    "id": "eIw3TXJRVXU",
@@ -25473,7 +25347,9 @@
    "transcript_cues": 10512,
    "in_feed": false,
    "feed_title": null,
-   "order": 83
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 78
   },
   {
    "id": "gKKjcLmmH0M",
@@ -25785,7 +25661,9 @@
    "transcript_cues": 11049,
    "in_feed": false,
    "feed_title": null,
-   "order": 84
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 79
   },
   {
    "id": "uql-PiG1l7A",
@@ -26153,7 +26031,9 @@
    "transcript_cues": 9759,
    "in_feed": false,
    "feed_title": null,
-   "order": 85
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 80
   },
   {
    "id": "eIfv0vEYynQ",
@@ -26230,7 +26110,9 @@
    "transcript_cues": 1549,
    "in_feed": false,
    "feed_title": null,
-   "order": 86
+   "curation": "include",
+   "curation_reason": "A community meetup episode.",
+   "order": 81
   },
   {
    "id": "FoA8TleUe3I",
@@ -26699,7 +26581,9 @@
    "transcript_cues": 9858,
    "in_feed": false,
    "feed_title": null,
-   "order": 87
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 82
   },
   {
    "id": "-7UPXmP0lis",
@@ -27041,7 +26925,9 @@
    "transcript_cues": 9969,
    "in_feed": false,
    "feed_title": null,
-   "order": 88
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 83
   },
   {
    "id": "jeUT0NRwqM4",
@@ -27290,7 +27176,9 @@
    "transcript_cues": 3802,
    "in_feed": false,
    "feed_title": null,
-   "order": 89
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 84
   },
   {
    "id": "8TUEBYK0q5k",
@@ -27483,7 +27371,9 @@
    "transcript_cues": 2428,
    "in_feed": false,
    "feed_title": null,
-   "order": 90
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 85
   },
   {
    "id": "qGAvAMKpCJo",
@@ -27549,7 +27439,9 @@
    "transcript_cues": 964,
    "in_feed": false,
    "feed_title": null,
-   "order": 91
+   "curation": "include",
+   "curation_reason": "An interview with Unity's UI team. Short, and genuinely the show.",
+   "order": 86
   },
   {
    "id": "vRwhSn6ikiI",
@@ -27828,7 +27720,9 @@
    "transcript_cues": 3922,
    "in_feed": false,
    "feed_title": null,
-   "order": 92
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 87
   },
   {
    "id": "V3UrSEnk5bo",
@@ -28028,7 +27922,9 @@
    "transcript_cues": 2351,
    "in_feed": false,
    "feed_title": null,
-   "order": 93
+   "curation": "include",
+   "curation_reason": "An interview with Unity's CEO. Forty minutes, but the single best credential the show has.",
+   "order": 88
   },
   {
    "id": "KWG9XUso-0I",
@@ -28159,7 +28055,9 @@
    "transcript_cues": 3278,
    "in_feed": false,
    "feed_title": null,
-   "order": 94
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 89
   },
   {
    "id": "IVy7atDUjBM",
@@ -28600,7 +28498,9 @@
    "transcript_cues": 4408,
    "in_feed": false,
    "feed_title": null,
-   "order": 95
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 90
   },
   {
    "id": "REy_Kw5pyOQ",
@@ -28995,7 +28895,9 @@
    "transcript_cues": 6162,
    "in_feed": false,
    "feed_title": null,
-   "order": 96
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 91
   },
   {
    "id": "bpeMUkMDY7o",
@@ -29326,7 +29228,9 @@
    "transcript_cues": 6883,
    "in_feed": false,
    "feed_title": null,
-   "order": 97
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 92
   },
   {
    "id": "qdvpPQhQw9U",
@@ -29626,7 +29530,9 @@
    "transcript_cues": 7757,
    "in_feed": false,
    "feed_title": null,
-   "order": 98
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 93
   },
   {
    "id": "RlPfFkjUsQU",
@@ -29859,7 +29765,9 @@
    "transcript_cues": 4454,
    "in_feed": false,
    "feed_title": null,
-   "order": 99
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 94
   },
   {
    "id": "2siC0MZiK2E",
@@ -30103,7 +30011,9 @@
    "transcript_cues": 3679,
    "in_feed": false,
    "feed_title": null,
-   "order": 100
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 95
   },
   {
    "id": "e6YHZAE08Xc",
@@ -30433,7 +30343,9 @@
    "transcript_cues": 7416,
    "in_feed": false,
    "feed_title": null,
-   "order": 101
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 96
   },
   {
    "id": "wD54T6dQP1U",
@@ -30657,7 +30569,9 @@
    "transcript_cues": 5784,
    "in_feed": false,
    "feed_title": null,
-   "order": 102
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 97
   },
   {
    "id": "MPNNS2le-Wk",
@@ -30811,7 +30725,9 @@
    "transcript_cues": 4296,
    "in_feed": false,
    "feed_title": null,
-   "order": 103
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 98
   },
   {
    "id": "mJSuH2wKX08",
@@ -31138,7 +31054,9 @@
    "transcript_cues": 4435,
    "in_feed": false,
    "feed_title": null,
-   "order": 104
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 99
   },
   {
    "id": "K2zAuIBKXWo",
@@ -31348,7 +31266,9 @@
    "transcript_cues": 3466,
    "in_feed": false,
    "feed_title": null,
-   "order": 105
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 100
   },
   {
    "id": "AYLwqGSeiPs",
@@ -31617,7 +31537,9 @@
    "transcript_cues": 4666,
    "in_feed": false,
    "feed_title": null,
-   "order": 106
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 101
   },
   {
    "id": "KZ74dOJ512A",
@@ -32028,7 +31950,9 @@
    "transcript_cues": 7128,
    "in_feed": false,
    "feed_title": null,
-   "order": 107
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 102
   },
   {
    "id": "kxZEYnJMgv8",
@@ -32196,7 +32120,9 @@
    "transcript_cues": 3163,
    "in_feed": false,
    "feed_title": null,
-   "order": 108
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 103
   },
   {
    "id": "PLMn5Hj7LMs",
@@ -32419,7 +32345,9 @@
    "transcript_cues": 3425,
    "in_feed": false,
    "feed_title": null,
-   "order": 109
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 104
   },
   {
    "id": "yAHALpZeoGQ",
@@ -32577,26 +32505,9 @@
    "transcript_cues": 3161,
    "in_feed": false,
    "feed_title": null,
-   "order": 110
-  },
-  {
-   "id": "DnF4WzM5LPU",
-   "title": "Unbelievable AI Breakthrough: Interactive AI Characters in a Videogame for the First Time!",
-   "number": null,
-   "date": "2023-03-17",
-   "duration": 1490,
-   "views": 100278,
-   "summary": "Origins is a technical demo where all of the NPC characters are powered by AI showing how developers can incorporate AI NPCs into their game narratives and experiences.",
-   "youtube": "https://www.youtube.com/watch?v=DnF4WzM5LPU",
-   "thumbnail": "https://i.ytimg.com/vi/DnF4WzM5LPU/hqdefault.jpg",
-   "guests": [],
-   "cohosts": [],
-   "tags": {},
-   "has_transcript": true,
-   "transcript_cues": 1354,
-   "in_feed": false,
-   "feed_title": null,
-   "order": 111
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 105
   },
   {
    "id": "v3S5dN1PFE0",
@@ -32804,7 +32715,9 @@
    "transcript_cues": 3585,
    "in_feed": false,
    "feed_title": null,
-   "order": 112
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 106
   },
   {
    "id": "zEDFqgIngzI",
@@ -33210,7 +33123,9 @@
    "transcript_cues": 5065,
    "in_feed": false,
    "feed_title": null,
-   "order": 113
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 107
   },
   {
    "id": "EH9Ao_WfLD8",
@@ -33457,7 +33372,9 @@
    "transcript_cues": 8133,
    "in_feed": false,
    "feed_title": null,
-   "order": 114
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 108
   },
   {
    "id": "tYB8NSOLcI0",
@@ -33678,7 +33595,9 @@
    "transcript_cues": 6770,
    "in_feed": false,
    "feed_title": null,
-   "order": 115
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 109
   },
   {
    "id": "E230gKf4zSI",
@@ -33924,7 +33843,9 @@
    "transcript_cues": 5873,
    "in_feed": false,
    "feed_title": null,
-   "order": 116
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 110
   },
   {
    "id": "Lamki0uL5gI",
@@ -34245,7 +34166,9 @@
    "transcript_cues": 4005,
    "in_feed": false,
    "feed_title": null,
-   "order": 117
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 111
   },
   {
    "id": "D7xCnWOR5kw",
@@ -34365,7 +34288,9 @@
    "transcript_cues": 3918,
    "in_feed": false,
    "feed_title": null,
-   "order": 118
+   "curation": "include",
+   "curation_reason": "A game-jam showcase episode.",
+   "order": 112
   },
   {
    "id": "rJndSQeeZs0",
@@ -34499,7 +34424,9 @@
    "transcript_cues": 4788,
    "in_feed": false,
    "feed_title": null,
-   "order": 119
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 113
   },
   {
    "id": "9KHU0mEGCgY",
@@ -34819,7 +34746,9 @@
    "transcript_cues": 5326,
    "in_feed": false,
    "feed_title": null,
-   "order": 120
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 114
   },
   {
    "id": "pg-xWwoKtgA",
@@ -35311,7 +35240,9 @@
    "transcript_cues": 8393,
    "in_feed": false,
    "feed_title": null,
-   "order": 121
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 115
   },
   {
    "id": "yqUx3IaocpU",
@@ -35630,7 +35561,9 @@
    "transcript_cues": 5517,
    "in_feed": false,
    "feed_title": null,
-   "order": 122
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 116
   },
   {
    "id": "mX3dS0vAp2k",
@@ -35854,7 +35787,9 @@
    "transcript_cues": 6116,
    "in_feed": false,
    "feed_title": null,
-   "order": 123
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 117
   },
   {
    "id": "wX4xtwBy1Fc",
@@ -36108,7 +36043,9 @@
    "transcript_cues": 3562,
    "in_feed": false,
    "feed_title": null,
-   "order": 124
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 118
   },
   {
    "id": "LBVqkqJFjRQ",
@@ -36371,7 +36308,9 @@
    "transcript_cues": 4805,
    "in_feed": false,
    "feed_title": null,
-   "order": 125
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 119
   },
   {
    "id": "osWIsdIJK60",
@@ -36539,7 +36478,9 @@
    "transcript_cues": 4192,
    "in_feed": false,
    "feed_title": null,
-   "order": 126
+   "curation": "include",
+   "curation_reason": "The same live build-and-Q&A run, 98 minutes.",
+   "order": 120
   },
   {
    "id": "CwDjVD03rZk",
@@ -36769,7 +36710,9 @@
    "transcript_cues": 4109,
    "in_feed": false,
    "feed_title": null,
-   "order": 127
+   "curation": "include",
+   "curation_reason": "A live build-and-Q&A episode with the panel, 109 minutes.",
+   "order": 121
   },
   {
    "id": "csn9BS7q64s",
@@ -37026,7 +36969,9 @@
    "transcript_cues": 4841,
    "in_feed": false,
    "feed_title": null,
-   "order": 128
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 122
   },
   {
    "id": "vLAN5k9L8DE",
@@ -37387,175 +37332,9 @@
    "transcript_cues": 8004,
    "in_feed": false,
    "feed_title": null,
-   "order": 129
-  },
-  {
-   "id": "pBZKh-hxOeE",
-   "title": "Unity | Dev Days of Summer Sale!",
-   "number": null,
-   "date": "2023-07-27",
-   "duration": 2251,
-   "views": 2131,
-   "summary": null,
-   "youtube": "https://www.youtube.com/watch?v=pBZKh-hxOeE",
-   "thumbnail": "https://i.ytimg.com/vi/pBZKh-hxOeE/hqdefault.jpg",
-   "guests": [],
-   "cohosts": [],
-   "tags": {
-    "unity": {
-     "hits": 9,
-     "peak": 9,
-     "peak_at": 1297,
-     "evidence": [
-      {
-       "t": 1297,
-       "term": "unity"
-      }
-     ]
-    },
-    "performance": {
-     "hits": 9,
-     "peak": 6,
-     "peak_at": 926,
-     "evidence": [
-      {
-       "t": 926,
-       "term": "optimization"
-      },
-      {
-       "t": 1560,
-       "term": "performance"
-      }
-     ]
-    },
-    "rendering": {
-     "hits": 13,
-     "peak": 13,
-     "peak_at": 616,
-     "evidence": [
-      {
-       "t": 616,
-       "term": "urp"
-      },
-      {
-       "t": 778,
-       "term": "hdrp"
-      },
-      {
-       "t": 892,
-       "term": "render pipeline"
-      }
-     ]
-    },
-    "navigation-ai": {
-     "hits": 18,
-     "peak": 12,
-     "peak_at": 1685,
-     "evidence": [
-      {
-       "t": 141,
-       "term": "pathfinding"
-      },
-      {
-       "t": 1055,
-       "term": "a star"
-      },
-      {
-       "t": 1685,
-       "term": "a star"
-      },
-      {
-       "t": 1849,
-       "term": "a star"
-      }
-     ]
-    },
-    "animation": {
-     "hits": 17,
-     "peak": 9,
-     "peak_at": 1334,
-     "evidence": [
-      {
-       "t": 241,
-       "term": "inverse kinematics"
-      },
-      {
-       "t": 1334,
-       "term": "animation"
-      },
-      {
-       "t": 2035,
-       "term": "animator"
-      },
-      {
-       "t": 2185,
-       "term": "animation"
-      }
-     ]
-    },
-    "game-design": {
-     "hits": 6,
-     "peak": 6,
-     "peak_at": 208,
-     "evidence": [
-      {
-       "t": 208,
-       "term": "juice"
-      },
-      {
-       "t": 634,
-       "term": "game loop"
-      }
-     ]
-    },
-    "vr-ar": {
-     "hits": 24,
-     "peak": 21,
-     "peak_at": 508,
-     "evidence": [
-      {
-       "t": 508,
-       "term": "vr"
-      },
-      {
-       "t": 650,
-       "term": "vr"
-      },
-      {
-       "t": 923,
-       "term": "vr"
-      },
-      {
-       "t": 1021,
-       "term": "vr"
-      },
-      {
-       "t": 2178,
-       "term": "vr"
-      }
-     ]
-    },
-    "monetisation": {
-     "hits": 11,
-     "peak": 8,
-     "peak_at": 285,
-     "evidence": [
-      {
-       "t": 285,
-       "term": "publisher"
-      },
-      {
-       "t": 1288,
-       "term": "publisher"
-      }
-     ]
-    }
-   },
-   "has_transcript": true,
-   "transcript_cues": 1819,
-   "in_feed": false,
-   "feed_title": null,
-   "order": 130
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 123
   },
   {
    "id": "30caybIhUzw",
@@ -37787,7 +37566,9 @@
    "transcript_cues": 4391,
    "in_feed": false,
    "feed_title": null,
-   "order": 131
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 124
   },
   {
    "id": "SmbFi_JHmEg",
@@ -37923,315 +37704,9 @@
    "transcript_cues": 1837,
    "in_feed": false,
    "feed_title": null,
-   "order": 132
-  },
-  {
-   "id": "XImqkM7slfI",
-   "title": "GAMEBLAST - Scifi Tourism Game Dev #unity3d",
-   "number": null,
-   "date": "2023-08-17",
-   "duration": 8975,
-   "views": 3134,
-   "summary": null,
-   "youtube": "https://www.youtube.com/watch?v=XImqkM7slfI",
-   "thumbnail": "https://i.ytimg.com/vi/XImqkM7slfI/hqdefault.jpg",
-   "guests": [],
-   "cohosts": [],
-   "tags": {
-    "unity": {
-     "hits": 21,
-     "peak": 9,
-     "peak_at": 2208,
-     "evidence": [
-      {
-       "t": 665,
-       "term": "unity"
-      },
-      {
-       "t": 942,
-       "term": "unity"
-      },
-      {
-       "t": 2208,
-       "term": "unity"
-      },
-      {
-       "t": 2513,
-       "term": "unity"
-      },
-      {
-       "t": 2637,
-       "term": "unity"
-      },
-      {
-       "t": 5944,
-       "term": "unity"
-      },
-      {
-       "t": 7860,
-       "term": "unity"
-      }
-     ]
-    },
-    "dots-ecs": {
-     "hits": 6,
-     "peak": 6,
-     "peak_at": 3668,
-     "evidence": [
-      {
-       "t": 3668,
-       "term": "dots"
-      }
-     ]
-    },
-    "architecture": {
-     "hits": 14,
-     "peak": 7,
-     "peak_at": 1638,
-     "evidence": [
-      {
-       "t": 1638,
-       "term": "scriptable object"
-      },
-      {
-       "t": 4440,
-       "term": "singleton"
-      },
-      {
-       "t": 5707,
-       "term": "scriptable object"
-      }
-     ]
-    },
-    "source-control": {
-     "hits": 12,
-     "peak": 6,
-     "peak_at": 8797,
-     "evidence": [
-      {
-       "t": 2457,
-       "term": "github"
-      },
-      {
-       "t": 7387,
-       "term": "git"
-      },
-      {
-       "t": 8797,
-       "term": "source control"
-      }
-     ]
-    },
-    "multiplayer": {
-     "hits": 11,
-     "peak": 11,
-     "peak_at": 1036,
-     "evidence": [
-      {
-       "t": 1036,
-       "term": "multiplayer"
-      },
-      {
-       "t": 1278,
-       "term": "multiplayer"
-      }
-     ]
-    },
-    "audio": {
-     "hits": 12,
-     "peak": 9,
-     "peak_at": 726,
-     "evidence": [
-      {
-       "t": 3,
-       "term": "audio"
-      },
-      {
-       "t": 726,
-       "term": "audio"
-      },
-      {
-       "t": 978,
-       "term": "audio"
-      }
-     ]
-    },
-    "ui-ux": {
-     "hits": 39,
-     "peak": 9,
-     "peak_at": 2644,
-     "evidence": [
-      {
-       "t": 185,
-       "term": "ui toolkit"
-      },
-      {
-       "t": 912,
-       "term": "canvas"
-      },
-      {
-       "t": 1503,
-       "term": "canvas"
-      },
-      {
-       "t": 1966,
-       "term": "canvas"
-      },
-      {
-       "t": 2177,
-       "term": "canvas"
-      },
-      {
-       "t": 2644,
-       "term": "canvas"
-      },
-      {
-       "t": 2735,
-       "term": "canvas"
-      },
-      {
-       "t": 2967,
-       "term": "canvas"
-      }
-     ]
-    },
-    "ai-tools": {
-     "hits": 5,
-     "peak": 5,
-     "peak_at": 2457,
-     "evidence": [
-      {
-       "t": 2457,
-       "term": "copilot"
-      }
-     ]
-    }
-   },
-   "has_transcript": true,
-   "transcript_cues": 5892,
-   "in_feed": false,
-   "feed_title": null,
-   "order": 133
-  },
-  {
-   "id": "1DYA3M_Lym4",
-   "title": "Redecorating the office More Scifi",
-   "number": null,
-   "date": "2023-08-19",
-   "duration": 4265,
-   "views": 934,
-   "summary": "Talking Game Development, C#, and Unity3D!",
-   "youtube": "https://www.youtube.com/watch?v=1DYA3M_Lym4",
-   "thumbnail": "https://i.ytimg.com/vi/1DYA3M_Lym4/hqdefault.jpg",
-   "guests": [],
-   "cohosts": [],
-   "tags": {
-    "unity": {
-     "hits": 10,
-     "peak": 4,
-     "peak_at": 883,
-     "evidence": [
-      {
-       "t": 883,
-       "term": "unity"
-      },
-      {
-       "t": 988,
-       "term": "unity"
-      },
-      {
-       "t": 2384,
-       "term": "unity"
-      },
-      {
-       "t": 3471,
-       "term": "unity"
-      }
-     ]
-    },
-    "rendering": {
-     "hits": 7,
-     "peak": 4,
-     "peak_at": 785,
-     "evidence": [
-      {
-       "t": 785,
-       "term": "lighting"
-      },
-      {
-       "t": 1225,
-       "term": "lighting"
-      },
-      {
-       "t": 3318,
-       "term": "lighting"
-      }
-     ]
-    },
-    "monetisation": {
-     "hits": 8,
-     "peak": 8,
-     "peak_at": 806,
-     "evidence": [
-      {
-       "t": 806,
-       "term": "publisher"
-      }
-     ]
-    }
-   },
-   "has_transcript": true,
-   "transcript_cues": 2203,
-   "in_feed": false,
-   "feed_title": null,
-   "order": 134
-  },
-  {
-   "id": "MwmpFE5jpdc",
-   "title": "GAMEBLAST - Scifi Tourism Game Dev #unity3d | Destinations & Redesigned BG",
-   "number": null,
-   "date": "2023-08-19",
-   "duration": 3170,
-   "views": 1503,
-   "summary": null,
-   "youtube": "https://www.youtube.com/watch?v=MwmpFE5jpdc",
-   "thumbnail": "https://i.ytimg.com/vi/MwmpFE5jpdc/hqdefault.jpg",
-   "guests": [],
-   "cohosts": [],
-   "tags": {
-    "ui-ux": {
-     "hits": 18,
-     "peak": 6,
-     "peak_at": 1039,
-     "evidence": [
-      {
-       "t": 422,
-       "term": "canvas"
-      },
-      {
-       "t": 1039,
-       "term": "canvas"
-      },
-      {
-       "t": 1612,
-       "term": "canvas"
-      },
-      {
-       "t": 2229,
-       "term": "canvas"
-      },
-      {
-       "t": 2716,
-       "term": "canvas"
-      }
-     ]
-    }
-   },
-   "has_transcript": true,
-   "transcript_cues": 2067,
-   "in_feed": false,
-   "feed_title": null,
-   "order": 135
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 125
   },
   {
    "id": "hcSlTz6nom8",
@@ -38449,265 +37924,9 @@
    "transcript_cues": 4661,
    "in_feed": false,
    "feed_title": null,
-   "order": 136
-  },
-  {
-   "id": "oWUZQrr-uK0",
-   "title": "Learning C# by Developing Games with Unity",
-   "number": null,
-   "date": "2023-08-19",
-   "duration": 2566,
-   "views": 2782,
-   "summary": "Talking Game Development, C#, and Unity3D!",
-   "youtube": "https://www.youtube.com/watch?v=oWUZQrr-uK0",
-   "thumbnail": "https://i.ytimg.com/vi/oWUZQrr-uK0/hqdefault.jpg",
-   "guests": [],
-   "cohosts": [],
-   "tags": {
-    "unity": {
-     "hits": 81,
-     "peak": 30,
-     "peak_at": 8,
-     "evidence": [
-      {
-       "t": 8,
-       "term": "unity"
-      },
-      {
-       "t": 102,
-       "term": "unity"
-      },
-      {
-       "t": 347,
-       "term": "unity"
-      },
-      {
-       "t": 446,
-       "term": "unity"
-      },
-      {
-       "t": 538,
-       "term": "unity"
-      },
-      {
-       "t": 673,
-       "term": "unity"
-      },
-      {
-       "t": 908,
-       "term": "unity"
-      },
-      {
-       "t": 1000,
-       "term": "unity"
-      }
-     ]
-    },
-    "multiplayer": {
-     "hits": 6,
-     "peak": 6,
-     "peak_at": 1088,
-     "evidence": [
-      {
-       "t": 1088,
-       "term": "networking"
-      },
-      {
-       "t": 1256,
-       "term": "multiplayer"
-      }
-     ]
-    },
-    "procedural": {
-     "hits": 9,
-     "peak": 9,
-     "peak_at": 1526,
-     "evidence": [
-      {
-       "t": 1526,
-       "term": "procedural"
-      },
-      {
-       "t": 1812,
-       "term": "procedurally generated"
-      }
-     ]
-    },
-    "ai-tools": {
-     "hits": 15,
-     "peak": 15,
-     "peak_at": 1858,
-     "evidence": [
-      {
-       "t": 1858,
-       "term": "gpt"
-      },
-      {
-       "t": 2065,
-       "term": "gpt"
-      }
-     ]
-    }
-   },
-   "has_transcript": true,
-   "transcript_cues": 2210,
-   "in_feed": false,
-   "feed_title": null,
-   "order": 137
-  },
-  {
-   "id": "0GwIkVpjhoo",
-   "title": "Creating a Scifi Game in a Week - It's almost done - Come join & Win!",
-   "number": null,
-   "date": "2023-08-25",
-   "duration": 6447,
-   "views": 3662,
-   "summary": null,
-   "youtube": "https://www.youtube.com/watch?v=0GwIkVpjhoo",
-   "thumbnail": "https://i.ytimg.com/vi/0GwIkVpjhoo/hqdefault.jpg",
-   "guests": [],
-   "cohosts": [],
-   "tags": {
-    "unity": {
-     "hits": 21,
-     "peak": 9,
-     "peak_at": 63,
-     "evidence": [
-      {
-       "t": 63,
-       "term": "unity"
-      },
-      {
-       "t": 3680,
-       "term": "unity"
-      },
-      {
-       "t": 4394,
-       "term": "unity"
-      },
-      {
-       "t": 6138,
-       "term": "unity"
-      }
-     ]
-    },
-    "architecture": {
-     "hits": 38,
-     "peak": 9,
-     "peak_at": 986,
-     "evidence": [
-      {
-       "t": 441,
-       "term": "state machine"
-      },
-      {
-       "t": 986,
-       "term": "scriptable object"
-      },
-      {
-       "t": 1576,
-       "term": "state machine"
-      },
-      {
-       "t": 2918,
-       "term": "state machine"
-      },
-      {
-       "t": 3732,
-       "term": "state machine"
-      },
-      {
-       "t": 4575,
-       "term": "scriptable object"
-      },
-      {
-       "t": 6166,
-       "term": "state machine"
-      }
-     ]
-    },
-    "source-control": {
-     "hits": 17,
-     "peak": 17,
-     "peak_at": 4398,
-     "evidence": [
-      {
-       "t": 4398,
-       "term": "version control"
-      }
-     ]
-    },
-    "tooling": {
-     "hits": 22,
-     "peak": 14,
-     "peak_at": 3193,
-     "evidence": [
-      {
-       "t": 2088,
-       "term": "inspector"
-      },
-      {
-       "t": 3193,
-       "term": "inspector"
-      },
-      {
-       "t": 3330,
-       "term": "inspector"
-      },
-      {
-       "t": 4625,
-       "term": "inspector"
-      },
-      {
-       "t": 4849,
-       "term": "inspector"
-      }
-     ]
-    },
-    "audio": {
-     "hits": 11,
-     "peak": 8,
-     "peak_at": 6237,
-     "evidence": [
-      {
-       "t": 2822,
-       "term": "audio"
-      },
-      {
-       "t": 6237,
-       "term": "audio"
-      }
-     ]
-    },
-    "ai-tools": {
-     "hits": 13,
-     "peak": 7,
-     "peak_at": 279,
-     "evidence": [
-      {
-       "t": 279,
-       "term": "gpt"
-      },
-      {
-       "t": 491,
-       "term": "ai generated"
-      },
-      {
-       "t": 683,
-       "term": "ai generated"
-      },
-      {
-       "t": 5011,
-       "term": "generative ai"
-      }
-     ]
-    }
-   },
-   "has_transcript": true,
-   "transcript_cues": 4516,
-   "in_feed": false,
-   "feed_title": null,
-   "order": 138
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 126
   },
   {
    "id": "EVn-p0AoqHM",
@@ -38910,7 +38129,9 @@
    "transcript_cues": 5810,
    "in_feed": false,
    "feed_title": null,
-   "order": 139
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 127
   },
   {
    "id": "LWGMgR7iAQ4",
@@ -39189,7 +38410,9 @@
    "transcript_cues": 7867,
    "in_feed": false,
    "feed_title": null,
-   "order": 140
+   "curation": "include",
+   "curation_reason": "A 190-minute panel show, the longest thing in the catalogue.",
+   "order": 128
   },
   {
    "id": "Tlk8ZYyQJ_I",
@@ -39383,7 +38606,9 @@
    "transcript_cues": 2386,
    "in_feed": false,
    "feed_title": null,
-   "order": 141
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 129
   },
   {
    "id": "Y5gYCVmDZU8",
@@ -39402,7 +38627,9 @@
    "transcript_cues": 1525,
    "in_feed": false,
    "feed_title": null,
-   "order": 142
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 130
   },
   {
    "id": "PLoq8WqCwfk",
@@ -39599,7 +38826,9 @@
    "transcript_cues": 3027,
    "in_feed": false,
    "feed_title": null,
-   "order": 143
+   "curation": "include",
+   "curation_reason": "The panel show, on the runtime-fee story. 18k views.",
+   "order": 131
   },
   {
    "id": "nKGGEdLTQyg",
@@ -39822,7 +39051,9 @@
    "transcript_cues": 3219,
    "in_feed": false,
    "feed_title": null,
-   "order": 144
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 132
   },
   {
    "id": "Mj1DqaQlZCs",
@@ -40211,7 +39442,9 @@
    "transcript_cues": 7232,
    "in_feed": false,
    "feed_title": null,
-   "order": 145
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 133
   },
   {
    "id": "qyLcI5O9iUY",
@@ -40230,7 +39463,9 @@
    "transcript_cues": 0,
    "in_feed": false,
    "feed_title": null,
-   "order": 146
+   "curation": "include",
+   "curation_reason": "The same booking, and the most-watched genuine episode at 56k.",
+   "order": 134
   },
   {
    "id": "2hCb5K6gskw",
@@ -40407,7 +39642,9 @@
    "transcript_cues": 3432,
    "in_feed": false,
    "feed_title": null,
-   "order": 147
+   "curation": "include",
+   "curation_reason": "A full interview with Unity's Create president. Flagship booking.",
+   "order": 135
   },
   {
    "id": "XaTJvvUZAYY",
@@ -40725,7 +39962,9 @@
    "transcript_cues": 5956,
    "in_feed": false,
    "feed_title": null,
-   "order": 148
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 136
   },
   {
    "id": "Lj68kNBgOqM",
@@ -40971,7 +40210,9 @@
    "transcript_cues": 2112,
    "in_feed": false,
    "feed_title": null,
-   "order": 149
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 137
   },
   {
    "id": "NRkwFKDjvqk",
@@ -41193,7 +40434,9 @@
    "transcript_cues": 4022,
    "in_feed": false,
    "feed_title": null,
-   "order": 150
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 138
   },
   {
    "id": "9z9AuUQqv5k",
@@ -41367,7 +40610,9 @@
    "transcript_cues": 3870,
    "in_feed": false,
    "feed_title": null,
-   "order": 151
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 139
   },
   {
    "id": "lMQBJ4siD8Y",
@@ -41575,7 +40820,9 @@
    "transcript_cues": 2428,
    "in_feed": false,
    "feed_title": null,
-   "order": 152
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 140
   },
   {
    "id": "tC-jFUlGRdw",
@@ -41813,7 +41060,9 @@
    "transcript_cues": 4791,
    "in_feed": false,
    "feed_title": null,
-   "order": 153
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 141
   },
   {
    "id": "wCM61B-JmyE",
@@ -42101,7 +41350,9 @@
    "transcript_cues": 2310,
    "in_feed": false,
    "feed_title": null,
-   "order": 154
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 142
   },
   {
    "id": "27oZ45nZxJs",
@@ -42437,7 +41688,9 @@
    "transcript_cues": 3643,
    "in_feed": false,
    "feed_title": null,
-   "order": 155
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 143
   },
   {
    "id": "Mf4VsPd9YWI",
@@ -42748,7 +42001,9 @@
    "transcript_cues": 6886,
    "in_feed": false,
    "feed_title": null,
-   "order": 156
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 144
   },
   {
    "id": "EoemD9vP-x8",
@@ -43175,7 +42430,9 @@
    "transcript_cues": 6789,
    "in_feed": false,
    "feed_title": null,
-   "order": 157
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 145
   },
   {
    "id": "ZMzJKIg142w",
@@ -43444,7 +42701,9 @@
    "transcript_cues": 5042,
    "in_feed": false,
    "feed_title": null,
-   "order": 158
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 146
   },
   {
    "id": "lGjsZzcwZx0",
@@ -43886,7 +43145,9 @@
    "transcript_cues": 11332,
    "in_feed": false,
    "feed_title": null,
-   "order": 159
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 147
   },
   {
    "id": "HznhPBvysi8",
@@ -44218,7 +43479,9 @@
    "transcript_cues": 7562,
    "in_feed": true,
    "feed_title": "#154 - New Years New GameDev! BIG SHOW",
-   "order": 160
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 148
   },
   {
    "id": "DPI5erwS2pE",
@@ -44513,7 +43776,9 @@
    "transcript_cues": 5808,
    "in_feed": false,
    "feed_title": null,
-   "order": 161
+   "curation": "include",
+   "curation_reason": "A live episode with a co-host, 106 minutes.",
+   "order": 149
   },
   {
    "id": "e_dwwbREY58",
@@ -44886,7 +44151,9 @@
    "transcript_cues": 9082,
    "in_feed": true,
    "feed_title": "#155 - GameDev in 2024",
-   "order": 162
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 150
   },
   {
    "id": "JUr1g-XE_g0",
@@ -45059,7 +44326,9 @@
    "transcript_cues": 1421,
    "in_feed": false,
    "feed_title": null,
-   "order": 163
+   "curation": "include",
+   "curation_reason": "An industry episode on the 2024 layoffs.",
+   "order": 151
   },
   {
    "id": "aGZnhCvB8Ak",
@@ -45212,7 +44481,9 @@
    "transcript_cues": 4340,
    "in_feed": true,
    "feed_title": "#156 - AI Ban Removed from Steam",
-   "order": 164
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 152
   },
   {
    "id": "BkrQPEQObhM",
@@ -45459,7 +44730,9 @@
    "transcript_cues": 5204,
    "in_feed": true,
    "feed_title": "#157 - Unity GameDev, Inworld AI, & 2024",
-   "order": 165
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 153
   },
   {
    "id": "Mg1SzVrHTjI",
@@ -45544,7 +44817,9 @@
    "transcript_cues": 2638,
    "in_feed": true,
    "feed_title": "#158 - Dungeons & Dragons, Digital Tools, AI Art & the Clippers",
-   "order": 166
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 154
   },
   {
    "id": "J0Yoq56cLcA",
@@ -45852,7 +45127,9 @@
    "transcript_cues": 7330,
    "in_feed": true,
    "feed_title": "#159 - Palworld, Apple, & AI Music",
-   "order": 167
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 155
   },
   {
    "id": "VzzkuFVpcxQ",
@@ -46170,7 +45447,9 @@
    "transcript_cues": 6319,
    "in_feed": true,
    "feed_title": "#160 - Why DEVS need to Cheat in games!",
-   "order": 168
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 156
   },
   {
    "id": "OeHH79oczyI",
@@ -46445,7 +45724,9 @@
    "transcript_cues": 4577,
    "in_feed": true,
    "feed_title": "#161 - Live Events - Educational Games - New Unity API - Disneys new Epic stake",
-   "order": 169
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 157
   },
   {
    "id": "ufu9fT2yonY",
@@ -46733,7 +46014,9 @@
    "transcript_cues": 5407,
    "in_feed": false,
    "feed_title": null,
-   "order": 170
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 158
   },
   {
    "id": "n_kEAGdHF6A",
@@ -46905,7 +46188,9 @@
    "transcript_cues": 1884,
    "in_feed": false,
    "feed_title": null,
-   "order": 171
+   "curation": "include",
+   "curation_reason": "A guest interview with Dan Baker.",
+   "order": 159
   },
   {
    "id": "xQeDCAR05v8",
@@ -47062,7 +46347,9 @@
    "transcript_cues": 5724,
    "in_feed": false,
    "feed_title": null,
-   "order": 172
+   "curation": "include",
+   "curation_reason": "A developer debate episode, 91 minutes.",
+   "order": 160
   },
   {
    "id": "Jx9IuyVcVRM",
@@ -47325,7 +46612,9 @@
    "transcript_cues": 5260,
    "in_feed": false,
    "feed_title": null,
-   "order": 173
+   "curation": "include",
+   "curation_reason": "The most recent episode, May 2025, 93 minutes.",
+   "order": 161
   }
  ],
  "duplicates": [
@@ -47552,7 +46841,119 @@
    "transcript_cues": 11404,
    "in_feed": false,
    "feed_title": null,
-   "duplicate_of": "HLPUeH4LaYE"
+   "duplicate_of": "HLPUeH4LaYE",
+   "curation": "include",
+   "curation_reason": "Titled as the show."
+  }
+ ],
+ "not_episodes": [
+  {
+   "id": "5iXUHFZogmI",
+   "title": "The Dirty Con Job Of Mike Rowe",
+   "date": "2020-04-12",
+   "views": 408459,
+   "duration": 1960,
+   "decision": "exclude",
+   "reason": "Not game development. Channel commentary from April 2020, and on its own it sets the site's start year and 408k of the view total."
+  },
+  {
+   "id": "IGBsHYoyaGg",
+   "title": "Monster Test Prototype 3 13 22",
+   "date": "2022-03-13",
+   "views": 126,
+   "duration": 538,
+   "decision": "exclude",
+   "reason": "An eight-minute test upload, 126 views."
+  },
+  {
+   "id": "w5Kneg9x9xg",
+   "title": "MUST WATCH! How TV News Is ACTIVELY Baiting You | The Problem With Jon Stewart | Apple TV+",
+   "date": "2022-03-16",
+   "views": 224287,
+   "duration": 146,
+   "decision": "exclude",
+   "reason": "Not game development, and two minutes long. 224k views, second most-watched thing in the catalogue."
+  },
+  {
+   "id": "iUIjiKtILUc",
+   "title": "Every Unity Developer should use this Now!",
+   "date": "2022-03-31",
+   "views": 41861,
+   "duration": 594,
+   "decision": "exclude",
+   "reason": "A nine-minute tutorial short, not a live show. 42k views would skew the averages."
+  },
+  {
+   "id": "jhqZdWTd3So",
+   "title": "GRAND OPENING GIVEAWAY - Pro Pass & $2k Worth of GameDev Stuff",
+   "date": "2022-05-23",
+   "views": 3563,
+   "duration": 5185,
+   "decision": "exclude",
+   "reason": "A giveaway stream."
+  },
+  {
+   "id": "DnF4WzM5LPU",
+   "title": "Unbelievable AI Breakthrough: Interactive AI Characters in a Videogame for the First Time!",
+   "date": "2023-03-17",
+   "views": 100278,
+   "duration": 1490,
+   "decision": "exclude",
+   "reason": "A 24-minute news piece rather than an episode. 100k views, third most-watched."
+  },
+  {
+   "id": "pBZKh-hxOeE",
+   "title": "Unity | Dev Days of Summer Sale!",
+   "date": "2023-07-27",
+   "views": 2131,
+   "duration": 2251,
+   "decision": "exclude",
+   "reason": "A sale promotion, not an episode."
+  },
+  {
+   "id": "XImqkM7slfI",
+   "title": "GAMEBLAST - Scifi Tourism Game Dev #unity3d",
+   "date": "2023-08-17",
+   "views": 3134,
+   "duration": 8975,
+   "decision": "exclude",
+   "reason": "Same GAMEBLAST build-stream series."
+  },
+  {
+   "id": "1DYA3M_Lym4",
+   "title": "Redecorating the office More Scifi",
+   "date": "2023-08-19",
+   "views": 934,
+   "duration": 4265,
+   "decision": "exclude",
+   "reason": "An office livestream. Long, but not the show and not about game development."
+  },
+  {
+   "id": "MwmpFE5jpdc",
+   "title": "GAMEBLAST - Scifi Tourism Game Dev #unity3d | Destinations & Redesigned BG",
+   "date": "2023-08-19",
+   "views": 1503,
+   "duration": 3170,
+   "decision": "exclude",
+   "reason": "A solo build stream under a different banner (GAMEBLAST), not the panel show."
+  },
+  {
+   "id": "oWUZQrr-uK0",
+   "title": "Learning C# by Developing Games with Unity",
+   "date": "2023-08-19",
+   "views": 2782,
+   "duration": 2566,
+   "decision": "exclude",
+   "reason": "A teaching stream, not the panel show."
+  },
+  {
+   "id": "0GwIkVpjhoo",
+   "title": "Creating a Scifi Game in a Week - It's almost done - Come join & Win!",
+   "date": "2023-08-25",
+   "views": 3662,
+   "duration": 6447,
+   "decision": "exclude",
+   "reason": "Part of the same solo build-along week rather than an episode."
   }
  ],
  "feed_only": [
