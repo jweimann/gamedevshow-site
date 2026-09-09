@@ -19303,6 +19303,212 @@
    "order": 77
   },
   {
+   "id": "V3UrSEnk5bo",
+   "title": "Talking with Unity CEO John Riccitiello - GameDev, Unity, and the Future of Gaming",
+   "number": null,
+   "date": "2022-08-29",
+   "duration": 2428,
+   "views": 26074,
+   "summary": "Talking with Unity CEO John Riccitiello about Unity3D, the merger with ironsource, the weta acquisition, rendering pipelines, dots, netcode & multiplayer, and the future of Unity & gamedev.",
+   "youtube": "https://www.youtube.com/watch?v=V3UrSEnk5bo",
+   "thumbnail": "https://i.ytimg.com/vi/V3UrSEnk5bo/hqdefault.jpg",
+   "guests": [
+    "John Riccitiello"
+   ],
+   "cohosts": [],
+   "people": [
+    {
+     "name": "John Riccitiello",
+     "role": "guest"
+    }
+   ],
+   "tags": {
+    "unity": {
+     "hits": 112,
+     "peak": 36,
+     "peak_at": 974,
+     "evidence": [
+      {
+       "t": 6,
+       "term": "unity"
+      },
+      {
+       "t": 98,
+       "term": "unity"
+      },
+      {
+       "t": 639,
+       "term": "unity"
+      },
+      {
+       "t": 974,
+       "term": "unity"
+      },
+      {
+       "t": 1176,
+       "term": "unity"
+      },
+      {
+       "t": 1298,
+       "term": "unity"
+      },
+      {
+       "t": 1394,
+       "term": "unity"
+      },
+      {
+       "t": 1525,
+       "term": "unity"
+      }
+     ],
+     "primary": true
+    },
+    "dots-ecs": {
+     "hits": 17,
+     "peak": 12,
+     "peak_at": 1596,
+     "evidence": [
+      {
+       "t": 471,
+       "term": "dots"
+      },
+      {
+       "t": 1596,
+       "term": "dots"
+      },
+      {
+       "t": 1768,
+       "term": "dots"
+      }
+     ],
+     "primary": false
+    },
+    "performance": {
+     "hits": 14,
+     "peak": 14,
+     "peak_at": 1560,
+     "evidence": [
+      {
+       "t": 1560,
+       "term": "performance"
+      },
+      {
+       "t": 1995,
+       "term": "performance"
+      }
+     ],
+     "primary": true
+    },
+    "rendering": {
+     "hits": 23,
+     "peak": 12,
+     "peak_at": 491,
+     "evidence": [
+      {
+       "t": 491,
+       "term": "rendering"
+      },
+      {
+       "t": 813,
+       "term": "ray tracing"
+      },
+      {
+       "t": 949,
+       "term": "rendering"
+      },
+      {
+       "t": 1672,
+       "term": "render pipeline"
+      },
+      {
+       "t": 1847,
+       "term": "render pipeline"
+      }
+     ],
+     "primary": false
+    },
+    "multiplayer": {
+     "hits": 32,
+     "peak": 18,
+     "peak_at": 478,
+     "evidence": [
+      {
+       "t": 478,
+       "term": "multiplayer"
+      },
+      {
+       "t": 728,
+       "term": "multiplayer"
+      },
+      {
+       "t": 919,
+       "term": "multiplayer"
+      },
+      {
+       "t": 1570,
+       "term": "multiplayer"
+      },
+      {
+       "t": 2372,
+       "term": "multiplayer"
+      }
+     ],
+     "primary": true
+    },
+    "monetisation": {
+     "hits": 18,
+     "peak": 15,
+     "peak_at": 290,
+     "evidence": [
+      {
+       "t": 290,
+       "term": "revenue"
+      },
+      {
+       "t": 646,
+       "term": "revenue"
+      },
+      {
+       "t": 2309,
+       "term": "publisher"
+      }
+     ],
+     "primary": true
+    },
+    "industry-news": {
+     "hits": 18,
+     "peak": 18,
+     "peak_at": 1171,
+     "evidence": [
+      {
+       "t": 1171,
+       "term": "unite"
+      },
+      {
+       "t": 1264,
+       "term": "unite"
+      },
+      {
+       "t": 1355,
+       "term": "unite"
+      },
+      {
+       "t": 1479,
+       "term": "unite"
+      }
+     ],
+     "primary": true
+    }
+   },
+   "has_transcript": true,
+   "transcript_cues": 2351,
+   "in_feed": false,
+   "feed_title": null,
+   "curation": "include",
+   "curation_reason": "Jason, 2026-09-08: counts as the show",
+   "order": 78
+  },
+  {
    "id": "KWG9XUso-0I",
    "title": "LIVE - BigO GameDev Show - Game Dev Show #80",
    "number": 80,
@@ -19427,7 +19633,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 78
+   "order": 79
   },
   {
    "id": "IVy7atDUjBM",
@@ -19818,7 +20024,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 79
+   "order": 80
   },
   {
    "id": "REy_Kw5pyOQ",
@@ -20073,7 +20279,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 80
+   "order": 81
   },
   {
    "id": "bpeMUkMDY7o",
@@ -20312,7 +20518,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 81
+   "order": 82
   },
   {
    "id": "qdvpPQhQw9U",
@@ -20519,7 +20725,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 82
+   "order": 83
   },
   {
    "id": "RlPfFkjUsQU",
@@ -20610,7 +20816,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 83
+   "order": 84
   },
   {
    "id": "2siC0MZiK2E",
@@ -20793,7 +20999,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 84
+   "order": 85
   },
   {
    "id": "e6YHZAE08Xc",
@@ -20996,7 +21202,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 85
+   "order": 86
   },
   {
    "id": "wD54T6dQP1U",
@@ -21219,7 +21425,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 86
+   "order": 87
   },
   {
    "id": "MPNNS2le-Wk",
@@ -21350,7 +21556,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 87
+   "order": 88
   },
   {
    "id": "mJSuH2wKX08",
@@ -21625,7 +21831,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 88
+   "order": 89
   },
   {
    "id": "K2zAuIBKXWo",
@@ -21780,7 +21986,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 89
+   "order": 90
   },
   {
    "id": "AYLwqGSeiPs",
@@ -21975,7 +22181,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 90
+   "order": 91
   },
   {
    "id": "KZ74dOJ512A",
@@ -22286,7 +22492,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 91
+   "order": 92
   },
   {
    "id": "kxZEYnJMgv8",
@@ -22421,7 +22627,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 92
+   "order": 93
   },
   {
    "id": "PLMn5Hj7LMs",
@@ -22620,7 +22826,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 93
+   "order": 94
   },
   {
    "id": "yAHALpZeoGQ",
@@ -22755,7 +22961,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 94
+   "order": 95
   },
   {
    "id": "v3S5dN1PFE0",
@@ -22950,7 +23156,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 95
+   "order": 96
   },
   {
    "id": "zEDFqgIngzI",
@@ -23249,7 +23455,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 96
+   "order": 97
   },
   {
    "id": "EH9Ao_WfLD8",
@@ -23424,7 +23630,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 97
+   "order": 98
   },
   {
    "id": "tYB8NSOLcI0",
@@ -23599,7 +23805,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 98
+   "order": 99
   },
   {
    "id": "E230gKf4zSI",
@@ -23766,7 +23972,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 99
+   "order": 100
   },
   {
    "id": "Lamki0uL5gI",
@@ -23985,7 +24191,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 100
+   "order": 101
   },
   {
    "id": "rJndSQeeZs0",
@@ -24076,7 +24282,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 101
+   "order": 102
   },
   {
    "id": "9KHU0mEGCgY",
@@ -24295,7 +24501,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 102
+   "order": 103
   },
   {
    "id": "pg-xWwoKtgA",
@@ -24694,7 +24900,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 103
+   "order": 104
   },
   {
    "id": "yqUx3IaocpU",
@@ -24917,7 +25123,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 104
+   "order": 105
   },
   {
    "id": "mX3dS0vAp2k",
@@ -25092,7 +25298,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 105
+   "order": 106
   },
   {
    "id": "wX4xtwBy1Fc",
@@ -25323,7 +25529,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 106
+   "order": 107
   },
   {
    "id": "LBVqkqJFjRQ",
@@ -25478,7 +25684,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 107
+   "order": 108
   },
   {
    "id": "csn9BS7q64s",
@@ -25673,7 +25879,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 108
+   "order": 109
   },
   {
    "id": "vLAN5k9L8DE",
@@ -25924,7 +26130,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 109
+   "order": 110
   },
   {
    "id": "30caybIhUzw",
@@ -26083,7 +26289,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 110
+   "order": 111
   },
   {
    "id": "SmbFi_JHmEg",
@@ -26150,7 +26356,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 111
+   "order": 112
   },
   {
    "id": "hcSlTz6nom8",
@@ -26233,7 +26439,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 112
+   "order": 113
   },
   {
    "id": "EVn-p0AoqHM",
@@ -26384,7 +26590,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 113
+   "order": 114
   },
   {
    "id": "Tlk8ZYyQJ_I",
@@ -26523,7 +26729,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 114
+   "order": 115
   },
   {
    "id": "Y5gYCVmDZU8",
@@ -26545,7 +26751,150 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 115
+   "order": 116
+  },
+  {
+   "id": "PLoq8WqCwfk",
+   "title": "LIVE | Let's talk about the Unity Changes",
+   "number": null,
+   "date": "2023-09-15",
+   "duration": 3377,
+   "views": 17952,
+   "summary": "Talking Game Development, C#, and Unity3D!",
+   "youtube": "https://www.youtube.com/watch?v=PLoq8WqCwfk",
+   "thumbnail": "https://i.ytimg.com/vi/PLoq8WqCwfk/hqdefault.jpg",
+   "guests": [],
+   "cohosts": [],
+   "people": [],
+   "tags": {
+    "unity": {
+     "hits": 123,
+     "peak": 40,
+     "peak_at": 774,
+     "evidence": [
+      {
+       "t": 22,
+       "term": "unity"
+      },
+      {
+       "t": 117,
+       "term": "unity"
+      },
+      {
+       "t": 208,
+       "term": "unity"
+      },
+      {
+       "t": 479,
+       "term": "unity"
+      },
+      {
+       "t": 641,
+       "term": "unity"
+      },
+      {
+       "t": 774,
+       "term": "unity"
+      },
+      {
+       "t": 962,
+       "term": "unity"
+      },
+      {
+       "t": 1062,
+       "term": "unity"
+      }
+     ],
+     "primary": true
+    },
+    "unreal": {
+     "hits": 38,
+     "peak": 29,
+     "peak_at": 1661,
+     "evidence": [
+      {
+       "t": 660,
+       "term": "unreal"
+      },
+      {
+       "t": 1661,
+       "term": "unreal"
+      },
+      {
+       "t": 1753,
+       "term": "unreal"
+      },
+      {
+       "t": 1863,
+       "term": "unreal"
+      },
+      {
+       "t": 2380,
+       "term": "unreal"
+      }
+     ],
+     "primary": true
+    },
+    "multiplayer": {
+     "hits": 15,
+     "peak": 15,
+     "peak_at": 1984,
+     "evidence": [
+      {
+       "t": 1984,
+       "term": "multiplayer"
+      }
+     ],
+     "primary": true
+    },
+    "monetisation": {
+     "hits": 69,
+     "peak": 28,
+     "peak_at": 779,
+     "evidence": [
+      {
+       "t": 243,
+       "term": "pricing"
+      },
+      {
+       "t": 475,
+       "term": "revenue"
+      },
+      {
+       "t": 779,
+       "term": "revenue"
+      },
+      {
+       "t": 1055,
+       "term": "runtime fee"
+      },
+      {
+       "t": 1145,
+       "term": "runtime fee"
+      },
+      {
+       "t": 1235,
+       "term": "runtime fee"
+      },
+      {
+       "t": 1502,
+       "term": "revenue"
+      },
+      {
+       "t": 1685,
+       "term": "revenue"
+      }
+     ],
+     "primary": true
+    }
+   },
+   "has_transcript": true,
+   "transcript_cues": 3027,
+   "in_feed": false,
+   "feed_title": null,
+   "curation": "include",
+   "curation_reason": "Jason, 2026-09-08: counts as the show",
+   "order": 117
   },
   {
    "id": "nKGGEdLTQyg",
@@ -26668,7 +27017,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 116
+   "order": 118
   },
   {
    "id": "Mj1DqaQlZCs",
@@ -26879,7 +27228,210 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 117
+   "order": 119
+  },
+  {
+   "id": "qyLcI5O9iUY",
+   "title": "Unity's Marc Whitten - Answers Unity Price Policy",
+   "number": null,
+   "date": "2023-09-22",
+   "duration": 3590,
+   "views": 55870,
+   "summary": null,
+   "youtube": "https://www.youtube.com/watch?v=qyLcI5O9iUY",
+   "thumbnail": "https://i.ytimg.com/vi/qyLcI5O9iUY/hqdefault.jpg",
+   "guests": [
+    "Marc Whitten"
+   ],
+   "cohosts": [],
+   "people": [
+    {
+     "name": "Marc Whitten",
+     "role": "guest"
+    }
+   ],
+   "tags": {},
+   "has_transcript": false,
+   "transcript_cues": 0,
+   "in_feed": false,
+   "feed_title": null,
+   "curation": "include",
+   "curation_reason": "Jason, 2026-09-08: counts as the show",
+   "order": 120
+  },
+  {
+   "id": "2hCb5K6gskw",
+   "title": "Unity Create President answers 24 Questions | Q&A w/ Marc Whitten",
+   "number": null,
+   "date": "2023-09-23",
+   "duration": 3590,
+   "views": 6264,
+   "summary": "03:00 - #1 - Why do this at all if you are going to essentially walk back on what you rolled out a week later?",
+   "youtube": "https://www.youtube.com/watch?v=2hCb5K6gskw",
+   "thumbnail": "https://i.ytimg.com/vi/2hCb5K6gskw/hqdefault.jpg",
+   "guests": [
+    "Marc Whitten"
+   ],
+   "cohosts": [],
+   "people": [
+    {
+     "name": "Marc Whitten",
+     "role": "guest"
+    }
+   ],
+   "tags": {
+    "unity": {
+     "hits": 185,
+     "peak": 55,
+     "peak_at": 2323,
+     "evidence": [
+      {
+       "t": 195,
+       "term": "unity"
+      },
+      {
+       "t": 286,
+       "term": "unity"
+      },
+      {
+       "t": 385,
+       "term": "unity"
+      },
+      {
+       "t": 600,
+       "term": "unity"
+      },
+      {
+       "t": 706,
+       "term": "unity"
+      },
+      {
+       "t": 813,
+       "term": "unity"
+      },
+      {
+       "t": 989,
+       "term": "unity"
+      },
+      {
+       "t": 1370,
+       "term": "unity"
+      }
+     ],
+     "primary": true
+    },
+    "source-control": {
+     "hits": 21,
+     "peak": 15,
+     "peak_at": 393,
+     "evidence": [
+      {
+       "t": 393,
+       "term": "github"
+      },
+      {
+       "t": 779,
+       "term": "github"
+      },
+      {
+       "t": 2198,
+       "term": "github"
+      },
+      {
+       "t": 2784,
+       "term": "github"
+      }
+     ],
+     "primary": true
+    },
+    "monetisation": {
+     "hits": 72,
+     "peak": 26,
+     "peak_at": 2641,
+     "evidence": [
+      {
+       "t": 176,
+       "term": "pricing"
+      },
+      {
+       "t": 274,
+       "term": "runtime fee"
+      },
+      {
+       "t": 430,
+       "term": "revenue"
+      },
+      {
+       "t": 629,
+       "term": "revenue"
+      },
+      {
+       "t": 1059,
+       "term": "runtime fee"
+      },
+      {
+       "t": 1243,
+       "term": "revenue"
+      },
+      {
+       "t": 1475,
+       "term": "revenue"
+      },
+      {
+       "t": 1653,
+       "term": "pricing"
+      }
+     ],
+     "primary": true
+    },
+    "industry-news": {
+     "hits": 50,
+     "peak": 18,
+     "peak_at": 2787,
+     "evidence": [
+      {
+       "t": 408,
+       "term": "terms of service"
+      },
+      {
+       "t": 761,
+       "term": "terms of service"
+      },
+      {
+       "t": 913,
+       "term": "announcement"
+      },
+      {
+       "t": 1806,
+       "term": "price change"
+      },
+      {
+       "t": 2165,
+       "term": "terms of service"
+      },
+      {
+       "t": 2787,
+       "term": "terms of service"
+      },
+      {
+       "t": 3229,
+       "term": "unite"
+      },
+      {
+       "t": 3398,
+       "term": "announcement"
+      }
+     ],
+     "primary": true
+    }
+   },
+   "has_transcript": true,
+   "transcript_cues": 3432,
+   "in_feed": false,
+   "feed_title": null,
+   "curation": "include",
+   "curation_reason": "Jason, 2026-09-08: counts as the show",
+   "order": 121
   },
   {
    "id": "XaTJvvUZAYY",
@@ -27030,7 +27582,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 118
+   "order": 122
   },
   {
    "id": "Lj68kNBgOqM",
@@ -27229,7 +27781,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 119
+   "order": 123
   },
   {
    "id": "NRkwFKDjvqk",
@@ -27404,7 +27956,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 120
+   "order": 124
   },
   {
    "id": "9z9AuUQqv5k",
@@ -27563,7 +28115,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 121
+   "order": 125
   },
   {
    "id": "lMQBJ4siD8Y",
@@ -27642,7 +28194,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 122
+   "order": 126
   },
   {
    "id": "tC-jFUlGRdw",
@@ -27825,7 +28377,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 123
+   "order": 127
   },
   {
    "id": "wCM61B-JmyE",
@@ -28032,7 +28584,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 124
+   "order": 128
   },
   {
    "id": "27oZ45nZxJs",
@@ -28356,7 +28908,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 125
+   "order": 129
   },
   {
    "id": "Mf4VsPd9YWI",
@@ -28576,7 +29128,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 126
+   "order": 130
   },
   {
    "id": "EoemD9vP-x8",
@@ -28876,7 +29428,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 127
+   "order": 131
   },
   {
    "id": "ZMzJKIg142w",
@@ -29052,7 +29604,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 128
+   "order": 132
   },
   {
    "id": "lGjsZzcwZx0",
@@ -29328,7 +29880,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 129
+   "order": 133
   },
   {
    "id": "HznhPBvysi8",
@@ -29580,7 +30132,7 @@
    "feed_title": "#154 - New Years New GameDev! BIG SHOW",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 130
+   "order": 134
   },
   {
    "id": "e_dwwbREY58",
@@ -29847,7 +30399,7 @@
    "feed_title": "#155 - GameDev in 2024",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 131
+   "order": 135
   },
   {
    "id": "aGZnhCvB8Ak",
@@ -29958,7 +30510,7 @@
    "feed_title": "#156 - AI Ban Removed from Steam",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 132
+   "order": 136
   },
   {
    "id": "BkrQPEQObhM",
@@ -30121,7 +30673,7 @@
    "feed_title": "#157 - Unity GameDev, Inworld AI, & 2024",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 133
+   "order": 137
   },
   {
    "id": "Mg1SzVrHTjI",
@@ -30200,7 +30752,7 @@
    "feed_title": "#158 - Dungeons & Dragons, Digital Tools, AI Art & the Clippers",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 134
+   "order": 138
   },
   {
    "id": "J0Yoq56cLcA",
@@ -30459,7 +31011,7 @@
    "feed_title": "#159 - Palworld, Apple, & AI Music",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 135
+   "order": 139
   },
   {
    "id": "VzzkuFVpcxQ",
@@ -30670,7 +31222,7 @@
    "feed_title": "#160 - Why DEVS need to Cheat in games!",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 136
+   "order": 140
   },
   {
    "id": "OeHH79oczyI",
@@ -30833,7 +31385,7 @@
    "feed_title": "#161 - Live Events - Educational Games - New Unity API - Disneys new Epic stake",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 137
+   "order": 141
   },
   {
    "id": "ufu9fT2yonY",
@@ -31020,7 +31572,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 138
+   "order": 142
   },
   {
    "id": "feed-163",
@@ -31045,7 +31597,7 @@
    "listen_link": "https://creators.spotify.com/pod/profile/gamedevshow/episodes/163---GDC-Predictions-and-Preview-e2gt23h",
    "curation": "include",
    "curation_reason": "Published to the podcast feed only; never uploaded to YouTube.",
-   "order": 139
+   "order": 143
   },
   {
    "id": "feed-164",
@@ -31070,7 +31622,7 @@
    "listen_link": "https://creators.spotify.com/pod/profile/gamedevshow/episodes/164---Google-AI-Game-Generation-and-Game-Engines-e2gt5mj",
    "curation": "include",
    "curation_reason": "Published to the podcast feed only; never uploaded to YouTube.",
-   "order": 140
+   "order": 144
   },
   {
    "id": "feed-165",
@@ -31095,7 +31647,341 @@
    "listen_link": "https://creators.spotify.com/pod/profile/gamedevshow/episodes/165---AI--GDC--GameDev-Resume-Reviews-e2gt66l",
    "curation": "include",
    "curation_reason": "Published to the podcast feed only; never uploaded to YouTube.",
-   "order": 141
+   "order": 145
+  },
+  {
+   "id": "xQeDCAR05v8",
+   "title": "Why I Stopped Using Event Buses in Unity \u2013 Developer Debate!",
+   "number": null,
+   "date": "2025-05-03",
+   "duration": 5473,
+   "views": 7069,
+   "summary": null,
+   "youtube": "https://www.youtube.com/watch?v=xQeDCAR05v8",
+   "thumbnail": "https://i.ytimg.com/vi/xQeDCAR05v8/hqdefault.jpg",
+   "guests": [],
+   "cohosts": [],
+   "people": [],
+   "tags": {
+    "unity": {
+     "hits": 15,
+     "peak": 12,
+     "peak_at": 1381,
+     "evidence": [
+      {
+       "t": 1381,
+       "term": "unity"
+      },
+      {
+       "t": 1535,
+       "term": "unity"
+      },
+      {
+       "t": 4518,
+       "term": "unity"
+      }
+     ],
+     "primary": true
+    },
+    "architecture": {
+     "hits": 77,
+     "peak": 31,
+     "peak_at": 4414,
+     "evidence": [
+      {
+       "t": 240,
+       "term": "state machine"
+      },
+      {
+       "t": 422,
+       "term": "singleton"
+      },
+      {
+       "t": 595,
+       "term": "singleton"
+      },
+      {
+       "t": 695,
+       "term": "architecture"
+      },
+      {
+       "t": 1443,
+       "term": "architecture"
+      },
+      {
+       "t": 1711,
+       "term": "architecture"
+      },
+      {
+       "t": 1830,
+       "term": "architecture"
+      },
+      {
+       "t": 2631,
+       "term": "event bus"
+      }
+     ],
+     "primary": true
+    },
+    "tooling": {
+     "hits": 15,
+     "peak": 12,
+     "peak_at": 946,
+     "evidence": [
+      {
+       "t": 199,
+       "term": "inspector"
+      },
+      {
+       "t": 946,
+       "term": "property drawer"
+      },
+      {
+       "t": 1492,
+       "term": "editor tool"
+      }
+     ],
+     "primary": true
+    },
+    "multiplayer": {
+     "hits": 20,
+     "peak": 17,
+     "peak_at": 3133,
+     "evidence": [
+      {
+       "t": 3133,
+       "term": "client server"
+      },
+      {
+       "t": 3262,
+       "term": "networking"
+      },
+      {
+       "t": 3462,
+       "term": "multiplayer"
+      },
+      {
+       "t": 4556,
+       "term": "networking"
+      }
+     ],
+     "primary": true
+    }
+   },
+   "has_transcript": true,
+   "transcript_cues": 5724,
+   "in_feed": false,
+   "feed_title": null,
+   "curation": "include",
+   "curation_reason": "Jason, 2026-09-08: counts as the show",
+   "order": 146
+  },
+  {
+   "id": "Jx9IuyVcVRM",
+   "title": "Vital Unity Tools, Event Bus Wrap-up, Simple big app, & AI",
+   "number": null,
+   "date": "2025-05-17",
+   "duration": 5585,
+   "views": 4350,
+   "summary": null,
+   "youtube": "https://www.youtube.com/watch?v=Jx9IuyVcVRM",
+   "thumbnail": "https://i.ytimg.com/vi/Jx9IuyVcVRM/hqdefault.jpg",
+   "guests": [],
+   "cohosts": [],
+   "people": [],
+   "tags": {
+    "unity": {
+     "hits": 151,
+     "peak": 46,
+     "peak_at": 78,
+     "evidence": [
+      {
+       "t": 24,
+       "term": "unity"
+      },
+      {
+       "t": 152,
+       "term": "unity"
+      },
+      {
+       "t": 282,
+       "term": "unity"
+      },
+      {
+       "t": 378,
+       "term": "unity"
+      },
+      {
+       "t": 468,
+       "term": "unity"
+      },
+      {
+       "t": 655,
+       "term": "unity"
+      },
+      {
+       "t": 747,
+       "term": "unity"
+      },
+      {
+       "t": 847,
+       "term": "unity"
+      }
+     ],
+     "primary": true
+    },
+    "architecture": {
+     "hits": 45,
+     "peak": 24,
+     "peak_at": 4935,
+     "evidence": [
+      {
+       "t": 3237,
+       "term": "architecture"
+      },
+      {
+       "t": 3847,
+       "term": "event bus"
+      },
+      {
+       "t": 3998,
+       "term": "architecture"
+      },
+      {
+       "t": 4498,
+       "term": "state machine"
+      },
+      {
+       "t": 4935,
+       "term": "event bus"
+      },
+      {
+       "t": 5075,
+       "term": "event bus"
+      },
+      {
+       "t": 5277,
+       "term": "service locator"
+      },
+      {
+       "t": 5371,
+       "term": "architecture"
+      }
+     ],
+     "primary": true
+    },
+    "tooling": {
+     "hits": 61,
+     "peak": 32,
+     "peak_at": 3403,
+     "evidence": [
+      {
+       "t": 1483,
+       "term": "inspector"
+      },
+      {
+       "t": 1657,
+       "term": "inspector"
+      },
+      {
+       "t": 1812,
+       "term": "inspector"
+      },
+      {
+       "t": 2785,
+       "term": "custom editor"
+      },
+      {
+       "t": 3094,
+       "term": "inspector"
+      },
+      {
+       "t": 3258,
+       "term": "inspector"
+      },
+      {
+       "t": 3403,
+       "term": "inspector"
+      },
+      {
+       "t": 3618,
+       "term": "inspector"
+      }
+     ],
+     "primary": true
+    },
+    "audio": {
+     "hits": 56,
+     "peak": 17,
+     "peak_at": 4269,
+     "evidence": [
+      {
+       "t": 313,
+       "term": "audio"
+      },
+      {
+       "t": 412,
+       "term": "audio"
+      },
+      {
+       "t": 738,
+       "term": "audio"
+      },
+      {
+       "t": 1959,
+       "term": "audio"
+      },
+      {
+       "t": 2351,
+       "term": "audio"
+      },
+      {
+       "t": 2472,
+       "term": "sound effect"
+      },
+      {
+       "t": 2586,
+       "term": "sound effect"
+      },
+      {
+       "t": 3351,
+       "term": "audio"
+      }
+     ],
+     "primary": true
+    },
+    "level-design": {
+     "hits": 18,
+     "peak": 15,
+     "peak_at": 3223,
+     "evidence": [
+      {
+       "t": 3223,
+       "term": "level design"
+      },
+      {
+       "t": 3470,
+       "term": "level design"
+      },
+      {
+       "t": 3581,
+       "term": "level design"
+      },
+      {
+       "t": 5436,
+       "term": "level design"
+      }
+     ],
+     "primary": true
+    }
+   },
+   "has_transcript": true,
+   "transcript_cues": 5260,
+   "in_feed": false,
+   "feed_title": null,
+   "curation": "include",
+   "curation_reason": "Jason, 2026-09-08: counts as the show",
+   "order": 147
   }
  ],
  "duplicates": [
@@ -31436,15 +32322,6 @@
    "reason": "An interview with Unity's UI team. Short, and genuinely the show."
   },
   {
-   "id": "V3UrSEnk5bo",
-   "title": "Talking with Unity CEO John Riccitiello - GameDev, Unity, and the Future of Gaming",
-   "date": "2022-08-29",
-   "views": 26074,
-   "duration": 2428,
-   "decision": "exclude",
-   "reason": "An interview with Unity's CEO. Forty minutes, but the single best credential the show has."
-  },
-  {
    "id": "DnF4WzM5LPU",
    "title": "Unbelievable AI Breakthrough: Interactive AI Characters in a Videogame for the First Time!",
    "date": "2023-03-17",
@@ -31544,33 +32421,6 @@
    "reason": "A 190-minute panel show, the longest thing in the catalogue."
   },
   {
-   "id": "PLoq8WqCwfk",
-   "title": "LIVE | Let's talk about the Unity Changes",
-   "date": "2023-09-15",
-   "views": 17952,
-   "duration": 3377,
-   "decision": "exclude",
-   "reason": "The panel show, on the runtime-fee story. 18k views."
-  },
-  {
-   "id": "qyLcI5O9iUY",
-   "title": "Unity's Marc Whitten - Answers Unity Price Policy",
-   "date": "2023-09-22",
-   "views": 55870,
-   "duration": 3590,
-   "decision": "exclude",
-   "reason": "The same booking, and the most-watched genuine episode at 56k."
-  },
-  {
-   "id": "2hCb5K6gskw",
-   "title": "Unity Create President answers 24 Questions | Q&A w/ Marc Whitten",
-   "date": "2023-09-23",
-   "views": 6264,
-   "duration": 3590,
-   "decision": "exclude",
-   "reason": "A full interview with Unity's Create president. Flagship booking."
-  },
-  {
    "id": "DPI5erwS2pE",
    "title": "50 GameDev Ideas & Some Clarifications - Live with Jason Storey!",
    "date": "2024-01-04",
@@ -31596,24 +32446,6 @@
    "duration": 1968,
    "decision": "exclude",
    "reason": "A guest interview with Dan Baker."
-  },
-  {
-   "id": "xQeDCAR05v8",
-   "title": "Why I Stopped Using Event Buses in Unity \u2013 Developer Debate!",
-   "date": "2025-05-03",
-   "views": 7069,
-   "duration": 5473,
-   "decision": "exclude",
-   "reason": "A developer debate episode, 91 minutes."
-  },
-  {
-   "id": "Jx9IuyVcVRM",
-   "title": "Vital Unity Tools, Event Bus Wrap-up, Simple big app, & AI",
-   "date": "2025-05-17",
-   "views": 4350,
-   "duration": 5585,
-   "decision": "exclude",
-   "reason": "The most recent episode, May 2025, 93 minutes."
   }
  ],
  "feed_only": [

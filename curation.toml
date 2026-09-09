@@ -102,26 +102,26 @@ reason = "A giveaway stream."
 [[entry]]
 id = "PLoq8WqCwfk"
 title = "LIVE | Let's talk about the Unity Changes"
-decision = "exclude"
-reason = "The panel show, on the runtime-fee story. 18k views."
+decision = "include"
+reason = "Jason, 2026-09-08: counts as the show"
 
 [[entry]]
 id = "2hCb5K6gskw"
 title = "Unity Create President answers 24 Questions | Q&A w/ Marc Whitten"
-decision = "exclude"
-reason = "A full interview with Unity's Create president. Flagship booking."
+decision = "include"
+reason = "Jason, 2026-09-08: counts as the show"
 
 [[entry]]
 id = "qyLcI5O9iUY"
 title = "Unity's Marc Whitten - Answers Unity Price Policy"
-decision = "exclude"
-reason = "The same booking, and the most-watched genuine episode at 56k."
+decision = "include"
+reason = "Jason, 2026-09-08: counts as the show"
 
 [[entry]]
 id = "V3UrSEnk5bo"
 title = "Talking with Unity CEO John Riccitiello - GameDev, Unity, and the future"
-decision = "exclude"
-reason = "An interview with Unity's CEO. Forty minutes, but the single best credential the show has."
+decision = "include"
+reason = "Jason, 2026-09-08: counts as the show"
 
 [[entry]]
 id = "qGAvAMKpCJo"
@@ -168,14 +168,14 @@ reason = "A live episode with a co-host, 106 minutes."
 [[entry]]
 id = "Jx9IuyVcVRM"
 title = "Vital Unity Tools, Event Bus Wrap-up, Simple big app, & AI"
-decision = "exclude"
-reason = "The most recent episode, May 2025, 93 minutes."
+decision = "include"
+reason = "Jason, 2026-09-08: counts as the show"
 
 [[entry]]
 id = "xQeDCAR05v8"
 title = "Why I Stopped Using Event Buses in Unity - Developer Debate!"
-decision = "exclude"
-reason = "A developer debate episode, 91 minutes."
+decision = "include"
+reason = "Jason, 2026-09-08: counts as the show"
 
 [[entry]]
 id = "D7xCnWOR5kw"

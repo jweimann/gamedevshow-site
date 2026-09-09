@@ -1,38 +1,32 @@
-REMOVED BY THE PODCAST-ONLY RULE: 36
+REMOVED BY THE PODCAST-ONLY RULE: 29
+(Jason's six rescues of 2026-09-08 are no longer in this list.)
 
 2020-04-12   0h32m  408,459  The Dirty Con Job Of Mike Rowe
-2021-04-25   2h14m    6,225  Episode 7 - Multiplayer & Unity3D Live
 2021-07-11   0h39m    6,388  The Story of Storey
 2021-08-22   0h03m      614  Game Dev Show #22 - How to make a game
 2022-03-13   0h08m      126  Monster Test Prototype 3 13 22
-2022-03-16   0h02m  224,287  MUST WATCH! How TV News Is ACTIVELY Baiting You | The Prob
+2022-03-16   0h02m  224,287  MUST WATCH! How TV News Is ACTIVELY Baiting You | The Problem With Jon Stewart | Apple TV+
 2022-03-31   0h09m   41,861  Every Unity Developer should use this Now!
-2022-04-23   1h13m   24,669  LIVE & Easy - Building a Unity Multiplayer game in an hour
-2022-05-21   2h25m    4,687  YOU should GET one of these! - Jeri Ellsworth | Tilt Five 
-2022-05-23   1h26m    3,563  GRAND OPENING GIVEAWAY - Pro Pass & $2k Worth of GameDev S
-2022-05-28   1h03m    5,415  LIVE - TableTop RPG Development in Unity3D - Hex Setup & B
-2022-06-02   1h03m    4,781  Undead Priest Healer - LIVE - TableTop RPG Development in 
+2022-04-23   1h13m   24,669  LIVE & Easy - Building a Unity Multiplayer game in an hour with this new library I found!
+2022-05-21   2h25m    4,687  YOU should GET one of these! - Jeri Ellsworth | Tilt Five | GameDev
+2022-05-23   1h26m    3,563  GRAND OPENING GIVEAWAY - Pro Pass & $2k Worth of GameDev Stuff
+2022-05-28   1h03m    5,415  LIVE - TableTop RPG Development in Unity3D - Hex Setup & Battlews
+2022-06-02   1h03m    4,781  Undead Priest Healer - LIVE - TableTop RPG Development in Unity3D
 2022-06-11   1h20m    7,035  LIVE - GameState Management - Adding Character Selection
 2022-07-09   1h11m    2,523  GameDev Mastermind Groups & Jobs
-2022-08-02   0h36m    1,978  Live GameDev Meetup - Randomness | XR Simulation | Meet Ot
+2022-08-02   0h36m    1,978  Live GameDev Meetup - Randomness | XR Simulation | Meet Other GameDevs
 2022-08-26   0h16m    3,838  Unity Dev Blitz Days - Talking with Unity's UI Team - LIVE
-2022-08-29   0h40m   26,074  Talking with Unity CEO John Riccitiello - GameDev, Unity, 
-2023-03-17   0h24m  100,278  Unbelievable AI Breakthrough: Interactive AI Characters in
+2023-03-17   0h24m  100,278  Unbelievable AI Breakthrough: Interactive AI Characters in a Videogame for the First Time!
 2023-05-01   1h28m    2,390  Ukraine Winter Game Jam: 12 games LIVE!
 2023-06-24   1h38m    4,863  Coding a Role Playing Game LIVE #unity3d  + Q&A
-2023-06-29   1h49m    2,683  Building a Role Playing Game LIVE | Adding key Assets #uni
+2023-06-29   1h49m    2,683  Building a Role Playing Game LIVE | Adding key Assets #unity3d  + Q&A
 2023-07-27   0h37m    2,131  Unity | Dev Days of Summer Sale!
 2023-08-17   2h29m    3,134  GAMEBLAST - Scifi Tourism Game Dev #unity3d
 2023-08-19   1h11m      934  Redecorating the office More Scifi
-2023-08-19   0h52m    1,503  GAMEBLAST - Scifi Tourism Game Dev #unity3d | Destinations
+2023-08-19   0h52m    1,503  GAMEBLAST - Scifi Tourism Game Dev #unity3d | Destinations & Redesigned BG
 2023-08-19   0h42m    2,782  Learning C# by Developing Games with Unity
-2023-08-25   1h47m    3,662  Creating a Scifi Game in a Week - It's almost done - Come 
+2023-08-25   1h47m    3,662  Creating a Scifi Game in a Week - It's almost done - Come join & Win!
 2023-08-26   3h10m    2,005  AI GameDev Day - PreEvent Show
-2023-09-15   0h56m   17,952  LIVE | Let's talk about the Unity Changes
-2023-09-22   0h59m   55,870  Unity's Marc Whitten - Answers Unity Price Policy
-2023-09-23   0h59m    6,264  Unity Create President answers 24 Questions | Q&A w/ Marc 
-2024-01-04   1h46m    2,570  50 GameDev Ideas & Some Clarifications - Live with Jason S
-2024-01-12   0h28m    2,336  Layoffs - How my first GameJob lasted 3 weeks & what's hap
+2024-01-04   1h46m    2,570  50 GameDev Ideas & Some Clarifications - Live with Jason Storey!
+2024-01-12   0h28m    2,336  Layoffs - How my first GameJob lasted 3 weeks & what's happening now
 2024-03-06   0h32m    3,250  Building Games that Push the Limits w/ Dan Baker
-2025-05-03   1h31m    7,069  Why I Stopped Using Event Buses in Unity – Developer Debat
-2025-05-17   1h33m    4,350  Vital Unity Tools, Event Bus Wrap-up, Simple big app, & AI
