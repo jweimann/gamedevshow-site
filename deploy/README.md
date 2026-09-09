@@ -72,6 +72,36 @@ optional; add them only if the apex should answer over IPv6.
 Re-verify before setting these if any time has passed. The addresses are GitHub's to
 change, and a stale apex record is a site that silently serves someone else.
 
+**Set on 2026-09-08**, with `www` pointing at `jweimann.github.io`.
+
+> **Check the www target once the repository exists.** That hostname was taken from the
+> Namecheap account name and a stored git credential, not from GitHub itself. If the
+> repository ends up under a different account, `www` resolves to a GitHub user who is
+> not Jason and the apex works while `www` does not — which looks like a propagation
+> delay and is not one.
+
+### One pre-existing record, left alone
+
+The zone already carried a **wildcard URL Redirect, `*` → `https://podcasters.spotify.com/pod/show/gamedevshow`, unmasked**. It predates this work and was
+deliberately not touched.
+
+It does not fight the records above: `@` and `www` are both explicit, and an explicit
+host beats the wildcard. What it does catch is every *other* name — `blog.gamedev.show`,
+a typo, anything — and send it to Spotify.
+
+Two things worth Jason knowing:
+
+- **The target has moved.** `podcasters.spotify.com` now redirects to
+  `creators.spotify.com`, so the record sends visitors through an extra hop to a URL
+  Spotify has retired. If it is kept, repoint it.
+- **It is the first suspect if HTTPS never provisions.** GitHub validates the
+  certificate over the apex and `www`. Those are explicit and should be unaffected, but
+  a zone mixing URL Redirect entries with A and CNAME records is unusual enough that
+  this is where to look before assuming GitHub is slow.
+
+Keeping it is reasonable if he wants stray subdomains to land somewhere. Dropping it is
+also reasonable now that the domain has a real site.
+
 ---
 
 ## Path B — S3 + CloudFront (matches aidevshow.com and theagenticpodcast.com)
