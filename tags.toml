@@ -1,0 +1,279 @@
+# The Game Dev Show tag taxonomy.
+#
+# THIS FILE IS THE ONE TO EDIT. The tagger reads it, matches `terms` against each
+# episode's English captions, and gives an episode a tag only when the hit count reaches
+# `min_hits`. Every tag it applies stores the timestamps where the terms were said, so a
+# tag on the site can always be checked against the episode.
+#
+# Fields:
+#   id       slug used in URLs and filters
+#   label    what a visitor sees
+#   group    how the filter bar is organised
+#   terms    phrases to match, lowercased; word-boundary matched, so "ecs" will not fire
+#            inside "specs"
+#   exclude  phrases that cancel a hit on the same line, for terms with a common
+#            innocent meaning
+#   min_hits how many hits before the tag sticks. Raise it for a term that gets said in
+#            passing, lower it for one that is always significant when mentioned.
+#   query    the phrase used to measure search demand, when it differs from the label
+
+[[tag]]
+id = "unity"
+label = "Unity"
+group = "Engines"
+terms = ["unity", "unity3d", "unity engine", "unity editor"]
+min_hits = 8
+query = "unity game development"
+
+[[tag]]
+id = "unreal"
+label = "Unreal Engine"
+group = "Engines"
+terms = ["unreal", "unreal engine", "ue4", "ue5", "blueprints"]
+min_hits = 4
+query = "unreal engine tutorial"
+
+[[tag]]
+id = "godot"
+label = "Godot"
+group = "Engines"
+terms = ["godot", "gdscript"]
+min_hits = 3
+query = "godot engine tutorial"
+
+[[tag]]
+id = "dots-ecs"
+label = "DOTS & ECS"
+group = "Architecture"
+terms = ["dots", "ecs", "entity component system", "burst compiler", "job system"]
+exclude = ["connect the dots"]
+min_hits = 3
+query = "unity ecs"
+
+[[tag]]
+id = "architecture"
+label = "Architecture & patterns"
+group = "Architecture"
+terms = ["design pattern", "solid principle", "single responsibility", "dependency injection",
+         "service locator", "event bus", "observer pattern", "state machine", "scriptable object",
+         "singleton", "clean code", "architecture"]
+min_hits = 4
+query = "game programming patterns"
+
+[[tag]]
+id = "testing"
+label = "Testing & TDD"
+group = "Architecture"
+terms = ["unit test", "test driven", "tdd", "integration test", "playmode test", "mocking"]
+min_hits = 3
+query = "unit testing in unity"
+
+[[tag]]
+id = "source-control"
+label = "Source control"
+group = "Workflow"
+terms = ["git", "github", "source control", "version control", "perforce", "plastic scm",
+         "merge conflict", "branching"]
+exclude = ["git gud"]
+min_hits = 3
+query = "git for game development"
+
+[[tag]]
+id = "tooling"
+label = "Editor tooling"
+group = "Workflow"
+terms = ["editor tool", "custom editor", "editor window", "inspector", "odin inspector",
+         "property drawer", "gizmo", "editor script"]
+min_hits = 3
+query = "unity editor tools"
+
+[[tag]]
+id = "performance"
+label = "Performance & optimisation"
+group = "Runtime"
+terms = ["performance", "optimization", "optimisation", "profiler", "frame rate", "framerate",
+         "garbage collection", "draw call", "memory leak", "bottleneck", "fps drop"]
+min_hits = 4
+query = "unity performance optimization"
+
+[[tag]]
+id = "rendering"
+label = "Rendering"
+group = "Runtime"
+terms = ["rendering", "render pipeline", "urp", "hdrp", "lighting", "global illumination",
+         "post processing", "ray tracing", "lightmap"]
+min_hits = 4
+query = "unity rendering pipeline"
+
+[[tag]]
+id = "shaders"
+label = "Shaders"
+group = "Runtime"
+terms = ["shader", "shader graph", "hlsl", "vertex shader", "fragment shader", "compute shader"]
+min_hits = 3
+query = "unity shader graph"
+
+[[tag]]
+id = "physics"
+label = "Physics"
+group = "Runtime"
+terms = ["physics", "rigidbody", "collider", "raycast", "collision detection", "havok"]
+min_hits = 4
+query = "unity physics tutorial"
+
+[[tag]]
+id = "navigation-ai"
+label = "Navigation & game AI"
+group = "Runtime"
+terms = ["navmesh", "nav mesh", "pathfinding", "a star", "behaviour tree", "behavior tree",
+         "steering", "flocking", "utility ai", "finite state machine"]
+min_hits = 3
+query = "unity pathfinding"
+
+[[tag]]
+id = "multiplayer"
+label = "Multiplayer & netcode"
+group = "Runtime"
+terms = ["multiplayer", "netcode", "networking", "dedicated server", "client server",
+         "photon", "mirror networking", "lag compensation", "rollback", "matchmaking"]
+min_hits = 4
+query = "unity multiplayer tutorial"
+
+[[tag]]
+id = "animation"
+label = "Animation"
+group = "Content"
+terms = ["animation", "animator", "rigging", "blend tree", "inverse kinematics",
+         "mocap", "motion capture", "skinned mesh"]
+min_hits = 4
+query = "unity animation rigging"
+
+[[tag]]
+id = "audio"
+label = "Audio"
+group = "Content"
+terms = ["audio", "sound effect", "sound design", "fmod", "wwise", "audio mixer",
+         "audio source", "sound track", "foley"]
+min_hits = 4
+query = "game audio design"
+
+[[tag]]
+id = "art-pipeline"
+label = "Art pipeline"
+group = "Content"
+terms = ["blender", "maya", "substance", "texture", "modeling", "modelling", "sculpting",
+         "uv unwrap", "photogrammetry", "asset pipeline"]
+min_hits = 4
+query = "blender to unity workflow"
+
+[[tag]]
+id = "procedural"
+label = "Procedural generation"
+group = "Content"
+terms = ["procedural", "proc gen", "perlin noise", "wave function collapse", "random generation",
+         "procedurally generated"]
+min_hits = 3
+query = "procedural generation games"
+
+[[tag]]
+id = "level-design"
+label = "Level design"
+group = "Design"
+terms = ["level design", "level designer", "whitebox", "greybox", "blockout", "world building"]
+min_hits = 3
+query = "level design tutorial"
+
+[[tag]]
+id = "game-design"
+label = "Game design"
+group = "Design"
+terms = ["game design", "game designer", "game loop", "core loop", "player experience",
+         "game feel", "juice", "balancing", "game design document", "gdd"]
+min_hits = 4
+query = "game design fundamentals"
+
+[[tag]]
+id = "ui-ux"
+label = "UI & UX"
+group = "Design"
+terms = ["ui toolkit", "ugui", "user interface", "hud", "menu system", "canvas", "ux"]
+min_hits = 3
+query = "unity ui toolkit"
+
+[[tag]]
+id = "vr-ar"
+label = "VR & AR"
+group = "Platforms"
+terms = ["vr", "virtual reality", "augmented reality", "meta quest", "quest 2",
+         "quest 3", "vision pro", "oculus", "mixed reality", "headset"]
+min_hits = 4
+query = "vr game development"
+
+[[tag]]
+id = "mobile"
+label = "Mobile"
+group = "Platforms"
+terms = ["mobile game", "android", "ios", "app store", "google play", "mobile performance"]
+min_hits = 3
+query = "mobile game development"
+
+[[tag]]
+id = "console"
+label = "Console & PC platforms"
+group = "Platforms"
+terms = ["playstation", "xbox", "nintendo switch", "steam deck", "console port", "certification"]
+min_hits = 3
+query = "console game development"
+
+[[tag]]
+id = "ai-tools"
+label = "AI tools for devs"
+group = "AI"
+terms = ["chatgpt", "gpt", "copilot", "midjourney", "stable diffusion", "generative ai",
+         "large language model", "llm", "ai generated", "machine learning", "inworld"]
+min_hits = 4
+query = "ai tools for game development"
+
+[[tag]]
+id = "careers"
+label = "Careers & hiring"
+group = "Business"
+terms = ["resume", "portfolio", "job interview", "job hunt", "hiring", "layoff",
+         "salary", "junior developer", "getting a job", "career"]
+min_hits = 4
+query = "how to become a game developer"
+
+[[tag]]
+id = "marketing"
+label = "Marketing & launch"
+group = "Business"
+terms = ["marketing", "wishlist", "steam page", "trailer", "launch day", "press kit",
+         "influencer", "community building", "kickstarter"]
+min_hits = 4
+query = "indie game marketing"
+
+[[tag]]
+id = "monetisation"
+label = "Monetisation & business"
+group = "Business"
+terms = ["monetization", "monetisation", "revenue", "royalty", "runtime fee", "pricing",
+         "in app purchase", "publisher", "funding", "profit"]
+min_hits = 4
+query = "game monetization"
+
+[[tag]]
+id = "game-jams"
+label = "Game jams"
+group = "Community"
+terms = ["game jam", "ludum dare", "gmtk", "jam game", "48 hours"]
+min_hits = 3
+query = "game jam tips"
+
+[[tag]]
+id = "industry-news"
+label = "Industry news"
+group = "Community"
+terms = ["gdc", "unite", "announcement", "acquisition", "layoffs", "price change",
+         "terms of service", "controversy"]
+min_hits = 4
+query = "game industry news"
