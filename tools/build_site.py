@@ -258,7 +258,9 @@ def build_index(episodes, tags, stats):
     payload = [{
         "i": ep["id"], "n": ep["number"], "d": ep["date"], "t": ep["title"],
         "r": ep["duration"], "v": ep["views"], "g": ep["guests"],
-        "T": sorted(ep["tags"].keys()),
+        # Filters and row chips carry only what the episode is about, not every topic
+        # that came up in two hours.
+        "T": sorted(t for t, d in ep["tags"].items() if d.get("primary")),
     } for ep in episodes]
     labels = {t["id"]: t["label"] for t in tags}
 
@@ -414,11 +416,14 @@ render();
 
 
 def build_episode(ep, tags_by_id, neighbours):
-    stamps = []
-    for tag_id, detail in sorted(ep["tags"].items(),
-                                 key=lambda kv: -kv[1]["hits"]):
+    stamps, also = [], []
+    for tag_id, detail in sorted(ep["tags"].items(), key=lambda kv: -kv[1]["peak"]):
         tag = tags_by_id.get(tag_id)
         if not tag:
+            continue
+        if not detail.get("primary"):
+            # Real, but incidental: named without a disclosure, and not a filter.
+            also.append(e(tag["label"]))
             continue
         # The densest ten minutes is where the topic is actually gone into, so it leads;
         # the scattered mentions follow it. That is the difference between "they said
@@ -486,7 +491,9 @@ def build_episode(ep, tags_by_id, neighbours):
         "feed": '<span>Also on the podcast feed</span>' if ep["in_feed"] else "",
         "id": e(ep["id"]),
         "summary": ('<p style="margin-top:18px">%s</p>' % e(ep["summary"])) if ep.get("summary") else "",
-        "stamps": "".join(stamps) or "<p class='hits'>No captions were available for this episode.</p>",
+        "stamps": ("".join(stamps) or "<p class='hits'>No captions were available for this episode.</p>")
+                  + ('<p class="srcnote" style="margin-top:16px">Also mentioned: %s</p>'
+                     % ", ".join(also) if also else ""),
         "youtube": e(ep["youtube"]),
         "spotify": SHOW["spotify"],
         "apple": SHOW["apple"],

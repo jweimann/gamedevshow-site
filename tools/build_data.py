@@ -116,6 +116,20 @@ def transcript_for(vid):
 # the evidence links to.
 WINDOW = 600  # ten minutes
 
+# How many hits inside that window before a topic counts as covered. Four was still far
+# too loose for a two-hour show: it left a median of twelve tags an episode, with
+# Multiplayer on 63% and Animation on half the catalogue, and a filter that returns half
+# the catalogue does not filter. Measured against the stored densities, ten is where the
+# median falls to six and Unity is the only topic left above 60% - which is true of this
+# show. A tag can still set its own `min_cluster` in tags.toml.
+MIN_CLUSTER = 10
+
+# Even at ten, a wide-ranging episode earns more topics than a reader can use. The densest
+# few are what the episode is ABOUT and drive the filters; the rest are real but
+# incidental, and appear on the episode page under "also mentioned" instead. Filtering by
+# Shaders should return the shader episodes, not every episode where shaders came up.
+PRIMARY_TAGS = 5
+
 
 def tag_episode(cues, tags):
     """Which tags this episode earns, and the times that prove each one."""
@@ -141,7 +155,7 @@ def tag_episode(cues, tags):
                 start += 1
             if end - start + 1 > peak:
                 peak, peak_at = end - start + 1, hits[start]["t"]
-        if peak < tag.get("min_cluster", 4):
+        if peak < tag.get("min_cluster", MIN_CLUSTER):
             continue
 
         # Evidence spread across the episode, never six hits from the same minute.
@@ -152,6 +166,11 @@ def tag_episode(cues, tags):
                 last = hit["t"]
         found[tag["id"]] = {"hits": len(hits), "peak": peak, "peak_at": peak_at,
                             "evidence": spread[:8]}
+
+    # The densest few are what the episode is about; the rest are marked incidental.
+    ranked = sorted(found.items(), key=lambda kv: -kv[1]["peak"])
+    for rank, (tag_id, detail) in enumerate(ranked):
+        detail["primary"] = rank < PRIMARY_TAGS
     return found
 
 
@@ -347,9 +366,12 @@ def main():
     known = {e["number"] for e in episodes if e["number"]}
     feed_only = [i for i in feed if i["number"] and i["number"] not in known]
 
+    # Chip counts follow the filters, so they count the episodes a topic is ABOUT.
     counts = {}
     for episode in live:
-        for tag_id in episode["tags"]:
+        for tag_id, detail in episode["tags"].items():
+            if not detail.get("primary"):
+                continue
             entry = counts.setdefault(tag_id, {"episodes": 0, "views": 0})
             entry["episodes"] += 1
             entry["views"] += episode.get("views") or 0
