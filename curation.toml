@@ -100,12 +100,6 @@ reason = "A giveaway stream."
 # ------------------------------------------------- the show under a different title
 
 [[entry]]
-id = "pdrVGJZ00qE"
-title = "Episode 7 - Multiplayer & Unity3D Live"
-decision = "exclude"
-reason = "A numbered episode; the title just says Episode rather than Game Dev Show."
-
-[[entry]]
 id = "PLoq8WqCwfk"
 title = "LIVE | Let's talk about the Unity Changes"
 decision = "exclude"

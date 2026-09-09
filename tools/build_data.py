@@ -271,7 +271,18 @@ def summary(description):
 # playlists' strays counted as episodes and carried 58% of the view total, so the three
 # most-watched "episodes" on the site were a Mike Rowe commentary, a TV-news clip and an
 # AI news short - and "most watched" sorted them to the top for a sponsor to click first.
-IS_SHOW = re.compile(r"game\s*dev\s*show|gamedevshow|\bgds\b|#\s*\d", re.I)
+# Numbering, in every shape this catalogue actually uses. "Episode 7 - Multiplayer &
+# Unity3D Live" is numbered as plainly as "#149" is, and it was being dropped only
+# because it spells the word out and omits the hash - a reviewer's rescue for what is
+# really the rule's job. A sweep of every removed upload found that one and no other
+# shape; "Ep 12" and "GDS 40" are here because they are the obvious next variants, not
+# because anything in the data uses them yet.
+IS_SHOW = re.compile(
+    r"game\s*dev\s*show|gamedevshow|\bgds\b"
+    r"|#\s*\d"
+    r"|\bepisode\s*#?\s*\d"
+    r"|\bep\.?\s*#?\s*\d\b",
+    re.I)
 
 # A clip cut from an episode keeps the episode's title, so the title rule alone let a
 # three-minute cut of "Game Dev Show #22" count as an episode a week after the real 3h12

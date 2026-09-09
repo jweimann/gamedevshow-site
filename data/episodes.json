@@ -1506,6 +1506,341 @@
    "order": 7
   },
   {
+   "id": "pdrVGJZ00qE",
+   "title": "Episode 7 - Multiplayer & Unity3D Live",
+   "number": null,
+   "date": "2021-04-25",
+   "duration": 8066,
+   "views": 6225,
+   "summary": "Talking Game Development, MLAPI, and Unity3D!",
+   "youtube": "https://www.youtube.com/watch?v=pdrVGJZ00qE",
+   "thumbnail": "https://i.ytimg.com/vi/pdrVGJZ00qE/hqdefault.jpg",
+   "guests": [],
+   "cohosts": [],
+   "people": [],
+   "tags": {
+    "unity": {
+     "hits": 126,
+     "peak": 30,
+     "peak_at": 3561,
+     "evidence": [
+      {
+       "t": 29,
+       "term": "unity"
+      },
+      {
+       "t": 135,
+       "term": "unity"
+      },
+      {
+       "t": 840,
+       "term": "unity"
+      },
+      {
+       "t": 937,
+       "term": "unity"
+      },
+      {
+       "t": 1057,
+       "term": "unity"
+      },
+      {
+       "t": 1201,
+       "term": "unity"
+      },
+      {
+       "t": 1692,
+       "term": "unity"
+      },
+      {
+       "t": 1947,
+       "term": "unity"
+      }
+     ],
+     "primary": true
+    },
+    "architecture": {
+     "hits": 31,
+     "peak": 15,
+     "peak_at": 1158,
+     "evidence": [
+      {
+       "t": 139,
+       "term": "state machine"
+      },
+      {
+       "t": 438,
+       "term": "architecture"
+      },
+      {
+       "t": 1158,
+       "term": "architecture"
+      },
+      {
+       "t": 1348,
+       "term": "architecture"
+      },
+      {
+       "t": 1657,
+       "term": "architecture"
+      },
+      {
+       "t": 1938,
+       "term": "architecture"
+      },
+      {
+       "t": 2808,
+       "term": "architecture"
+      },
+      {
+       "t": 3829,
+       "term": "dependency injection"
+      }
+     ],
+     "primary": false
+    },
+    "performance": {
+     "hits": 15,
+     "peak": 12,
+     "peak_at": 4644,
+     "evidence": [
+      {
+       "t": 4114,
+       "term": "performance"
+      },
+      {
+       "t": 4644,
+       "term": "performance"
+      },
+      {
+       "t": 4821,
+       "term": "performance"
+      },
+      {
+       "t": 4924,
+       "term": "performance"
+      }
+     ],
+     "primary": false
+    },
+    "rendering": {
+     "hits": 21,
+     "peak": 15,
+     "peak_at": 3987,
+     "evidence": [
+      {
+       "t": 3107,
+       "term": "rendering"
+      },
+      {
+       "t": 3987,
+       "term": "rendering"
+      },
+      {
+       "t": 4080,
+       "term": "lighting"
+      },
+      {
+       "t": 4175,
+       "term": "rendering"
+      },
+      {
+       "t": 4388,
+       "term": "rendering"
+      },
+      {
+       "t": 4730,
+       "term": "lighting"
+      }
+     ],
+     "primary": false
+    },
+    "physics": {
+     "hits": 54,
+     "peak": 27,
+     "peak_at": 3218,
+     "evidence": [
+      {
+       "t": 1639,
+       "term": "physics"
+      },
+      {
+       "t": 1814,
+       "term": "collision detection"
+      },
+      {
+       "t": 2103,
+       "term": "physics"
+      },
+      {
+       "t": 2193,
+       "term": "physics"
+      },
+      {
+       "t": 2640,
+       "term": "raycast"
+      },
+      {
+       "t": 3218,
+       "term": "physics"
+      },
+      {
+       "t": 3316,
+       "term": "physics"
+      },
+      {
+       "t": 3436,
+       "term": "physics"
+      }
+     ],
+     "primary": true
+    },
+    "multiplayer": {
+     "hits": 200,
+     "peak": 61,
+     "peak_at": 1482,
+     "evidence": [
+      {
+       "t": 29,
+       "term": "multiplayer"
+      },
+      {
+       "t": 808,
+       "term": "multiplayer"
+      },
+      {
+       "t": 917,
+       "term": "multiplayer"
+      },
+      {
+       "t": 1056,
+       "term": "multiplayer"
+      },
+      {
+       "t": 1201,
+       "term": "networking"
+      },
+      {
+       "t": 1291,
+       "term": "networking"
+      },
+      {
+       "t": 1482,
+       "term": "networking"
+      },
+      {
+       "t": 1572,
+       "term": "multiplayer"
+      }
+     ],
+     "primary": true
+    },
+    "audio": {
+     "hits": 25,
+     "peak": 12,
+     "peak_at": 7230,
+     "evidence": [
+      {
+       "t": 293,
+       "term": "audio"
+      },
+      {
+       "t": 5191,
+       "term": "audio"
+      },
+      {
+       "t": 7230,
+       "term": "audio"
+      }
+     ],
+     "primary": false
+    },
+    "art-pipeline": {
+     "hits": 43,
+     "peak": 43,
+     "peak_at": 3982,
+     "evidence": [
+      {
+       "t": 3982,
+       "term": "modeling"
+      },
+      {
+       "t": 4110,
+       "term": "maya"
+      }
+     ],
+     "primary": true
+    },
+    "game-design": {
+     "hits": 30,
+     "peak": 21,
+     "peak_at": 5331,
+     "evidence": [
+      {
+       "t": 5331,
+       "term": "game design"
+      },
+      {
+       "t": 5457,
+       "term": "game design"
+      },
+      {
+       "t": 5568,
+       "term": "game design"
+      },
+      {
+       "t": 5726,
+       "term": "game design"
+      },
+      {
+       "t": 5946,
+       "term": "game designer"
+      },
+      {
+       "t": 6125,
+       "term": "game design"
+      }
+     ],
+     "primary": true
+    },
+    "industry-news": {
+     "hits": 29,
+     "peak": 20,
+     "peak_at": 4698,
+     "evidence": [
+      {
+       "t": 812,
+       "term": "announcement"
+      },
+      {
+       "t": 922,
+       "term": "unite"
+      },
+      {
+       "t": 1727,
+       "term": "gdc"
+      },
+      {
+       "t": 4698,
+       "term": "gdc"
+      },
+      {
+       "t": 4891,
+       "term": "unite"
+      }
+     ],
+     "primary": false
+    }
+   },
+   "has_transcript": true,
+   "transcript_cues": 8929,
+   "in_feed": false,
+   "feed_title": null,
+   "curation": "include",
+   "curation_reason": "Titled as the show.",
+   "order": 8
+  },
+  {
    "id": "ziot86pdcyY",
    "title": "The Game Dev Show #8 - 5/2 - DONT MISS - Unity3D - Virtual Reality - Oculus",
    "number": 8,
@@ -1802,7 +2137,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 8
+   "order": 9
   },
   {
    "id": "5RBqOzVXP2w",
@@ -2069,7 +2404,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 9
+   "order": 10
   },
   {
    "id": "oVGzUFwIdy4",
@@ -2344,7 +2679,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 10
+   "order": 11
   },
   {
    "id": "CQbw6XbTVX0",
@@ -2691,7 +3026,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 11
+   "order": 12
   },
   {
    "id": "w2UMb7pqh5g",
@@ -2713,7 +3048,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 12
+   "order": 13
   },
   {
    "id": "OOcStYUYhRc",
@@ -2980,7 +3315,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 13
+   "order": 14
   },
   {
    "id": "4QGe3s3ic7A",
@@ -3263,7 +3598,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 14
+   "order": 15
   },
   {
    "id": "hpHxqfp9jOY",
@@ -3402,7 +3737,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 15
+   "order": 16
   },
   {
    "id": "6iOMlMam9xw",
@@ -3649,7 +3984,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 16
+   "order": 17
   },
   {
    "id": "TUT2vOO6tds",
@@ -3896,7 +4231,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 17
+   "order": 18
   },
   {
    "id": "ruAM2PKLw0o",
@@ -4191,7 +4526,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 18
+   "order": 19
   },
   {
    "id": "YZ7gdx3gAgs",
@@ -4482,7 +4817,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 19
+   "order": 20
   },
   {
    "id": "VLJV50TCQts",
@@ -4745,7 +5080,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 20
+   "order": 21
   },
   {
    "id": "uIwqkfwKUrA",
@@ -4948,7 +5283,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 21
+   "order": 22
   },
   {
    "id": "1cNB89BQY5k",
@@ -5203,7 +5538,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 22
+   "order": 23
   },
   {
    "id": "vmDCBNeMk5w",
@@ -5338,7 +5673,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 23
+   "order": 24
   },
   {
    "id": "tFNrZEhMX1g",
@@ -5569,7 +5904,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 24
+   "order": 25
   },
   {
    "id": "KqsFnnLdO70",
@@ -5716,7 +6051,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 25
+   "order": 26
   },
   {
    "id": "LTfYdiIxMJA",
@@ -5971,7 +6306,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 26
+   "order": 27
   },
   {
    "id": "hzxE8usiQYs",
@@ -6238,7 +6573,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 27
+   "order": 28
   },
   {
    "id": "FiEyXi_b4XU",
@@ -6461,7 +6796,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 28
+   "order": 29
   },
   {
    "id": "vpwEs0gjCPs",
@@ -6764,7 +7099,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 29
+   "order": 30
   },
   {
    "id": "jxjGt9pv4pY",
@@ -6971,7 +7306,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 30
+   "order": 31
   },
   {
    "id": "iKY2RiF7WVw",
@@ -7394,7 +7729,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 31
+   "order": 32
   },
   {
    "id": "mOdPAPXIJKo",
@@ -7629,7 +7964,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 32
+   "order": 33
   },
   {
    "id": "SwGW3hugDhc",
@@ -8000,7 +8335,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 33
+   "order": 34
   },
   {
    "id": "8NrsvIg0Q6E",
@@ -8119,7 +8454,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 34
+   "order": 35
   },
   {
    "id": "uP7vPKs0rrE",
@@ -8250,7 +8585,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 35
+   "order": 36
   },
   {
    "id": "jx7J8eRNG9A",
@@ -8597,7 +8932,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 36
+   "order": 37
   },
   {
    "id": "LAPiLiQs3TU",
@@ -8836,7 +9171,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 37
+   "order": 38
   },
   {
    "id": "OIDdmgqAt6E",
@@ -8915,7 +9250,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 38
+   "order": 39
   },
   {
    "id": "2FAUAii6qGo",
@@ -9062,7 +9397,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 39
+   "order": 40
   },
   {
    "id": "bpPjxrE8HII",
@@ -9289,7 +9624,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 40
+   "order": 41
   },
   {
    "id": "FirdPV_9JnA",
@@ -9564,7 +9899,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 41
+   "order": 42
   },
   {
    "id": "_45gLN440X4",
@@ -9807,7 +10142,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 42
+   "order": 43
   },
   {
    "id": "pDGgjHrk5jI",
@@ -9890,7 +10225,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 43
+   "order": 44
   },
   {
    "id": "I9fNR6vT5Mc",
@@ -10041,7 +10376,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 44
+   "order": 45
   },
   {
    "id": "iYCp7r6mCWY",
@@ -10488,7 +10823,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 45
+   "order": 46
   },
   {
    "id": "TtLm0h2SBfA",
@@ -10807,7 +11142,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 46
+   "order": 47
   },
   {
    "id": "EaZ7Q9INRuo",
@@ -11094,7 +11429,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 47
+   "order": 48
   },
   {
    "id": "EnWEn0yFib0",
@@ -11257,7 +11592,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 48
+   "order": 49
   },
   {
    "id": "QV6IQMVi2gw",
@@ -11380,7 +11715,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 49
+   "order": 50
   },
   {
    "id": "hlYUfThbtIA",
@@ -11559,7 +11894,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 50
+   "order": 51
   },
   {
    "id": "2Yto1HxBBpE",
@@ -11850,7 +12185,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 51
+   "order": 52
   },
   {
    "id": "G6J9s5U86d8",
@@ -12217,7 +12552,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 52
+   "order": 53
   },
   {
    "id": "KaT4JH5BRqU",
@@ -12592,7 +12927,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 53
+   "order": 54
   },
   {
    "id": "picD5RzwQwc",
@@ -12875,7 +13210,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 54
+   "order": 55
   },
   {
    "id": "-IQO5HzLId0",
@@ -13150,7 +13485,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 55
+   "order": 56
   },
   {
    "id": "wLirKjI_-UI",
@@ -13525,7 +13860,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 56
+   "order": 57
   },
   {
    "id": "Fy2WH59Q1rk",
@@ -13936,7 +14271,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 57
+   "order": 58
   },
   {
    "id": "Xra9RmlY7vM",
@@ -14263,7 +14598,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 58
+   "order": 59
   },
   {
    "id": "2oyBYgLQu7Q",
@@ -14466,7 +14801,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 59
+   "order": 60
   },
   {
    "id": "5wOHI73-98Y",
@@ -14769,7 +15104,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 60
+   "order": 61
   },
   {
    "id": "DtX3Ru0Ffg0",
@@ -15108,7 +15443,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 61
+   "order": 62
   },
   {
    "id": "Vi6UcHyO3RM",
@@ -15291,7 +15626,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 62
+   "order": 63
   },
   {
    "id": "Yqfz1RG3HSI",
@@ -15550,7 +15885,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 63
+   "order": 64
   },
   {
    "id": "B81hTTkgew8",
@@ -15709,7 +16044,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 64
+   "order": 65
   },
   {
    "id": "dcvfptKu4Cg",
@@ -15896,7 +16231,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 65
+   "order": 66
   },
   {
    "id": "E_Cxyv_X-pY",
@@ -16195,7 +16530,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 66
+   "order": 67
   },
   {
    "id": "PUxRIc8TaXU",
@@ -16650,7 +16985,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 67
+   "order": 68
   },
   {
    "id": "peQexmgs9Xc",
@@ -16961,7 +17296,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 68
+   "order": 69
   },
   {
    "id": "eIw3TXJRVXU",
@@ -17380,7 +17715,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 69
+   "order": 70
   },
   {
    "id": "gKKjcLmmH0M",
@@ -17531,7 +17866,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 70
+   "order": 71
   },
   {
    "id": "uql-PiG1l7A",
@@ -17838,7 +18173,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 71
+   "order": 72
   },
   {
    "id": "FoA8TleUe3I",
@@ -18133,7 +18468,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 72
+   "order": 73
   },
   {
    "id": "-7UPXmP0lis",
@@ -18368,7 +18703,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 73
+   "order": 74
   },
   {
    "id": "jeUT0NRwqM4",
@@ -18575,7 +18910,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 74
+   "order": 75
   },
   {
    "id": "8TUEBYK0q5k",
@@ -18718,7 +19053,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 75
+   "order": 76
   },
   {
    "id": "vRwhSn6ikiI",
@@ -18965,7 +19300,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 76
+   "order": 77
   },
   {
    "id": "KWG9XUso-0I",
@@ -19092,7 +19427,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 77
+   "order": 78
   },
   {
    "id": "IVy7atDUjBM",
@@ -19483,7 +19818,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 78
+   "order": 79
   },
   {
    "id": "REy_Kw5pyOQ",
@@ -19738,7 +20073,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 79
+   "order": 80
   },
   {
    "id": "bpeMUkMDY7o",
@@ -19977,7 +20312,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 80
+   "order": 81
   },
   {
    "id": "qdvpPQhQw9U",
@@ -20184,7 +20519,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 81
+   "order": 82
   },
   {
    "id": "RlPfFkjUsQU",
@@ -20275,7 +20610,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 82
+   "order": 83
   },
   {
    "id": "2siC0MZiK2E",
@@ -20458,7 +20793,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 83
+   "order": 84
   },
   {
    "id": "e6YHZAE08Xc",
@@ -20661,7 +20996,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 84
+   "order": 85
   },
   {
    "id": "wD54T6dQP1U",
@@ -20884,7 +21219,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 85
+   "order": 86
   },
   {
    "id": "MPNNS2le-Wk",
@@ -21015,7 +21350,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 86
+   "order": 87
   },
   {
    "id": "mJSuH2wKX08",
@@ -21290,7 +21625,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 87
+   "order": 88
   },
   {
    "id": "K2zAuIBKXWo",
@@ -21445,7 +21780,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 88
+   "order": 89
   },
   {
    "id": "AYLwqGSeiPs",
@@ -21640,7 +21975,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 89
+   "order": 90
   },
   {
    "id": "KZ74dOJ512A",
@@ -21951,7 +22286,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 90
+   "order": 91
   },
   {
    "id": "kxZEYnJMgv8",
@@ -22086,7 +22421,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 91
+   "order": 92
   },
   {
    "id": "PLMn5Hj7LMs",
@@ -22285,7 +22620,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 92
+   "order": 93
   },
   {
    "id": "yAHALpZeoGQ",
@@ -22420,7 +22755,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 93
+   "order": 94
   },
   {
    "id": "v3S5dN1PFE0",
@@ -22615,7 +22950,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 94
+   "order": 95
   },
   {
    "id": "zEDFqgIngzI",
@@ -22914,7 +23249,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 95
+   "order": 96
   },
   {
    "id": "EH9Ao_WfLD8",
@@ -23089,7 +23424,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 96
+   "order": 97
   },
   {
    "id": "tYB8NSOLcI0",
@@ -23264,7 +23599,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 97
+   "order": 98
   },
   {
    "id": "E230gKf4zSI",
@@ -23431,7 +23766,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 98
+   "order": 99
   },
   {
    "id": "Lamki0uL5gI",
@@ -23650,7 +23985,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 99
+   "order": 100
   },
   {
    "id": "rJndSQeeZs0",
@@ -23741,7 +24076,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 100
+   "order": 101
   },
   {
    "id": "9KHU0mEGCgY",
@@ -23960,7 +24295,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 101
+   "order": 102
   },
   {
    "id": "pg-xWwoKtgA",
@@ -24359,7 +24694,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 102
+   "order": 103
   },
   {
    "id": "yqUx3IaocpU",
@@ -24582,7 +24917,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 103
+   "order": 104
   },
   {
    "id": "mX3dS0vAp2k",
@@ -24757,7 +25092,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 104
+   "order": 105
   },
   {
    "id": "wX4xtwBy1Fc",
@@ -24988,7 +25323,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 105
+   "order": 106
   },
   {
    "id": "LBVqkqJFjRQ",
@@ -25143,7 +25478,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 106
+   "order": 107
   },
   {
    "id": "csn9BS7q64s",
@@ -25338,7 +25673,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 107
+   "order": 108
   },
   {
    "id": "vLAN5k9L8DE",
@@ -25589,7 +25924,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 108
+   "order": 109
   },
   {
    "id": "30caybIhUzw",
@@ -25748,7 +26083,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 109
+   "order": 110
   },
   {
    "id": "SmbFi_JHmEg",
@@ -25815,7 +26150,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 110
+   "order": 111
   },
   {
    "id": "hcSlTz6nom8",
@@ -25898,7 +26233,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 111
+   "order": 112
   },
   {
    "id": "EVn-p0AoqHM",
@@ -26049,7 +26384,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 112
+   "order": 113
   },
   {
    "id": "Tlk8ZYyQJ_I",
@@ -26188,7 +26523,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 113
+   "order": 114
   },
   {
    "id": "Y5gYCVmDZU8",
@@ -26210,7 +26545,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 114
+   "order": 115
   },
   {
    "id": "nKGGEdLTQyg",
@@ -26333,7 +26668,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 115
+   "order": 116
   },
   {
    "id": "Mj1DqaQlZCs",
@@ -26544,7 +26879,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 116
+   "order": 117
   },
   {
    "id": "XaTJvvUZAYY",
@@ -26695,7 +27030,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 117
+   "order": 118
   },
   {
    "id": "Lj68kNBgOqM",
@@ -26894,7 +27229,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 118
+   "order": 119
   },
   {
    "id": "NRkwFKDjvqk",
@@ -27069,7 +27404,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 119
+   "order": 120
   },
   {
    "id": "9z9AuUQqv5k",
@@ -27228,7 +27563,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 120
+   "order": 121
   },
   {
    "id": "lMQBJ4siD8Y",
@@ -27307,7 +27642,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 121
+   "order": 122
   },
   {
    "id": "tC-jFUlGRdw",
@@ -27490,7 +27825,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 122
+   "order": 123
   },
   {
    "id": "wCM61B-JmyE",
@@ -27697,7 +28032,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 123
+   "order": 124
   },
   {
    "id": "27oZ45nZxJs",
@@ -28021,7 +28356,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 124
+   "order": 125
   },
   {
    "id": "Mf4VsPd9YWI",
@@ -28241,7 +28576,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 125
+   "order": 126
   },
   {
    "id": "EoemD9vP-x8",
@@ -28541,7 +28876,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 126
+   "order": 127
   },
   {
    "id": "ZMzJKIg142w",
@@ -28717,7 +29052,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 127
+   "order": 128
   },
   {
    "id": "lGjsZzcwZx0",
@@ -28993,7 +29328,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 128
+   "order": 129
   },
   {
    "id": "HznhPBvysi8",
@@ -29245,7 +29580,7 @@
    "feed_title": "#154 - New Years New GameDev! BIG SHOW",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 129
+   "order": 130
   },
   {
    "id": "e_dwwbREY58",
@@ -29512,7 +29847,7 @@
    "feed_title": "#155 - GameDev in 2024",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 130
+   "order": 131
   },
   {
    "id": "aGZnhCvB8Ak",
@@ -29623,7 +29958,7 @@
    "feed_title": "#156 - AI Ban Removed from Steam",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 131
+   "order": 132
   },
   {
    "id": "BkrQPEQObhM",
@@ -29786,7 +30121,7 @@
    "feed_title": "#157 - Unity GameDev, Inworld AI, & 2024",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 132
+   "order": 133
   },
   {
    "id": "Mg1SzVrHTjI",
@@ -29865,7 +30200,7 @@
    "feed_title": "#158 - Dungeons & Dragons, Digital Tools, AI Art & the Clippers",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 133
+   "order": 134
   },
   {
    "id": "J0Yoq56cLcA",
@@ -30124,7 +30459,7 @@
    "feed_title": "#159 - Palworld, Apple, & AI Music",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 134
+   "order": 135
   },
   {
    "id": "VzzkuFVpcxQ",
@@ -30335,7 +30670,7 @@
    "feed_title": "#160 - Why DEVS need to Cheat in games!",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 135
+   "order": 136
   },
   {
    "id": "OeHH79oczyI",
@@ -30498,7 +30833,7 @@
    "feed_title": "#161 - Live Events - Educational Games - New Unity API - Disneys new Epic stake",
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 136
+   "order": 137
   },
   {
    "id": "ufu9fT2yonY",
@@ -30685,7 +31020,7 @@
    "feed_title": null,
    "curation": "include",
    "curation_reason": "Titled as the show.",
-   "order": 137
+   "order": 138
   },
   {
    "id": "feed-163",
@@ -30710,7 +31045,7 @@
    "listen_link": "https://creators.spotify.com/pod/profile/gamedevshow/episodes/163---GDC-Predictions-and-Preview-e2gt23h",
    "curation": "include",
    "curation_reason": "Published to the podcast feed only; never uploaded to YouTube.",
-   "order": 138
+   "order": 139
   },
   {
    "id": "feed-164",
@@ -30735,7 +31070,7 @@
    "listen_link": "https://creators.spotify.com/pod/profile/gamedevshow/episodes/164---Google-AI-Game-Generation-and-Game-Engines-e2gt5mj",
    "curation": "include",
    "curation_reason": "Published to the podcast feed only; never uploaded to YouTube.",
-   "order": 139
+   "order": 140
   },
   {
    "id": "feed-165",
@@ -30760,7 +31095,7 @@
    "listen_link": "https://creators.spotify.com/pod/profile/gamedevshow/episodes/165---AI--GDC--GameDev-Resume-Reviews-e2gt66l",
    "curation": "include",
    "curation_reason": "Published to the podcast feed only; never uploaded to YouTube.",
-   "order": 140
+   "order": 141
   }
  ],
  "duplicates": [
@@ -30973,15 +31308,6 @@
    "duration": 1960,
    "decision": "exclude",
    "reason": "Not game development. Channel commentary from April 2020, and on its own it sets the site's start year and 408k of the view total."
-  },
-  {
-   "id": "pdrVGJZ00qE",
-   "title": "Episode 7 - Multiplayer & Unity3D Live",
-   "date": "2021-04-25",
-   "views": 6225,
-   "duration": 8066,
-   "decision": "exclude",
-   "reason": "A numbered episode; the title just says Episode rather than Game Dev Show."
   },
   {
    "id": "pC0oXzhjG3g",
