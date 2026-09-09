@@ -7,12 +7,21 @@ Output is plain files with no build step and no runtime dependency: site/index.h
 the catalogue, site/e/<id>.html is one page per episode. Any static host serves it, and
 it opens correctly from the filesystem, so the preview is the same thing that ships.
 
-DESIGN NOTE, so the next person does not "tidy" the thing that makes it work. The page is
-laid out as a BROADCAST RUNDOWN - the sheet a live show is actually run from - because
-that is this subject's own document: dense rows, hairline rules, monospace timings, a
-running order down the left. Not cards. The one flourish is the evidence disclosure: a
-tag opens to the timestamps where the topic was actually discussed, which is a thing this
-catalogue can do and a generic podcast template cannot.
+DESIGN NOTE, so the next person does not "tidy" the thing that makes it work.
+
+The bones are a BROADCAST RUNDOWN - the sheet a live show is actually run from: dense
+rows, hairline rules, monospace timings, a running order down the left. Not cards.
+
+What is worn over them is the ENGINE EDITOR everyone on this show has open all day. Chrome
+greys cooled toward blue, and one selection orange that only ever marks what is live,
+selected or hovered - the colour an engine outlines a clicked object in. Hovering a row
+paints the selection bar down its left edge. The evidence disclosures were always
+foldouts, so they now carry an inspector's triangle. The masthead sits over a scene-view
+grid, the figures read as the stats overlay, and the panel are portraits in frames.
+
+The one flourish is the evidence disclosure itself: a tag opens to the timestamps where
+the topic was really discussed, which is a thing this catalogue can do and a generic
+podcast template cannot.
 """
 
 import html
@@ -58,33 +67,37 @@ def thousands(n):
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?'
-         'family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&'
-         'family=IBM+Plex+Mono:wght@400;600&'
-         'family=IBM+Plex+Sans:wght@400;500;600&display=swap">')
+         'family=Chakra+Petch:wght@600;700&'
+         'family=IBM+Plex+Sans:wght@400;500;600&'
+         'family=JetBrains+Mono:wght@400;500;700&'
+         'family=Silkscreen:wght@400;700&display=swap">')
 
-# The palette is a tally light on studio paper: one loud red that only ever marks what is
-# live or selected, a deep teal that carries data, and neutrals pulled cool so the red
-# stays the only warm thing on the page.
-CSS = """
+# The page is dressed as an engine editor, because that is the window everyone on this
+# show has open. Chrome greys cooled toward blue exactly as editor chrome is, and one
+# selection orange - the colour an engine outlines the thing you have clicked in - which
+# is why it only ever marks what is live, selected or being pointed at. A second gizmo
+# green carries counts and never competes.
+CSS = r"""
 :root{
-  --paper:#edf0ef; --surface:#ffffff; --ink:#10171a; --muted:#66767a;
-  --rule:#d3dad8; --tally:#c8102e; --signal:#1f6f6b; --signal-soft:#e4efed;
-  --shadow:0 1px 2px rgba(16,23,26,.06);
-  --f-display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --paper:#e7eaec; --surface:#f7f8f9; --sunken:#dde1e4; --ink:#141a1e; --muted:#5d6a72;
+  --rule:#c5ccd1; --accent:#c2540b; --accent-ink:#ffffff; --gizmo:#256b4e;
+  --gizmo-soft:#dfeee7; --grid:rgba(20,26,30,.07);
+  --f-display:"Chakra Petch","Helvetica Neue",Arial,sans-serif;
   --f-body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
-  --f-mono:"IBM Plex Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+  --f-mono:"JetBrains Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+  --f-pixel:"Silkscreen",ui-monospace,Consolas,monospace;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --paper:#0e1416; --surface:#161e21; --ink:#e6ecea; --muted:#8ca0a4;
-    --rule:#263134; --tally:#ff6b7a; --signal:#58bdb6; --signal-soft:#152927;
-    --shadow:0 1px 2px rgba(0,0,0,.4);
+    --paper:#1b1f22; --surface:#252a2e; --sunken:#15181b; --ink:#e2e7ea; --muted:#94a1a9;
+    --rule:#333a40; --accent:#ff8b3d; --accent-ink:#1b1f22; --gizmo:#79cfa4;
+    --gizmo-soft:#1d2a26; --grid:rgba(226,231,234,.06);
   }
 }
 :root[data-theme="dark"]{
-  --paper:#0e1416; --surface:#161e21; --ink:#e6ecea; --muted:#8ca0a4;
-  --rule:#263134; --tally:#ff6b7a; --signal:#58bdb6; --signal-soft:#152927;
-  --shadow:0 1px 2px rgba(0,0,0,.4);
+  --paper:#1b1f22; --surface:#252a2e; --sunken:#15181b; --ink:#e2e7ea; --muted:#94a1a9;
+  --rule:#333a40; --accent:#ff8b3d; --accent-ink:#1b1f22; --gizmo:#79cfa4;
+  --gizmo-soft:#1d2a26; --grid:rgba(226,231,234,.06);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -93,66 +106,98 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body)
 a{color:inherit}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
 
-/* ---------- masthead: the show's own figures, stated plainly ---------- */
-.mast{border-bottom:2px solid var(--ink);padding:40px 0 0}
-.tally{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-mono);
-  font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--tally)}
-.tally::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--tally)}
-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.6rem,7vw,5.2rem);
-  line-height:.95;letter-spacing:-.02em;margin:14px 0 0;text-wrap:balance}
+/* ---------- masthead: a title card over the scene grid ---------- */
+.mast{position:relative;border-bottom:2px solid var(--ink);padding:40px 0 0;overflow:hidden}
+/* The scene view's grid, fading out before it reaches the reading. */
+.mast::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),
+    linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:58px 58px;
+  -webkit-mask-image:linear-gradient(to bottom,#000,transparent 74%);
+  mask-image:linear-gradient(to bottom,#000,transparent 74%)}
+.mast .wrap{position:relative}
+.tally{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-pixel);
+  font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.tally::before{content:"";width:8px;height:8px;background:var(--accent);
+  box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(2.6rem,7.4vw,5.4rem);
+  line-height:.94;letter-spacing:-.005em;margin:16px 0 0;text-wrap:balance}
 .standfirst{max-width:60ch;color:var(--muted);font-size:1.06rem;margin:16px 0 0}
-.figures{display:flex;flex-wrap:wrap;gap:0;margin:32px 0 0;border-top:1px solid var(--rule)}
-.figure{flex:1 1 150px;padding:14px 20px 18px;border-right:1px solid var(--rule)}
+/* The figures read as the Stats overlay an engine puts over the game view. */
+.figures{display:flex;flex-wrap:wrap;gap:0;margin:32px 0 0;border:1px solid var(--rule);
+  border-bottom:0;background:var(--surface)}
+.figure{flex:1 1 150px;padding:13px 18px 16px;border-right:1px solid var(--rule)}
 .figure:last-child{border-right:0}
-.figure b{display:block;font-family:var(--f-mono);font-weight:600;font-size:1.7rem;
-  letter-spacing:-.02em;font-variant-numeric:tabular-nums}
-.figure span{display:block;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;
-  color:var(--muted);margin-top:2px}
-.listen{display:flex;flex-wrap:wrap;gap:8px;padding:16px 0 22px}
-.listen a{font-family:var(--f-mono);font-size:.8rem;text-decoration:none;padding:7px 13px;
-  border:1px solid var(--rule);background:var(--surface);border-radius:2px}
-.listen a:hover{border-color:var(--ink)}
+.figure b{display:block;font-family:var(--f-mono);font-weight:700;font-size:1.65rem;
+  letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.figure span{display:block;font-family:var(--f-pixel);font-size:.62rem;letter-spacing:.02em;
+  text-transform:uppercase;color:var(--muted);margin-top:4px}
+.listen{display:flex;flex-wrap:wrap;gap:8px;padding:16px 0 22px;position:relative}
+.listen a{font-family:var(--f-mono);font-size:.78rem;text-decoration:none;padding:7px 13px;
+  border:1px solid var(--rule);background:var(--surface);border-radius:3px}
+.listen a:hover{border-color:var(--accent);color:var(--accent)}
 
-/* ---------- controls ---------- */
+/* ---------- the panel, in portrait frames ---------- */
+.people{padding:24px 0 20px;border-bottom:1px solid var(--rule)}
+.phead{font-family:var(--f-pixel);font-size:.66rem;letter-spacing:.02em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 14px;font-weight:400}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px 28px;
+  margin:0;padding:0;list-style:none}
+.pcard{display:flex;gap:11px;align-items:center;min-width:0}
+/* Square-ish frames, not circles: a roster of portraits, the way a party screen shows one. */
+.face{width:46px;height:46px;border-radius:5px;flex:0 0 auto;border:1px solid var(--rule);
+  object-fit:cover;background:var(--sunken);display:block}
+.pcard:hover .face{border-color:var(--accent)}
+.face.mono{display:grid;place-items:center;font-family:var(--f-mono);font-size:.84rem;
+  font-weight:700;color:var(--muted)}
+.pwho{min-width:0;display:flex;flex-direction:column;line-height:1.32}
+.pwho b{font-family:var(--f-display);font-weight:600;font-size:1rem}
+.plinks{display:flex;flex-wrap:wrap;gap:2px 10px;font-family:var(--f-mono);font-size:.72rem}
+.plinks a{color:var(--gizmo);text-decoration:none}
+.plinks a:hover{text-decoration:underline}
+.plinks .nolink{color:var(--muted)}
+.pnote{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin:16px 0 0}
+
+/* ---------- controls: the editor toolbar ---------- */
 .controls{position:sticky;top:0;z-index:20;background:var(--paper);
   border-bottom:1px solid var(--rule);padding:14px 0 12px}
 .searchrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 input[type=search]{flex:1 1 260px;min-width:0;font:inherit;padding:9px 12px;
-  border:1px solid var(--rule);background:var(--surface);color:var(--ink);border-radius:2px}
+  border:1px solid var(--rule);background:var(--sunken);color:var(--ink);border-radius:3px}
 input[type=search]:focus-visible,select:focus-visible,button:focus-visible,
-summary:focus-visible,a:focus-visible{outline:2px solid var(--tally);outline-offset:2px}
+summary:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 select{font:inherit;padding:9px 10px;border:1px solid var(--rule);background:var(--surface);
-  color:var(--ink);border-radius:2px}
-.count{font-family:var(--f-mono);font-size:.82rem;color:var(--muted);
+  color:var(--ink);border-radius:3px}
+.count{font-family:var(--f-mono);font-size:.8rem;color:var(--muted);
   font-variant-numeric:tabular-nums;white-space:nowrap}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;align-items:center}
-.chip{font-family:var(--f-mono);font-size:.76rem;padding:5px 10px;border:1px solid var(--rule);
-  background:var(--surface);color:var(--ink);border-radius:2px;cursor:pointer;
+.chip{font-family:var(--f-mono);font-size:.75rem;padding:5px 10px;border:1px solid var(--rule);
+  background:var(--surface);color:var(--ink);border-radius:3px;cursor:pointer;
   display:inline-flex;align-items:center;gap:6px}
 .chip .n{color:var(--muted);font-variant-numeric:tabular-nums}
-.chip:hover{border-color:var(--ink)}
-/* Selected changes SHAPE as well as colour: a square chip becomes a pill with a cross,
-   so the state survives a glance, a greyscale screen and a colour-blind reader. */
-.chip[aria-pressed="true"]{background:var(--tally);border-color:var(--tally);color:#fff;
-  border-radius:999px;padding-left:12px}
-.chip[aria-pressed="true"] .n{color:rgba(255,255,255,.8)}
+.chip:hover{border-color:var(--accent)}
+/* Selected changes SHAPE as well as colour: a square toolbar toggle becomes a pill with a
+   cross, so the state survives a glance, a greyscale screen and a colour-blind reader. */
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);
+  color:var(--accent-ink);border-radius:999px;padding-left:12px}
+.chip[aria-pressed="true"] .n{color:color-mix(in srgb,var(--accent-ink) 75%,transparent)}
 .chip[aria-pressed="true"]::after{content:"×";font-size:1.05em;line-height:1;opacity:.9}
 
 /* The row of topics people actually use, then everything else behind one disclosure. */
 .topline{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:12px}
-.morebtn{font-family:var(--f-mono);font-size:.76rem;padding:5px 10px;cursor:pointer;
-  border:1px dashed var(--rule);background:none;color:var(--muted);border-radius:2px}
-.morebtn:hover{border-color:var(--ink);color:var(--ink)}
+.morebtn{font-family:var(--f-mono);font-size:.75rem;padding:5px 10px;cursor:pointer;
+  border:1px dashed var(--rule);background:none;color:var(--muted);border-radius:3px}
+.morebtn:hover{border-color:var(--accent);color:var(--accent)}
 .alltopics{margin-top:10px}
 .alltopics[hidden]{display:none}
 .tgroup{margin:0 0 14px}
-.tgroup h4{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--muted);margin:0 0 6px;font-weight:600}
+.tgroup h4{font-family:var(--f-pixel);font-size:.64rem;letter-spacing:.02em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 7px;font-weight:400}
 .tgroup .chips{margin-top:0}
 
 /* What is selected, said in words rather than left to be inferred from tint. */
 .showing{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px;
-  padding:9px 12px;border-left:3px solid var(--tally);background:var(--surface)}
+  padding:9px 12px;border-left:3px solid var(--accent);background:var(--surface)}
 .showing[hidden]{display:none}
 .showing .lead{font-size:.84rem;color:var(--muted)}
 .showing .lead b{color:var(--ink)}
@@ -163,56 +208,58 @@ select{font:inherit;padding:9px 10px;border:1px solid var(--rule);background:var
     scrollbar-width:thin;-webkit-overflow-scrolling:touch}
   .topline .chip{flex:0 0 auto}
 }
-.panel{margin:12px 0 0;font-size:.88rem;color:var(--muted)}
-.panel b{color:var(--ink);font-weight:600}
-.panel a{color:var(--signal);text-decoration:none}
-.panel .chan{color:var(--muted)}
-.panel a:hover{text-decoration:underline}
-.clear{background:none;border:0;color:var(--tally);font:inherit;font-size:.82rem;
+.clear{background:none;border:0;color:var(--accent);font:inherit;font-size:.82rem;
   cursor:pointer;padding:4px 2px;text-decoration:underline}
 
-/* ---------- the rundown ---------- */
+/* ---------- the rundown, read as a hierarchy ---------- */
 .rundown{margin:0;padding:26px 0 0}
 .row{display:grid;grid-template-columns:88px 52px 1fr 78px;gap:16px;align-items:baseline;
-  padding:13px 0;border-bottom:1px solid var(--rule)}
-.row:hover{background:var(--surface)}
-.cell-date,.cell-no,.cell-run{font-family:var(--f-mono);font-size:.8rem;
+  padding:13px 0 13px 10px;border-bottom:1px solid var(--rule);
+  box-shadow:inset 3px 0 0 transparent}
+/* Hover paints the selection bar an engine paints down the side of a selected object. */
+.row:hover{background:var(--surface);box-shadow:inset 3px 0 0 var(--accent)}
+.cell-date,.cell-no,.cell-run{font-family:var(--f-mono);font-size:.78rem;
   font-variant-numeric:tabular-nums;color:var(--muted)}
-.cell-no{color:var(--tally);font-weight:600}
+.cell-no{color:var(--accent);font-weight:700}
 .cell-run{text-align:right}
-.cell-main a.t{font-family:var(--f-display);font-weight:600;font-size:1.06rem;
-  line-height:1.28;text-decoration:none;display:inline-block}
-.cell-main a.t:hover{text-decoration:underline;text-decoration-color:var(--tally);
+.cell-main a.t{font-family:var(--f-display);font-weight:600;font-size:1.1rem;
+  line-height:1.26;text-decoration:none;display:inline-block}
+.cell-main a.t:hover{text-decoration:underline;text-decoration-color:var(--accent);
   text-underline-offset:3px}
 .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:6px}
-.tg{font-family:var(--f-mono);font-size:.7rem;color:var(--signal);background:var(--signal-soft);
-  padding:2px 7px;border-radius:2px;border:0;cursor:pointer}
+.tg{font-family:var(--f-mono);font-size:.7rem;color:var(--gizmo);background:var(--gizmo-soft);
+  padding:2px 7px;border-radius:3px;border:0;cursor:pointer}
 .tg:hover{text-decoration:underline}
-.audioflag{color:var(--tally);background:none;border:1px solid var(--tally);cursor:default}
+.audioflag{color:var(--accent);background:none;border:1px solid var(--accent);cursor:default}
 .audioflag:hover{text-decoration:none}
 audio{width:100%;margin-top:4px}
 .guest{font-family:var(--f-mono);font-size:.7rem;color:var(--muted)}
-.guest b{color:var(--ink);font-weight:600}
+.guest b{color:var(--ink);font-weight:500}
 .empty{padding:60px 0;text-align:center;color:var(--muted)}
 
 /* ---------- sponsor block ---------- */
 .sponsor{margin:64px 0 0;border-top:2px solid var(--ink);padding:34px 0 70px}
-.sponsor h2{font-family:var(--f-display);font-size:2rem;margin:0 0 6px;letter-spacing:-.01em}
+.sponsor h2{font-family:var(--f-display);font-weight:700;font-size:2.1rem;margin:0 0 6px}
 .sponsor .note{color:var(--muted);max-width:62ch}
-.srcnote{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);
+.srcnote{font-family:var(--f-mono);font-size:.73rem;color:var(--muted);
   border-left:2px solid var(--rule);padding-left:10px;margin:22px 0 0}
 .topics{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:0 26px;
   margin:22px 0 0;padding:0;list-style:none}
-.topics li{display:flex;justify-content:space-between;gap:12px;padding:7px 0;
+/* The rule under each topic fills to how much of the catalogue's watch time it carries,
+   so the list is also the chart. */
+.topics li{position:relative;display:flex;justify-content:space-between;gap:12px;padding:7px 0;
   border-bottom:1px solid var(--rule);font-size:.9rem}
-.topics .v{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);
+.topics li::after{content:"";position:absolute;left:0;bottom:-1px;height:2px;
+  width:var(--w,0);background:var(--accent)}
+.topics .v{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);
   font-variant-numeric:tabular-nums;white-space:nowrap}
 footer{border-top:1px solid var(--rule);padding:22px 0 40px;color:var(--muted);font-size:.84rem}
 
 /* ---------- episode page ---------- */
-.back{font-family:var(--f-mono);font-size:.78rem;text-decoration:none;color:var(--muted)}
+.back{font-family:var(--f-mono);font-size:.77rem;text-decoration:none;color:var(--muted)}
+.back:hover{color:var(--accent)}
 .ep h1{font-size:clamp(1.9rem,4.4vw,3rem);margin-top:10px}
-.epmeta{display:flex;flex-wrap:wrap;gap:18px;font-family:var(--f-mono);font-size:.82rem;
+.epmeta{display:flex;flex-wrap:wrap;gap:18px;font-family:var(--f-mono);font-size:.8rem;
   color:var(--muted);margin:14px 0 0;font-variant-numeric:tabular-nums}
 .epgrid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(240px,.85fr);gap:44px;
   margin:34px 0 0}
@@ -221,21 +268,24 @@ footer{border-top:1px solid var(--rule);padding:22px 0 40px;color:var(--muted);f
   .cell-run{text-align:left;grid-column:1}
   .cell-main{grid-column:1 / -1}}
 .player{width:100%;aspect-ratio:16/9;border:1px solid var(--rule);background:#000}
+/* These were always foldouts. Now they look like the foldouts in an inspector, triangle
+   on the left, so it reads as something to open rather than a heading. */
 .evtag{border-bottom:1px solid var(--rule)}
 .evtag summary{cursor:pointer;padding:11px 0;display:flex;justify-content:space-between;
-  gap:12px;align-items:baseline;list-style:none}
+  gap:10px;align-items:baseline;list-style:none}
 .evtag summary::-webkit-details-marker{display:none}
-.evtag summary::after{content:"+";font-family:var(--f-mono);color:var(--muted)}
-.evtag[open] summary::after{content:"\\2212"}
-.evtag .name{font-weight:600}
-.evtag .hits{font-family:var(--f-mono);font-size:.76rem;color:var(--muted)}
-.stamps{display:flex;flex-wrap:wrap;gap:6px;padding:0 0 14px}
-.stamps a{font-family:var(--f-mono);font-size:.76rem;text-decoration:none;padding:3px 8px;
-  border:1px solid var(--rule);border-radius:2px;background:var(--surface)}
-.stamps a:hover{border-color:var(--tally);color:var(--tally)}
-.stamps a.peak{border-color:var(--tally);color:var(--tally)}
-.aside h3{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--muted);margin:0 0 8px;font-weight:600}
+.evtag summary::before{content:"\25B8";font-size:.8em;color:var(--muted);
+  margin-right:2px;flex:0 0 auto}
+.evtag[open] summary::before{content:"\25BE";color:var(--accent)}
+.evtag .name{font-weight:600;margin-right:auto}
+.evtag .hits{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+.stamps{display:flex;flex-wrap:wrap;gap:6px;padding:0 0 14px 16px}
+.stamps a{font-family:var(--f-mono);font-size:.75rem;text-decoration:none;padding:3px 8px;
+  border:1px solid var(--rule);border-radius:3px;background:var(--surface)}
+.stamps a:hover{border-color:var(--accent);color:var(--accent)}
+.stamps a.peak{border-color:var(--accent);color:var(--accent)}
+.aside h3{font-family:var(--f-pixel);font-size:.64rem;letter-spacing:.02em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 9px;font-weight:400}
 .aside section{margin:0 0 26px}
 .aside ul{margin:0;padding:0;list-style:none}
 .aside li{padding:4px 0;font-size:.92rem}
@@ -273,6 +323,90 @@ week's news, recorded live with a rotating table of developers. %(episodes)s epi
 </div></header>""" % stats
 
 
+def slugify(name):
+    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+
+
+def canonical_names(people):
+    """Every form a person is written in, mapped to the one name the site uses.
+
+    The description credits call him "Warped Imagination" and the stream tile calls him
+    "David"; without this the filter offers both and each finds half his episodes.
+    """
+    out = {}
+    for person in people:
+        forms = [person["name"], person.get("channel")] + list(person.get("aliases") or [])
+        for form in forms:
+            if form:
+                out[form.strip().lower()] = person["name"]
+    return out
+
+
+def tile_credits():
+    """Who was read off the stream's own name tags, per episode.
+
+    This is the source that works. The captions were tried four ways and each one put a
+    name on an episode the name was not on - see the note at the top of people.toml.
+    """
+    path = os.path.join(DATA, "tile_people.json")
+    if not os.path.exists(path):
+        return {}
+    rows = json.load(open(path, encoding="utf-8"))["episodes"]
+    return {vid: [r["name"] for r in entries] for vid, entries in rows.items()}
+
+
+def merge_people(episodes, people):
+    """Fold the tile credits into each episode, under one name per person.
+
+    Before this, nine episodes of a hundred and forty-seven said who was on them. The
+    tiles carry a hundred, which is the difference between a filter worth using and a
+    decoration.
+    """
+    canon = canonical_names(people)
+    tiles = tile_credits()
+    for ep in episodes:
+        merged = {}
+        for p in ep.get("people") or []:
+            merged.setdefault(canon.get(p["name"].strip().lower(), p["name"]), None)
+        for name in tiles.get(ep["id"], []):
+            merged.setdefault(name, None)
+        ep["people"] = [{"name": name} for name in sorted(merged)]
+
+
+def people_strip(people):
+    """The panel up top, each name pointing at where they actually publish.
+
+    A channel picture where the channel is known, initials where it is not, so the row
+    stays even and an unlinked person reads as a gap to fill rather than a mistake. The
+    asset-store links carry Jason's affiliate id.
+    """
+    cards = []
+    for p in people:
+        slug = slugify(p["name"])
+        if os.path.exists(os.path.join(SITE, "img", slug + ".jpg")):
+            face = ('<img class="face" src="img/%s.jpg" alt="" loading="lazy" '
+                    'width="44" height="44">' % e(slug))
+        else:
+            initials = "".join(w[0] for w in p["name"].split()[:2]).upper()
+            face = '<span class="face mono" aria-hidden="true">%s</span>' % e(initials)
+        links = []
+        channel = p.get("channel") or ""
+        if channel.strip().lower() == p["name"].strip().lower():
+            channel = ""
+        if p.get("link"):
+            links.append('<a href="%s">%s</a>' % (e(p["link"]), e(channel or "YouTube")))
+        if p.get("store"):
+            links.append('<a href="%s">Asset Store</a>' % e(p["store"]))
+        if p.get("site"):
+            links.append('<a href="%s">Site</a>' % e(p["site"]))
+        if not links:
+            links.append('<span class="nolink">channel not on record</span>')
+        cards.append('<li class="pcard">%s<span class="pwho"><b>%s</b>'
+                     '<span class="plinks">%s</span></span></li>'
+                     % (face, e(p["name"]), "".join(links)))
+    return "".join(cards)
+
+
 def roster():
     """The panel, as stated in people.toml. Read here rather than in build_data because
     it is a display fact, not a derived one - which also means editing the roster costs a
@@ -284,7 +418,8 @@ def roster():
     with open(path, "rb") as handle:
         people = tomllib.load(handle).get("person", [])
     shown = [p for p in people if p.get("confirmed", True)]
-    return ([p for p in shown if p.get("role") == "regular"],
+    return (shown,
+            [p for p in shown if p.get("role") == "regular"],
             [p for p in shown if p.get("role") == "guest"])
 
 
@@ -333,35 +468,30 @@ def build_index(episodes, tags, stats):
     # Demand survives only as the internal order of the chip bar.
     top_topics = sorted([t for t in tags if t["episodes"]],
                         key=lambda t: -t["views"])[:12]
+    peak_views = max([t["views"] for t in top_topics] or [1]) or 1
     topics_html = "".join(
-        '<li><span>%s</span><span class="v">%d eps &middot; %s views</span></li>'
-        % (e(t["label"]), t["episodes"], thousands(t["views"]))
+        '<li style="--w:%d%%"><span>%s</span>'
+        '<span class="v">%d eps &middot; %s views</span></li>'
+        % (round(100 * t["views"] / peak_views), e(t["label"]),
+           t["episodes"], thousands(t["views"]))
         for t in top_topics)
 
-    regulars, _guests = roster()
-    def credit(p):
-        """Name, then the channel they go by, linked only where a channel is known."""
-        who = e(p["name"])
-        chan = p.get("channel")
-        url = p.get("link") or p.get("site")
-        # "Jason Storey Jason Storey" - when someone's channel is just their name, the
-        # channel adds nothing, so the name itself becomes the link.
-        if chan and chan.strip().lower() == p["name"].strip().lower():
-            chan = None
-        if chan and url:
-            return '%s <span class="chan">&middot; <a href="%s">%s</a></span>' % (
-                who, e(url), e(chan))
-        if chan:
-            return '%s <span class="chan">&middot; %s</span>' % (who, e(chan))
-        if url:
-            return '<a href="%s">%s</a>' % (e(url), who)
-        return who
-
-    panel_html = ", ".join(credit(p) for p in regulars)
-    guest_html = ", ".join(credit(p) for p in _guests)
+    _all, regulars, _guests = roster()
+    # The strip is the regular panel. A one-off guest with no channel would be a face-less
+    # card linking nowhere, so guests live in the "Who's on" filter instead - which is
+    # what Jason asked for.
+    strip_html = people_strip(regulars)
+    missing = [p["name"] for p in regulars
+               if not (p.get("link") or p.get("store") or p.get("site"))]
+    if missing:
+        print("no channel on record, shown as initials: %s" % ", ".join(missing))
 
     body = """%(mast)s
 <main class="wrap">
+  <section class="people" aria-label="The regular panel">
+    <h2 class="phead">The regular panel</h2>
+    <ul class="pgrid">%(strip)s</ul>
+  </section>
   <section class="controls" aria-label="Filter episodes">
     <div class="searchrow">
       <input type="search" id="q" placeholder="Search titles, guests and topics" aria-label="Search episodes">
@@ -379,11 +509,11 @@ def build_index(episodes, tags, stats):
     <div class="topline" id="topline">%(topchips)s<button class="morebtn" type="button"
       id="morebtn" aria-expanded="false" aria-controls="alltopics">All %(tagcount)d topics</button></div>
     <div class="alltopics" id="alltopics" hidden>%(allgroups)s</div>
-    <p class="panel"><b>The regular panel:</b> %(panel)s</p>
-    %(guestline)s
-    <p class="srcnote" style="margin:8px 0 0;border:0;padding:0">The panel rotates and is
-    only credited on some episodes, so "Who's on" filters by the people an episode's own
-    title or credits name &mdash; not everyone who was in the room that night.</p>
+    <p class="srcnote" style="margin:10px 0 0;border:0;padding:0">"Who's on" reads the
+    name tags shown on screen during the stream, so it finds the table as it actually sat
+    that night rather than whoever the title happened to credit. %(covered)d of the
+    %(episodes)s episodes carry readable tags; the rest are filtered by their title
+    credits alone.</p>
   </section>
   <section class="rundown" id="rundown" aria-live="polite"></section>
 
@@ -411,9 +541,8 @@ table of game developers.</footer>
         "allgroups": all_groups,
         "tagcount": len(used),
         "guests": guest_options,
-        "panel": panel_html,
-        "guestline": ('<p class="panel"><b>Guests so far:</b> %s</p>'
-                      % guest_html) if guest_html else "",
+        "strip": strip_html,
+        "covered": sum(1 for ep in episodes if ep.get("people")),
         "topics": topics_html,
         "built": stats["built"], "episodes": stats["episodes"],
         "contact": SHOW["contact"],
@@ -620,7 +749,8 @@ def build_episode(ep, tags_by_id, neighbours):
       <li><a href="%(spotify)s">Spotify</a></li>
       <li><a href="%(apple)s">Apple Podcasts</a></li>
     </ul></section>
-    <section><h3>Credited</h3><ul>%(guests)s</ul></section>
+    %(onthis)s
+    <section><h3>Credited in the title</h3><ul>%(guests)s</ul></section>
     %(cohost_block)s
   </aside>
 </div>
@@ -647,6 +777,11 @@ def build_episode(ep, tags_by_id, neighbours):
         "spotify": SHOW["spotify"],
         "apple": SHOW["apple"],
         "guests": guests,
+        "onthis": ('<section><h3>On this episode</h3><ul>%s</ul>'
+                   '<p class="srcnote" style="margin-top:8px">Read from the name tags on '
+                   'screen.</p></section>'
+                   % "".join("<li>%s</li>" % e(p["name"]) for p in ep["people"]))
+                  if ep.get("people") else "",
         "cohost_block": ('<section><h3>Co-hosts</h3><ul>%s</ul></section>' % cohosts) if cohosts else "",
         "nav": "".join(nav),
     }
@@ -659,6 +794,7 @@ def main():
     tags = json.load(open(os.path.join(DATA, "tags.json"), encoding="utf-8"))
     episodes = data["episodes"]
     tags_by_id = {t["id"]: t for t in tags}
+    merge_people(episodes, roster()[0])
 
     # "Still going" is a claim, so the page only makes it when the catalogue supports it.
     # After the podcast-only clean-up the newest listed episode is March 2024, and a
@@ -720,8 +856,14 @@ def main():
     # ever dropped from the catalogue kept its page: thirty of them shipped to the live
     # site, including the uploads Jason had just decided were not the show. Unlinked, but
     # publicly reachable and indexable, which is not what "removed from the site" means.
+    # site/img holds the panel's channel pictures, fetched by tools/fetch_avatars.py and
+    # not written by this build. Without this line the very first rebuild after adding the
+    # strip deletes every face on it and leaves fourteen broken images on the live site.
+    keep = os.path.normcase(os.path.abspath(os.path.join(SITE, "img")))
     removed = []
     for folder, _dirs, files in os.walk(SITE):
+        if os.path.normcase(os.path.abspath(folder)).startswith(keep):
+            continue
         for name in files:
             path = os.path.abspath(os.path.join(folder, name))
             if os.path.normcase(path) not in written:
