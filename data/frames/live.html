@@ -66,44 +66,15 @@ select{font:inherit;padding:9px 10px;border:1px solid var(--rule);background:var
   color:var(--ink);border-radius:2px}
 .count{font-family:var(--f-mono);font-size:.82rem;color:var(--muted);
   font-variant-numeric:tabular-nums;white-space:nowrap}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .chip{font-family:var(--f-mono);font-size:.76rem;padding:5px 10px;border:1px solid var(--rule);
-  background:var(--surface);color:var(--ink);border-radius:2px;cursor:pointer;
-  display:inline-flex;align-items:center;gap:6px}
-.chip .n{color:var(--muted);font-variant-numeric:tabular-nums}
+  background:var(--surface);color:var(--ink);border-radius:2px;cursor:pointer}
+.chip .n{color:var(--muted);margin-left:6px;font-variant-numeric:tabular-nums}
 .chip:hover{border-color:var(--ink)}
-/* Selected changes SHAPE as well as colour: a square chip becomes a pill with a cross,
-   so the state survives a glance, a greyscale screen and a colour-blind reader. */
-.chip[aria-pressed="true"]{background:var(--tally);border-color:var(--tally);color:#fff;
-  border-radius:999px;padding-left:12px}
-.chip[aria-pressed="true"] .n{color:rgba(255,255,255,.8)}
-.chip[aria-pressed="true"]::after{content:"×";font-size:1.05em;line-height:1;opacity:.9}
-
-/* The row of topics people actually use, then everything else behind one disclosure. */
-.topline{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:12px}
-.morebtn{font-family:var(--f-mono);font-size:.76rem;padding:5px 10px;cursor:pointer;
-  border:1px dashed var(--rule);background:none;color:var(--muted);border-radius:2px}
-.morebtn:hover{border-color:var(--ink);color:var(--ink)}
-.alltopics{margin-top:10px}
-.alltopics[hidden]{display:none}
-.tgroup{margin:0 0 14px}
-.tgroup h4{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--muted);margin:0 0 6px;font-weight:600}
-.tgroup .chips{margin-top:0}
-
-/* What is selected, said in words rather than left to be inferred from tint. */
-.showing{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px;
-  padding:9px 12px;border-left:3px solid var(--tally);background:var(--surface)}
-.showing[hidden]{display:none}
-.showing .lead{font-size:.84rem;color:var(--muted)}
-.showing .lead b{color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--tally);border-color:var(--tally);color:#fff}
+.chip[aria-pressed="true"] .n{color:rgba(255,255,255,.75)}
 .grouplabel{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;
   text-transform:uppercase;color:var(--muted);align-self:center;margin-right:2px}
-@media (max-width:640px){
-  .topline{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;
-    scrollbar-width:thin;-webkit-overflow-scrolling:touch}
-  .topline .chip{flex:0 0 auto}
-}
 .panel{margin:12px 0 0;font-size:.88rem;color:var(--muted)}
 .panel b{color:var(--ink);font-weight:600}
 .panel a{color:var(--signal);text-decoration:none}
@@ -217,10 +188,7 @@ week's news, recorded live with a rotating table of developers. 147 episodes.</p
       <span class="count" id="count"></span>
       <button class="clear" id="clear" type="button" hidden>Reset</button>
     </div>
-    <div class="showing" id="showing" hidden></div>
-    <div class="topline" id="topline"><button class="chip" type="button" aria-pressed="false" data-tag="unity"><span>Unity</span><span class="n">127</span></button><button class="chip" type="button" aria-pressed="false" data-tag="vr-ar"><span>VR &amp; AR</span><span class="n">46</span></button><button class="chip" type="button" aria-pressed="false" data-tag="multiplayer"><span>Multiplayer &amp; netcode</span><span class="n">41</span></button><button class="chip" type="button" aria-pressed="false" data-tag="architecture"><span>Architecture &amp; patterns</span><span class="n">37</span></button><button class="chip" type="button" aria-pressed="false" data-tag="unreal"><span>Unreal Engine</span><span class="n">32</span></button><button class="chip" type="button" aria-pressed="false" data-tag="animation"><span>Animation</span><span class="n">30</span></button><button class="chip" type="button" aria-pressed="false" data-tag="careers"><span>Careers &amp; hiring</span><span class="n">29</span></button><button class="chip" type="button" aria-pressed="false" data-tag="rendering"><span>Rendering</span><span class="n">27</span></button><button class="morebtn" type="button"
-      id="morebtn" aria-expanded="false" aria-controls="alltopics">All 30 topics</button></div>
-    <div class="alltopics" id="alltopics" hidden><div class="tgroup"><h4>Engines</h4><div class="chips"><button class="chip" type="button" aria-pressed="false" data-tag="unity"><span>Unity</span><span class="n">127</span></button><button class="chip" type="button" aria-pressed="false" data-tag="godot"><span>Godot</span><span class="n">1</span></button><button class="chip" type="button" aria-pressed="false" data-tag="unreal"><span>Unreal Engine</span><span class="n">32</span></button></div></div><div class="tgroup"><h4>Platforms</h4><div class="chips"><button class="chip" type="button" aria-pressed="false" data-tag="vr-ar"><span>VR &amp; AR</span><span class="n">46</span></button><button class="chip" type="button" aria-pressed="false" data-tag="mobile"><span>Mobile</span><span class="n">9</span></button><button class="chip" type="button" aria-pressed="false" data-tag="console"><span>Console &amp; PC platforms</span><span class="n">11</span></button></div></div><div class="tgroup"><h4>Workflow</h4><div class="chips"><button class="chip" type="button" aria-pressed="false" data-tag="source-control"><span>Source control</span><span class="n">18</span></button><button class="chip" type="button" aria-pressed="false" data-tag="tooling"><span>Editor tooling</span><span class="n">17</span></button></div></div><div class="tgroup"><h4>AI</h4><div class="chips"><button class="chip" type="button" aria-pressed="false" data-tag="ai-tools"><span>AI tools for devs</span><span class="n">18</span></button></div></div><div class="tgroup"><h4>Runtime</h4><div class="chips"><button class="chip" type="button" aria-pressed="false" data-tag="navigation-ai"><span>Navigation &amp; game AI</span><span class="n">7</span></button><button class="chip" type="button" aria-pressed="false" data-tag="multiplayer"><span>Multiplayer &amp; netcode</span><span class="n">41</span></button><button class="chip" type="button" aria-pressed="false" data-tag="rendering"><span>Rendering</span><span class="n">27</span></button><button class="chip" type="button" aria-pressed="false" data-tag="shaders"><span>Shaders</span><span class="n">13</span></button><button class="chip" type="button" aria-pressed="false" data-tag="physics"><span>Physics</span><span class="n">17</span></button><button class="chip" type="button" aria-pressed="false" data-tag="performance"><span>Performance &amp; optimisation</span><span class="n">26</span></button></div></div><div class="tgroup"><h4>Architecture</h4><div class="chips"><button class="chip" type="button" aria-pressed="false" data-tag="architecture"><span>Architecture &amp; patterns</span><span class="n">37</span></button><button class="chip" type="button" aria-pressed="false" data-tag="dots-ecs"><span>DOTS &amp; ECS</span><span class="n">23</span></button><button class="chip" type="button" aria-pressed="false" data-tag="testing"><span>Testing &amp; TDD</span><span class="n">2</span></button></div></div><div class="tgroup"><h4>Design</h4><div class="chips"><button class="chip" type="button" aria-pressed="false" data-tag="game-design"><span>Game design</span><span class="n">15</span></button><button class="chip" type="button" aria-pressed="false" data-tag="ui-ux"><span>UI &amp; UX</span><span class="n">8</span></button><button class="chip" type="button" aria-pressed="false" data-tag="level-design"><span>Level design</span><span class="n">5</span></button></div></div><div class="tgroup"><h4>Community</h4><div class="chips"><button class="chip" type="button" aria-pressed="false" data-tag="industry-news"><span>Industry news</span><span class="n">15</span></button><button class="chip" type="button" aria-pressed="false" data-tag="game-jams"><span>Game jams</span><span class="n">4</span></button></div></div><div class="tgroup"><h4>Business</h4><div class="chips"><button class="chip" type="button" aria-pressed="false" data-tag="monetisation"><span>Monetisation &amp; business</span><span class="n">11</span></button><button class="chip" type="button" aria-pressed="false" data-tag="careers"><span>Careers &amp; hiring</span><span class="n">29</span></button><button class="chip" type="button" aria-pressed="false" data-tag="marketing"><span>Marketing &amp; launch</span><span class="n">12</span></button></div></div><div class="tgroup"><h4>Content</h4><div class="chips"><button class="chip" type="button" aria-pressed="false" data-tag="animation"><span>Animation</span><span class="n">30</span></button><button class="chip" type="button" aria-pressed="false" data-tag="art-pipeline"><span>Art pipeline</span><span class="n">27</span></button><button class="chip" type="button" aria-pressed="false" data-tag="audio"><span>Audio</span><span class="n">25</span></button><button class="chip" type="button" aria-pressed="false" data-tag="procedural"><span>Procedural generation</span><span class="n">4</span></button></div></div></div>
+    <div class="chips" id="chips"><span class="grouplabel">Engines</span><button class="chip" type="button" aria-pressed="false" data-tag="unity">Unity<span class="n">127</span></button><button class="chip" type="button" aria-pressed="false" data-tag="godot">Godot<span class="n">1</span></button><button class="chip" type="button" aria-pressed="false" data-tag="unreal">Unreal Engine<span class="n">32</span></button><span class="grouplabel">Platforms</span><button class="chip" type="button" aria-pressed="false" data-tag="vr-ar">VR &amp; AR<span class="n">46</span></button><button class="chip" type="button" aria-pressed="false" data-tag="mobile">Mobile<span class="n">9</span></button><button class="chip" type="button" aria-pressed="false" data-tag="console">Console &amp; PC platforms<span class="n">11</span></button><span class="grouplabel">Workflow</span><button class="chip" type="button" aria-pressed="false" data-tag="source-control">Source control<span class="n">18</span></button><button class="chip" type="button" aria-pressed="false" data-tag="tooling">Editor tooling<span class="n">17</span></button><span class="grouplabel">AI</span><button class="chip" type="button" aria-pressed="false" data-tag="ai-tools">AI tools for devs<span class="n">18</span></button><span class="grouplabel">Runtime</span><button class="chip" type="button" aria-pressed="false" data-tag="navigation-ai">Navigation &amp; game AI<span class="n">7</span></button><button class="chip" type="button" aria-pressed="false" data-tag="multiplayer">Multiplayer &amp; netcode<span class="n">41</span></button><button class="chip" type="button" aria-pressed="false" data-tag="rendering">Rendering<span class="n">27</span></button><button class="chip" type="button" aria-pressed="false" data-tag="shaders">Shaders<span class="n">13</span></button><button class="chip" type="button" aria-pressed="false" data-tag="physics">Physics<span class="n">17</span></button><button class="chip" type="button" aria-pressed="false" data-tag="performance">Performance &amp; optimisation<span class="n">26</span></button><span class="grouplabel">Architecture</span><button class="chip" type="button" aria-pressed="false" data-tag="architecture">Architecture &amp; patterns<span class="n">37</span></button><button class="chip" type="button" aria-pressed="false" data-tag="dots-ecs">DOTS &amp; ECS<span class="n">23</span></button><button class="chip" type="button" aria-pressed="false" data-tag="testing">Testing &amp; TDD<span class="n">2</span></button><span class="grouplabel">Design</span><button class="chip" type="button" aria-pressed="false" data-tag="game-design">Game design<span class="n">15</span></button><button class="chip" type="button" aria-pressed="false" data-tag="ui-ux">UI &amp; UX<span class="n">8</span></button><button class="chip" type="button" aria-pressed="false" data-tag="level-design">Level design<span class="n">5</span></button><span class="grouplabel">Community</span><button class="chip" type="button" aria-pressed="false" data-tag="industry-news">Industry news<span class="n">15</span></button><button class="chip" type="button" aria-pressed="false" data-tag="game-jams">Game jams<span class="n">4</span></button><span class="grouplabel">Business</span><button class="chip" type="button" aria-pressed="false" data-tag="monetisation">Monetisation &amp; business<span class="n">11</span></button><button class="chip" type="button" aria-pressed="false" data-tag="careers">Careers &amp; hiring<span class="n">29</span></button><button class="chip" type="button" aria-pressed="false" data-tag="marketing">Marketing &amp; launch<span class="n">12</span></button><span class="grouplabel">Content</span><button class="chip" type="button" aria-pressed="false" data-tag="animation">Animation<span class="n">30</span></button><button class="chip" type="button" aria-pressed="false" data-tag="art-pipeline">Art pipeline<span class="n">27</span></button><button class="chip" type="button" aria-pressed="false" data-tag="audio">Audio<span class="n">25</span></button><button class="chip" type="button" aria-pressed="false" data-tag="procedural">Procedural generation<span class="n">4</span></button></div>
     <p class="panel"><b>The regular panel:</b> Andrew <span class="chan">&middot; <a href="https://www.youtube.com/channel/UCzATh2-NC_xZSGnhZF-cFaw">Infinity PBR • Magic Pig Games</a></span>, David <span class="chan">&middot; <a href="https://www.youtube.com/c/WarpedImagination">Warped Imagination</a></span>, Pawel <span class="chan">&middot; <a href="https://www.youtube.com/@NatureManufacture">NatureManufacture</a></span>, <a href="https://www.youtube.com/c/JasonStorey">Jason Storey</a>, Greg Bradburn <span class="chan">&middot; <a href="https://www.youtube.com/channel/UCbbOlBjl21q9kYlhprE_EDQ">Midnite Oil Software</a></span>, Johnny <span class="chan">&middot; <a href="https://www.youtube.com/c/TurboMakesGames">Turbo Makes Games</a></span>, Salim, Yorai</p>
     <p class="panel"><b>Guests so far:</b> Lana Lux, Corvalis Cohen <span class="chan">&middot; Powercore2000</span></p>
     <p class="srcnote" style="margin:8px 0 0;border:0;padding:0">The panel rotates and is
@@ -249,7 +217,6 @@ table of game developers.</footer>
 <script id="labels" type="application/json">{"unity":"Unity","vr-ar":"VR & AR","source-control":"Source control","ai-tools":"AI tools for devs","navigation-ai":"Navigation & game AI","godot":"Godot","multiplayer":"Multiplayer & netcode","architecture":"Architecture & patterns","rendering":"Rendering","game-design":"Game design","industry-news":"Industry news","shaders":"Shaders","ui-ux":"UI & UX","physics":"Physics","monetisation":"Monetisation & business","performance":"Performance & optimisation","animation":"Animation","art-pipeline":"Art pipeline","mobile":"Mobile","game-jams":"Game jams","unreal":"Unreal Engine","audio":"Audio","tooling":"Editor tooling","procedural":"Procedural generation","level-design":"Level design","console":"Console & PC platforms","careers":"Careers & hiring","dots-ecs":"DOTS & ECS","marketing":"Marketing & launch","testing":"Testing & TDD"}</script>
 <script>
 const EPS = JSON.parse(document.getElementById('data').textContent);
-const TAGCOUNT = document.querySelectorAll('#alltopics .chip').length;
 const LABELS = JSON.parse(document.getElementById('labels').textContent);
 const rundown = document.getElementById('rundown');
 const q = document.getElementById('q'), guest = document.getElementById('guest');
@@ -285,7 +252,6 @@ function render(){
     ? EPS.length + ' episodes'
     : list.length + ' of ' + EPS.length + ' episodes';
   clear.hidden = !(active.size || q.value || guest.value);
-  renderShowing();
 
   if (!list.length){
     rundown.innerHTML = '<p class="empty">No episode matches that. Try fewer filters.</p>';
@@ -315,38 +281,13 @@ function render(){
 
 function toggle(id){
   active.has(id) ? active.delete(id) : active.add(id);
-  // The same topic can appear in the top row AND in its group, so every copy updates.
   document.querySelectorAll('.chip[data-tag="' + id + '"]').forEach(c =>
     c.setAttribute('aria-pressed', active.has(id) ? 'true' : 'false'));
   render();
 }
 
-function renderShowing(){
-  const box = document.getElementById('showing');
-  if (!active.size){ box.hidden = true; box.innerHTML = ''; return; }
-  const names = [...active].map(t =>
-    '<button class="chip" type="button" aria-pressed="true" data-tag="' + t + '">' +
-    '<span>' + (LABELS[t] || t) + '</span></button>').join('');
-  box.innerHTML = '<span class="lead">Showing episodes about <b>' +
-    (active.size > 1 ? 'all ' + active.size + ' of these' : 'this') + '</b>:</span>' + names;
-  box.hidden = false;
-}
-
-document.getElementById('topline').addEventListener('click', ev => {
+document.getElementById('chips').addEventListener('click', ev => {
   const chip = ev.target.closest('.chip'); if (chip) toggle(chip.dataset.tag);
-});
-document.getElementById('alltopics').addEventListener('click', ev => {
-  const chip = ev.target.closest('.chip'); if (chip) toggle(chip.dataset.tag);
-});
-document.getElementById('showing').addEventListener('click', ev => {
-  const chip = ev.target.closest('.chip'); if (chip) toggle(chip.dataset.tag);
-});
-const moreBtn = document.getElementById('morebtn'), allBox = document.getElementById('alltopics');
-moreBtn.addEventListener('click', () => {
-  const open = allBox.hidden;
-  allBox.hidden = !open;
-  moreBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  moreBtn.textContent = open ? 'Hide topics' : 'All ' + TAGCOUNT + ' topics';
 });
 rundown.addEventListener('click', ev => {
   const tg = ev.target.closest('.tg');

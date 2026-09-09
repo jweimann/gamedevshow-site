@@ -66,15 +66,44 @@ select{font:inherit;padding:9px 10px;border:1px solid var(--rule);background:var
   color:var(--ink);border-radius:2px}
 .count{font-family:var(--f-mono);font-size:.82rem;color:var(--muted);
   font-variant-numeric:tabular-nums;white-space:nowrap}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;align-items:center}
 .chip{font-family:var(--f-mono);font-size:.76rem;padding:5px 10px;border:1px solid var(--rule);
-  background:var(--surface);color:var(--ink);border-radius:2px;cursor:pointer}
-.chip .n{color:var(--muted);margin-left:6px;font-variant-numeric:tabular-nums}
+  background:var(--surface);color:var(--ink);border-radius:2px;cursor:pointer;
+  display:inline-flex;align-items:center;gap:6px}
+.chip .n{color:var(--muted);font-variant-numeric:tabular-nums}
 .chip:hover{border-color:var(--ink)}
-.chip[aria-pressed="true"]{background:var(--tally);border-color:var(--tally);color:#fff}
-.chip[aria-pressed="true"] .n{color:rgba(255,255,255,.75)}
+/* Selected changes SHAPE as well as colour: a square chip becomes a pill with a cross,
+   so the state survives a glance, a greyscale screen and a colour-blind reader. */
+.chip[aria-pressed="true"]{background:var(--tally);border-color:var(--tally);color:#fff;
+  border-radius:999px;padding-left:12px}
+.chip[aria-pressed="true"] .n{color:rgba(255,255,255,.8)}
+.chip[aria-pressed="true"]::after{content:"×";font-size:1.05em;line-height:1;opacity:.9}
+
+/* The row of topics people actually use, then everything else behind one disclosure. */
+.topline{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:12px}
+.morebtn{font-family:var(--f-mono);font-size:.76rem;padding:5px 10px;cursor:pointer;
+  border:1px dashed var(--rule);background:none;color:var(--muted);border-radius:2px}
+.morebtn:hover{border-color:var(--ink);color:var(--ink)}
+.alltopics{margin-top:10px}
+.alltopics[hidden]{display:none}
+.tgroup{margin:0 0 14px}
+.tgroup h4{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 6px;font-weight:600}
+.tgroup .chips{margin-top:0}
+
+/* What is selected, said in words rather than left to be inferred from tint. */
+.showing{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px;
+  padding:9px 12px;border-left:3px solid var(--tally);background:var(--surface)}
+.showing[hidden]{display:none}
+.showing .lead{font-size:.84rem;color:var(--muted)}
+.showing .lead b{color:var(--ink)}
 .grouplabel{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;
   text-transform:uppercase;color:var(--muted);align-self:center;margin-right:2px}
+@media (max-width:640px){
+  .topline{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;
+    scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+  .topline .chip{flex:0 0 auto}
+}
 .panel{margin:12px 0 0;font-size:.88rem;color:var(--muted)}
 .panel b{color:var(--ink);font-weight:600}
 .panel a{color:var(--signal);text-decoration:none}

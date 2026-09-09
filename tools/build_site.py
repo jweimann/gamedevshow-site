@@ -125,15 +125,44 @@ select{font:inherit;padding:9px 10px;border:1px solid var(--rule);background:var
   color:var(--ink);border-radius:2px}
 .count{font-family:var(--f-mono);font-size:.82rem;color:var(--muted);
   font-variant-numeric:tabular-nums;white-space:nowrap}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;align-items:center}
 .chip{font-family:var(--f-mono);font-size:.76rem;padding:5px 10px;border:1px solid var(--rule);
-  background:var(--surface);color:var(--ink);border-radius:2px;cursor:pointer}
-.chip .n{color:var(--muted);margin-left:6px;font-variant-numeric:tabular-nums}
+  background:var(--surface);color:var(--ink);border-radius:2px;cursor:pointer;
+  display:inline-flex;align-items:center;gap:6px}
+.chip .n{color:var(--muted);font-variant-numeric:tabular-nums}
 .chip:hover{border-color:var(--ink)}
-.chip[aria-pressed="true"]{background:var(--tally);border-color:var(--tally);color:#fff}
-.chip[aria-pressed="true"] .n{color:rgba(255,255,255,.75)}
+/* Selected changes SHAPE as well as colour: a square chip becomes a pill with a cross,
+   so the state survives a glance, a greyscale screen and a colour-blind reader. */
+.chip[aria-pressed="true"]{background:var(--tally);border-color:var(--tally);color:#fff;
+  border-radius:999px;padding-left:12px}
+.chip[aria-pressed="true"] .n{color:rgba(255,255,255,.8)}
+.chip[aria-pressed="true"]::after{content:"×";font-size:1.05em;line-height:1;opacity:.9}
+
+/* The row of topics people actually use, then everything else behind one disclosure. */
+.topline{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:12px}
+.morebtn{font-family:var(--f-mono);font-size:.76rem;padding:5px 10px;cursor:pointer;
+  border:1px dashed var(--rule);background:none;color:var(--muted);border-radius:2px}
+.morebtn:hover{border-color:var(--ink);color:var(--ink)}
+.alltopics{margin-top:10px}
+.alltopics[hidden]{display:none}
+.tgroup{margin:0 0 14px}
+.tgroup h4{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 6px;font-weight:600}
+.tgroup .chips{margin-top:0}
+
+/* What is selected, said in words rather than left to be inferred from tint. */
+.showing{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px;
+  padding:9px 12px;border-left:3px solid var(--tally);background:var(--surface)}
+.showing[hidden]{display:none}
+.showing .lead{font-size:.84rem;color:var(--muted)}
+.showing .lead b{color:var(--ink)}
 .grouplabel{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;
   text-transform:uppercase;color:var(--muted);align-self:center;margin-right:2px}
+@media (max-width:640px){
+  .topline{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;
+    scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+  .topline .chip{flex:0 0 auto}
+}
 .panel{margin:12px 0 0;font-size:.88rem;color:var(--muted)}
 .panel b{color:var(--ink);font-weight:600}
 .panel a{color:var(--signal);text-decoration:none}
@@ -265,14 +294,20 @@ def build_index(episodes, tags, stats):
         if tag["episodes"]:
             groups.setdefault(tag["group"], []).append(tag)
 
-    chips = []
-    for group, items in groups.items():
-        chips.append('<span class="grouplabel">%s</span>' % e(group))
-        for tag in items:
-            chips.append(
-                '<button class="chip" type="button" aria-pressed="false" data-tag="%s">%s'
-                '<span class="n">%d</span></button>'
+    def chip(tag):
+        return ('<button class="chip" type="button" aria-pressed="false" data-tag="%s">'
+                '<span>%s</span><span class="n">%d</span></button>'
                 % (e(tag["id"]), e(tag["label"]), tag["episodes"]))
+
+    # The eight topics that actually carry the catalogue lead; everything else is one
+    # click away. Thirty chips in a single wrapping block was the complaint.
+    used = sorted([t for t in tags if t["episodes"]], key=lambda t: -t["episodes"])
+    top_chips = "".join(chip(t) for t in used[:8])
+    group_blocks = []
+    for group, items in groups.items():
+        group_blocks.append('<div class="tgroup"><h4>%s</h4><div class="chips">%s</div></div>'
+                            % (e(group), "".join(chip(t) for t in items)))
+    all_groups = "".join(group_blocks)
 
     people = sorted({p["name"] for ep in episodes for p in ep.get("people") or []})
     guest_options = "".join('<option value="%s">%s</option>' % (e(p), e(p)) for p in people)
@@ -340,7 +375,10 @@ def build_index(episodes, tags, stats):
       <span class="count" id="count"></span>
       <button class="clear" id="clear" type="button" hidden>Reset</button>
     </div>
-    <div class="chips" id="chips">%(chips)s</div>
+    <div class="showing" id="showing" hidden></div>
+    <div class="topline" id="topline">%(topchips)s<button class="morebtn" type="button"
+      id="morebtn" aria-expanded="false" aria-controls="alltopics">All %(tagcount)d topics</button></div>
+    <div class="alltopics" id="alltopics" hidden>%(allgroups)s</div>
     <p class="panel"><b>The regular panel:</b> %(panel)s</p>
     %(guestline)s
     <p class="srcnote" style="margin:8px 0 0;border:0;padding:0">The panel rotates and is
@@ -369,7 +407,9 @@ table of game developers.</footer>
 <script id="labels" type="application/json">%(labels)s</script>
 <script>%(js)s</script>""" % {
         "mast": masthead(stats),
-        "chips": "".join(chips),
+        "topchips": top_chips,
+        "allgroups": all_groups,
+        "tagcount": len(used),
         "guests": guest_options,
         "panel": panel_html,
         "guestline": ('<p class="panel"><b>Guests so far:</b> %s</p>'
@@ -388,6 +428,7 @@ table of game developers.</footer>
 
 INDEX_JS = r"""
 const EPS = JSON.parse(document.getElementById('data').textContent);
+const TAGCOUNT = document.querySelectorAll('#alltopics .chip').length;
 const LABELS = JSON.parse(document.getElementById('labels').textContent);
 const rundown = document.getElementById('rundown');
 const q = document.getElementById('q'), guest = document.getElementById('guest');
@@ -423,6 +464,7 @@ function render(){
     ? EPS.length + ' episodes'
     : list.length + ' of ' + EPS.length + ' episodes';
   clear.hidden = !(active.size || q.value || guest.value);
+  renderShowing();
 
   if (!list.length){
     rundown.innerHTML = '<p class="empty">No episode matches that. Try fewer filters.</p>';
@@ -452,13 +494,38 @@ function render(){
 
 function toggle(id){
   active.has(id) ? active.delete(id) : active.add(id);
+  // The same topic can appear in the top row AND in its group, so every copy updates.
   document.querySelectorAll('.chip[data-tag="' + id + '"]').forEach(c =>
     c.setAttribute('aria-pressed', active.has(id) ? 'true' : 'false'));
   render();
 }
 
-document.getElementById('chips').addEventListener('click', ev => {
+function renderShowing(){
+  const box = document.getElementById('showing');
+  if (!active.size){ box.hidden = true; box.innerHTML = ''; return; }
+  const names = [...active].map(t =>
+    '<button class="chip" type="button" aria-pressed="true" data-tag="' + t + '">' +
+    '<span>' + (LABELS[t] || t) + '</span></button>').join('');
+  box.innerHTML = '<span class="lead">Showing episodes about <b>' +
+    (active.size > 1 ? 'all ' + active.size + ' of these' : 'this') + '</b>:</span>' + names;
+  box.hidden = false;
+}
+
+document.getElementById('topline').addEventListener('click', ev => {
   const chip = ev.target.closest('.chip'); if (chip) toggle(chip.dataset.tag);
+});
+document.getElementById('alltopics').addEventListener('click', ev => {
+  const chip = ev.target.closest('.chip'); if (chip) toggle(chip.dataset.tag);
+});
+document.getElementById('showing').addEventListener('click', ev => {
+  const chip = ev.target.closest('.chip'); if (chip) toggle(chip.dataset.tag);
+});
+const moreBtn = document.getElementById('morebtn'), allBox = document.getElementById('alltopics');
+moreBtn.addEventListener('click', () => {
+  const open = allBox.hidden;
+  allBox.hidden = !open;
+  moreBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  moreBtn.textContent = open ? 'Hide topics' : 'All ' + TAGCOUNT + ' topics';
 });
 rundown.addEventListener('click', ev => {
   const tg = ev.target.closest('.tg');
