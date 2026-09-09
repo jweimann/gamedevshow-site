@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FIRED after 3 weeks! - The Game Dev Show | LIVE + More CES w/ Johnny maybe :) | The Game Dev Show</title>
+<meta name="description" content="The Game Dev Show, 2023-01-20. FIRED after 3 weeks! - The Game Dev Show | LIVE + More CES w/ Johnny maybe :)">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#edf0ef; --surface:#ffffff; --ink:#10171a; --muted:#66767a;
+  --rule:#d3dad8; --tally:#c8102e; --signal:#1f6f6b; --signal-soft:#e4efed;
+  --shadow:0 1px 2px rgba(16,23,26,.06);
+  --f-display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --f-body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0e1416; --surface:#161e21; --ink:#e6ecea; --muted:#8ca0a4;
+    --rule:#263134; --tally:#ff6b7a; --signal:#58bdb6; --signal-soft:#152927;
+    --shadow:0 1px 2px rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0e1416; --surface:#161e21; --ink:#e6ecea; --muted:#8ca0a4;
+  --rule:#263134; --tally:#ff6b7a; --signal:#58bdb6; --signal-soft:#152927;
+  --shadow:0 1px 2px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* ---------- masthead: the show's own figures, stated plainly ---------- */
+.mast{border-bottom:2px solid var(--ink);padding:40px 0 0}
+.tally{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-mono);
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--tally)}
+.tally::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--tally)}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.6rem,7vw,5.2rem);
+  line-height:.95;letter-spacing:-.02em;margin:14px 0 0;text-wrap:balance}
+.standfirst{max-width:60ch;color:var(--muted);font-size:1.06rem;margin:16px 0 0}
+.figures{display:flex;flex-wrap:wrap;gap:0;margin:32px 0 0;border-top:1px solid var(--rule)}
+.figure{flex:1 1 150px;padding:14px 20px 18px;border-right:1px solid var(--rule)}
+.figure:last-child{border-right:0}
+.figure b{display:block;font-family:var(--f-mono);font-weight:600;font-size:1.7rem;
+  letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.figure span{display:block;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);margin-top:2px}
+.listen{display:flex;flex-wrap:wrap;gap:8px;padding:16px 0 22px}
+.listen a{font-family:var(--f-mono);font-size:.8rem;text-decoration:none;padding:7px 13px;
+  border:1px solid var(--rule);background:var(--surface);border-radius:2px}
+.listen a:hover{border-color:var(--ink)}
+
+/* ---------- controls ---------- */
+.controls{position:sticky;top:0;z-index:20;background:var(--paper);
+  border-bottom:1px solid var(--rule);padding:14px 0 12px}
+.searchrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+input[type=search]{flex:1 1 260px;min-width:0;font:inherit;padding:9px 12px;
+  border:1px solid var(--rule);background:var(--surface);color:var(--ink);border-radius:2px}
+input[type=search]:focus-visible,select:focus-visible,button:focus-visible,
+summary:focus-visible,a:focus-visible{outline:2px solid var(--tally);outline-offset:2px}
+select{font:inherit;padding:9px 10px;border:1px solid var(--rule);background:var(--surface);
+  color:var(--ink);border-radius:2px}
+.count{font-family:var(--f-mono);font-size:.82rem;color:var(--muted);
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chip{font-family:var(--f-mono);font-size:.76rem;padding:5px 10px;border:1px solid var(--rule);
+  background:var(--surface);color:var(--ink);border-radius:2px;cursor:pointer}
+.chip .n{color:var(--muted);margin-left:6px;font-variant-numeric:tabular-nums}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--tally);border-color:var(--tally);color:#fff}
+.chip[aria-pressed="true"] .n{color:rgba(255,255,255,.75)}
+.grouplabel{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);align-self:center;margin-right:2px}
+.clear{background:none;border:0;color:var(--tally);font:inherit;font-size:.82rem;
+  cursor:pointer;padding:4px 2px;text-decoration:underline}
+
+/* ---------- the rundown ---------- */
+.rundown{margin:0;padding:26px 0 0}
+.row{display:grid;grid-template-columns:88px 52px 1fr 78px;gap:16px;align-items:baseline;
+  padding:13px 0;border-bottom:1px solid var(--rule)}
+.row:hover{background:var(--surface)}
+.cell-date,.cell-no,.cell-run{font-family:var(--f-mono);font-size:.8rem;
+  font-variant-numeric:tabular-nums;color:var(--muted)}
+.cell-no{color:var(--tally);font-weight:600}
+.cell-run{text-align:right}
+.cell-main a.t{font-family:var(--f-display);font-weight:600;font-size:1.06rem;
+  line-height:1.28;text-decoration:none;display:inline-block}
+.cell-main a.t:hover{text-decoration:underline;text-decoration-color:var(--tally);
+  text-underline-offset:3px}
+.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:6px}
+.tg{font-family:var(--f-mono);font-size:.7rem;color:var(--signal);background:var(--signal-soft);
+  padding:2px 7px;border-radius:2px;border:0;cursor:pointer}
+.tg:hover{text-decoration:underline}
+.guest{font-family:var(--f-mono);font-size:.7rem;color:var(--muted)}
+.guest b{color:var(--ink);font-weight:600}
+.empty{padding:60px 0;text-align:center;color:var(--muted)}
+
+/* ---------- sponsor block ---------- */
+.sponsor{margin:64px 0 0;border-top:2px solid var(--ink);padding:34px 0 70px}
+.sponsor h2{font-family:var(--f-display);font-size:2rem;margin:0 0 6px;letter-spacing:-.01em}
+.sponsor .note{color:var(--muted);max-width:62ch}
+.srcnote{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);
+  border-left:2px solid var(--rule);padding-left:10px;margin:22px 0 0}
+.topics{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:0 26px;
+  margin:22px 0 0;padding:0;list-style:none}
+.topics li{display:flex;justify-content:space-between;gap:12px;padding:7px 0;
+  border-bottom:1px solid var(--rule);font-size:.9rem}
+.topics .v{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+footer{border-top:1px solid var(--rule);padding:22px 0 40px;color:var(--muted);font-size:.84rem}
+
+/* ---------- episode page ---------- */
+.back{font-family:var(--f-mono);font-size:.78rem;text-decoration:none;color:var(--muted)}
+.ep h1{font-size:clamp(1.9rem,4.4vw,3rem);margin-top:10px}
+.epmeta{display:flex;flex-wrap:wrap;gap:18px;font-family:var(--f-mono);font-size:.82rem;
+  color:var(--muted);margin:14px 0 0;font-variant-numeric:tabular-nums}
+.epgrid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(240px,.85fr);gap:44px;
+  margin:34px 0 0}
+@media (max-width:860px){.epgrid{grid-template-columns:1fr;gap:28px}
+  .row{grid-template-columns:74px 1fr;gap:6px 12px}
+  .cell-run{text-align:left;grid-column:1}
+  .cell-main{grid-column:1 / -1}}
+.player{width:100%;aspect-ratio:16/9;border:1px solid var(--rule);background:#000}
+.evtag{border-bottom:1px solid var(--rule)}
+.evtag summary{cursor:pointer;padding:11px 0;display:flex;justify-content:space-between;
+  gap:12px;align-items:baseline;list-style:none}
+.evtag summary::-webkit-details-marker{display:none}
+.evtag summary::after{content:"+";font-family:var(--f-mono);color:var(--muted)}
+.evtag[open] summary::after{content:"\2212"}
+.evtag .name{font-weight:600}
+.evtag .hits{font-family:var(--f-mono);font-size:.76rem;color:var(--muted)}
+.stamps{display:flex;flex-wrap:wrap;gap:6px;padding:0 0 14px}
+.stamps a{font-family:var(--f-mono);font-size:.76rem;text-decoration:none;padding:3px 8px;
+  border:1px solid var(--rule);border-radius:2px;background:var(--surface)}
+.stamps a:hover{border-color:var(--tally);color:var(--tally)}
+.stamps a.peak{border-color:var(--tally);color:var(--tally)}
+.aside h3{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 8px;font-weight:600}
+.aside section{margin:0 0 26px}
+.aside ul{margin:0;padding:0;list-style:none}
+.aside li{padding:4px 0;font-size:.92rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;
+  transition:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap ep">
+<p style="padding-top:28px"><a class="back" href="../index.html">&larr; All episodes</a></p>
+<p class="tally">2023-01-20</p>
+<h1>FIRED after 3 weeks! - The Game Dev Show | LIVE + More CES w/ Johnny maybe :)</h1>
+<div class="epmeta"><span>1h 19m</span><span>4,280 views</span></div>
+<div class="epgrid">
+  <div>
+    <iframe class="player" src="https://www.youtube-nocookie.com/embed/mJSuH2wKX08"
+      title="FIRED after 3 weeks! - The Game Dev Show | LIVE + More CES w/ Johnny maybe :)" loading="lazy" allowfullscreen
+      allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"></iframe>
+    <p style="margin-top:18px">Talking Game Development, C#, and Unity3D!</p>
+    <h3 style="font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;
+      text-transform:uppercase;color:var(--muted);margin:30px 0 4px">What this episode covers</h3>
+    <p class="srcnote" style="margin:0 0 14px">Topics are taken from the episode's own
+    captions. Open one to jump to the moments where it comes up.</p>
+    <details class="evtag"><summary><span class="name">DOTS &amp; ECS</span><span class="hits">140 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2032s" class="peak"><b>Main run &middot; 33:52</b></a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=218s">3:38</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2032s">33:52</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2123s">35:23</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2286s">38:06</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2379s">39:39</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2483s">41:23</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2600s">43:20</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2703s">45:03</a></div></details><details class="evtag"><summary><span class="name">Unity</span><span class="hits">57 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=199s" class="peak"><b>Main run &middot; 3:19</b></a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=199s">3:19</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=356s">5:56</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=685s">11:25</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=1019s">16:59</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=1649s">27:29</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2712s">45:12</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2946s">49:06</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=3856s">1:04:16</a></div></details><details class="evtag"><summary><span class="name">Industry news</span><span class="hits">55 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=351s" class="peak"><b>Main run &middot; 5:51</b></a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=351s">5:51</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=445s">7:25</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=548s">9:08</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=638s">10:38</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=1034s">17:14</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=1167s">19:27</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=1360s">22:40</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=3816s">1:03:36</a></div></details><details class="evtag"><summary><span class="name">Careers &amp; hiring</span><span class="hits">47 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=3152s" class="peak"><b>Main run &middot; 52:32</b></a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=768s">12:48</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=994s">16:34</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2903s">48:23</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=3152s">52:32</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=3486s">58:06</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=3818s">1:03:38</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=3951s">1:05:51</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=4482s">1:14:42</a></div></details><details class="evtag"><summary><span class="name">VR &amp; AR</span><span class="hits">42 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=1356s" class="peak"><b>Main run &middot; 22:36</b></a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=1356s">22:36</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=1786s">29:46</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=1923s">32:03</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=4629s">1:17:09</a></div></details><details class="evtag"><summary><span class="name">Physics</span><span class="hits">22 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2346s" class="peak"><b>Main run &middot; 39:06</b></a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2346s">39:06</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2706s">45:06</a></div></details><details class="evtag"><summary><span class="name">Performance &amp; optimisation</span><span class="hits">15 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2035s" class="peak"><b>Main run &middot; 33:55</b></a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2035s">33:55</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2256s">37:36</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2744s">45:44</a></div></details><details class="evtag"><summary><span class="name">Game design</span><span class="hits">12 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=64s" class="peak"><b>Main run &middot; 1:04</b></a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=64s">1:04</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=3310s">55:10</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=4623s">1:17:03</a></div></details><details class="evtag"><summary><span class="name">Console &amp; PC platforms</span><span class="hits">12 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=1249s" class="peak"><b>Main run &middot; 20:49</b></a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=1249s">20:49</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=1734s">28:54</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=1980s">33:00</a></div></details><details class="evtag"><summary><span class="name">AI tools for devs</span><span class="hits">12 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2909s" class="peak"><b>Main run &middot; 48:29</b></a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=2909s">48:29</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=3118s">51:58</a></div></details><details class="evtag"><summary><span class="name">Marketing &amp; launch</span><span class="hits">12 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=4330s" class="peak"><b>Main run &middot; 1:12:10</b></a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=4330s">1:12:10</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=4420s">1:13:40</a></div></details><details class="evtag"><summary><span class="name">Mobile</span><span class="hits">11 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=1637s" class="peak"><b>Main run &middot; 27:17</b></a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=1637s">27:17</a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=4319s">1:11:59</a></div></details><details class="evtag"><summary><span class="name">Shaders</span><span class="hits">6 mentions</span></summary><div class="stamps"><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=3334s" class="peak"><b>Main run &middot; 55:34</b></a><a href="https://www.youtube.com/watch?v=mJSuH2wKX08&t=3334s">55:34</a></div></details>
+  </div>
+  <aside class="aside">
+    <section><h3>Listen</h3><ul>
+      <li><a href="https://www.youtube.com/watch?v=mJSuH2wKX08">Watch on YouTube</a></li>
+      <li><a href="https://open.spotify.com/show/2aVmqZDsjGOQjC7gR44u1F">Spotify</a></li>
+      <li><a href="https://podcasts.apple.com/us/podcast/the-game-dev-show/id1727884433">Apple Podcasts</a></li>
+    </ul></section>
+    <section><h3>Guests</h3><ul><li class='hits'>No guest credited</li></ul></section>
+    
+  </aside>
+</div>
+<p style="display:flex;justify-content:space-between;gap:20px;margin:44px 0 60px"><a class="back" href="MPNNS2le-Wk.html">&larr; AI Revolution is here 》in-game - Unity Devs </a><a class="back" href="K2zAuIBKXWo.html">AI 3D Model Creation | BC | Unity3D - The Ga &rarr;</a></p>
+</main>
+</body>
+</html>
