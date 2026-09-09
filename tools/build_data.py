@@ -44,12 +44,23 @@ SUBS = os.path.join(DATA, "transcripts")
 # "w/ Dan Baker", "with Marc Whitten", "feat. Jason Storey" - the shapes a guest credit
 # takes in these titles. Deliberately strict: a false guest is worse than a missing one.
 GUEST_PATTERNS = [
-    re.compile(r"\bw/\s*(?:a\s+)?([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,2})"),
-    re.compile(r"\bwith\s+([A-Z][a-z]+\s+[A-Z][a-z]+)"),
-    re.compile(r"\bfeat\.?\s+([A-Z][a-z]+\s+[A-Z][a-z]+)"),
-    re.compile(r"\bQ&A\s+w/\s*([A-Z][a-z]+\s+[A-Z][a-z]+)"),
+    re.compile(r"\bw/\s*(?:a\s+)?([A-Z][a-zA-Z]+(?:\s+[A-Z][a-zA-Z]+){1,3})"),
+    re.compile(r"\bwith\s+([A-Z][a-zA-Z]+\s+[A-Z][a-zA-Z]+)"),
+    re.compile(r"\bfeat\.?\s+([A-Z][a-zA-Z]+\s+[A-Z][a-zA-Z]+)"),
+    re.compile(r"\bQ&A\s+w/\s*([A-Z][a-zA-Z]+\s+[A-Z][a-zA-Z]+)"),
+    # "Talking with Unity CEO John Riccitiello", "Talking with Unity's UI Team"
+    re.compile(r"\bTalking with\s+((?:[A-Z][\w'’]+\s*){1,4}?)(?:\s*[-–|]|\s*$)"),
+    # "- Jeri Ellsworth | Tilt Five": the guest before their company
+    re.compile(r"[-–]\s*([A-Z][a-z]+\s+[A-Z][a-z]+)\s*\|"),
+    # "Unity's Marc Whitten - Answers Unity Price Policy"
+    re.compile(r"([A-Z][a-z]+\s+[A-Z][a-z]+)\s*[-–]\s*Answers"),
 ]
-NOT_GUESTS = {"Game Dev", "Dev Show", "The Game", "Live With", "New Game", "Unity Solution"}
+NOT_GUESTS = {"Game Dev", "Dev Show", "The Game", "Live With", "New Game", "Unity Solution",
+              "Unity Awards", "Unity CEO", "Game Modules", "Dev Days", "Game Jams"}
+# Words that mean the capture names a company or a team rather than a person, so the
+# trailing-two-words rule must not turn "Unity's UI Team" into "UI Team".
+ORG_WORDS = {"team", "awards", "ceo", "president", "unity", "unity's", "studio", "studios",
+             "games", "engine", "team!", "crew"}
 
 
 def load_tags():
@@ -185,11 +196,21 @@ def guests(title, description):
     """
     names = []
     for pattern in GUEST_PATTERNS:
-        for name in pattern.findall(title):
-            name = name.strip()
-            if name not in NOT_GUESTS and name not in names and len(name) > 4:
+        for raw in pattern.findall(title):
+            name = " ".join(raw.split())
+            # "Talking with Unity CEO John Riccitiello" names a person behind their job
+            # title; the person is the trailing two words, unless those words are what
+            # makes it a team ("Unity's UI Team").
+            words = name.split()
+            if len(words) > 2 and words[-1].lower().strip("!,.") not in ORG_WORDS:
+                name = " ".join(words[-2:])
+            if name in NOT_GUESTS or len(name) <= 4:
+                continue
+            if name not in names:
                 names.append(name)
-    return names
+    # A shorter capture that is contained in a longer one is the same person named less
+    # completely, so keep the fuller version only.
+    return [n for n in names if not any(n != m and n in m for m in names)]
 
 
 # The descriptions carry a "CoHosts" block of `https://channel - Name` lines. That is
@@ -347,6 +368,13 @@ def main():
             "thumbnail": "https://i.ytimg.com/vi/%s/hqdefault.jpg" % vid,
             "guests": guests(title, info.get("description")),
             "cohosts": cohosts(info.get("description")),
+            # One list for the "Who's on" filter. Guests come from the title and
+            # co-hosts from the description's credit block, which only 7 episodes carry,
+            # so this is who is CREDITED rather than everyone who was in the room.
+            "people": ([{"name": g, "role": "guest"}
+                        for g in guests(title, info.get("description"))] +
+                       [{"name": c["name"], "role": "co-host", "link": c["link"]}
+                        for c in cohosts(info.get("description"))]),
             "tags": applied,
             "has_transcript": bool(cues),
             "transcript_cues": len(cues),
@@ -411,6 +439,7 @@ def main():
             "thumbnail": None,
             "guests": [],
             "cohosts": [],
+            "people": [],
             "tags": {},
             "has_transcript": False,
             "transcript_cues": 0,

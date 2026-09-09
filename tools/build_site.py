@@ -255,12 +255,13 @@ def build_index(episodes, tags, stats):
                 '<span class="n">%d</span></button>'
                 % (e(tag["id"]), e(tag["label"]), tag["episodes"]))
 
-    guests = sorted({g for ep in episodes for g in ep["guests"]})
-    guest_options = "".join('<option value="%s">%s</option>' % (e(g), e(g)) for g in guests)
+    people = sorted({p["name"] for ep in episodes for p in ep.get("people") or []})
+    guest_options = "".join('<option value="%s">%s</option>' % (e(p), e(p)) for p in people)
 
     payload = [{
         "i": ep["id"], "n": ep["number"], "d": ep["date"], "t": ep["title"],
-        "r": ep["duration"], "v": ep["views"], "g": ep["guests"],
+        "r": ep["duration"], "v": ep["views"],
+        "g": [p["name"] for p in ep.get("people") or []],
         # Filters and row chips carry only what the episode is about, not every topic
         # that came up in two hours.
         "T": sorted(t for t, d in ep["tags"].items() if d.get("primary")),
@@ -282,7 +283,7 @@ def build_index(episodes, tags, stats):
   <section class="controls" aria-label="Filter episodes">
     <div class="searchrow">
       <input type="search" id="q" placeholder="Search titles, guests and topics" aria-label="Search episodes">
-      <select id="guest" aria-label="Filter by guest"><option value="">Every guest</option>%(guests)s</select>
+      <select id="guest" aria-label="Filter by who is on the episode"><option value="">Who's on &mdash; anyone</option>%(guests)s</select>
       <select id="sort" aria-label="Sort order">
         <option value="old">Release order</option>
         <option value="new">Newest first</option>
@@ -293,6 +294,10 @@ def build_index(episodes, tags, stats):
       <button class="clear" id="clear" type="button" hidden>Reset</button>
     </div>
     <div class="chips" id="chips">%(chips)s</div>
+    <p class="srcnote" style="margin:10px 0 0;border:0;padding:0">Who's on lists the people
+    credited in an episode's title or its co-host block. The panel rotates and is not
+    credited on every episode, so this names who is on the record rather than everyone who
+    was in the room.</p>
   </section>
   <section class="rundown" id="rundown" aria-live="polite"></section>
 
@@ -447,7 +452,7 @@ def build_episode(ep, tags_by_id, neighbours):
                "".join(links) or "<span class='hits'>&mdash;</span>"))
 
     guests = ("".join("<li>%s</li>" % e(g) for g in ep["guests"])
-              if ep["guests"] else "<li class='hits'>No guest credited</li>")
+              if ep["guests"] else "<li class='hits'>Nobody credited in the title</li>")
     cohosts = "".join('<li><a href="%s">%s</a></li>' % (e(c["link"]), e(c["name"]))
                       for c in ep.get("cohosts") or [])
     # Three episodes went out on the podcast feed and were never uploaded to YouTube, so
@@ -497,7 +502,7 @@ def build_episode(ep, tags_by_id, neighbours):
       <li><a href="%(spotify)s">Spotify</a></li>
       <li><a href="%(apple)s">Apple Podcasts</a></li>
     </ul></section>
-    <section><h3>Guests</h3><ul>%(guests)s</ul></section>
+    <section><h3>Credited</h3><ul>%(guests)s</ul></section>
     %(cohost_block)s
   </aside>
 </div>
