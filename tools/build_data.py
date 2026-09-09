@@ -421,15 +421,21 @@ def main():
         elif IS_SHOW.search(episode["title"]) and (episode["duration"] or 0) >= MIN_EPISODE_SECONDS:
             episode["curation"] = "include"
             episode["curation_reason"] = "Titled as the show."
+        elif episode["in_feed"]:
+            episode["curation"] = "include"
+            episode["curation_reason"] = "Published to the podcast feed."
         elif IS_SHOW.search(episode["title"]):
             episode["curation"] = "unreviewed"
             episode["curation_reason"] = ("Titled as the show but under ten minutes, so "
                                           "probably a clip. Needs a line in curation.toml.")
         else:
-            # New strays default OUT and are reported, so the numbers cannot quietly
-            # inflate again the next time the playlists gain something odd.
-            episode["curation"] = "unreviewed"
-            episode["curation_reason"] = "Not titled as the show and not yet reviewed."
+            # THE DEFAULT IS OUT. Jason looked at the preview and said a lot of what was
+            # listed was not from the podcast, so a livestream on the same channel is not
+            # an episode unless its title or the feed says it is. Excluded uploads are
+            # reported rather than dropped, so a good one can be argued back in.
+            episode["curation"] = "exclude"
+            episode["curation_reason"] = ("Not numbered, not titled as the show, and not "
+                                          "in the podcast feed.")
 
     live = [e for e in episodes
             if not e.get("duplicate_of") and e["curation"] == "include"]

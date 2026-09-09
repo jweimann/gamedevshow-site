@@ -220,11 +220,10 @@ def page(title, description, body, extra_head=""):
 
 def masthead(stats):
     return """<header class="mast"><div class="wrap">
-<p class="tally">Live every week &middot; %(span)s</p>
+<p class="tally">Live, with a rotating table of developers</p>
 <h1>The Game&nbsp;Dev Show</h1>
 <p class="standfirst">A working game developer's podcast: engines, code, the industry and the
-week's news, recorded live with a rotating table of developers. %(episodes)s episodes and
-still going.</p>
+week's news, recorded live with a rotating table of developers. %(episodes)s episodes%(current)s.</p>
 <div class="figures">
   <div class="figure"><b>%(episodes)s</b><span>episodes</span></div>
   <div class="figure"><b>%(hours)s</b><span>hours recorded</span></div>
@@ -548,6 +547,19 @@ def main():
     episodes = data["episodes"]
     tags_by_id = {t["id"]: t for t in tags}
 
+    # "Still going" is a claim, so the page only makes it when the catalogue supports it.
+    # After the podcast-only clean-up the newest listed episode is March 2024, and a
+    # sponsor-facing page that says "still going" over a fourteen-month gap is telling
+    # them something the rundown underneath it contradicts. If the 2025 episodes are
+    # brought back, this turns itself on again.
+    from datetime import date
+    latest = max((ep["date"] for ep in episodes if ep["date"]), default=None)
+    months_since = 999
+    if latest:
+        y, m, _ = (int(p) for p in latest.split("-"))
+        today = date.today()
+        months_since = (today.year - y) * 12 + (today.month - m)
+
     total_seconds = sum(ep["duration"] or 0 for ep in episodes)
     durations = sorted(ep["duration"] or 0 for ep in episodes)
     years = sorted(ep["date"][:4] for ep in episodes if ep["date"])
@@ -558,7 +570,9 @@ def main():
         "views": thousands(sum(ep["views"] or 0 for ep in episodes)),
         "median": runtime(durations[len(durations) // 2] if durations else 0),
         "years": (int(years[-1]) - int(years[0]) + 1) if years else 0,
-        "span": "%s &ndash; %s" % (years[0], years[-1]) if years else "",
+        # No closed year range anywhere: an end year reads as a show that stopped.
+        "span": "",
+        "current": " and counting" if months_since <= 12 else "",
         "built": date.today().isoformat(),
         "youtube": SHOW["youtube"], "spotify": SHOW["spotify"],
         "apple": SHOW["apple"], "rss": SHOW["rss"],
