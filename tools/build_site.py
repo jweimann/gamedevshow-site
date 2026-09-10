@@ -237,10 +237,10 @@ audio{width:100%;margin-top:4px}
 .guest b{color:var(--ink);font-weight:500}
 .empty{padding:60px 0;text-align:center;color:var(--muted)}
 
-/* ---------- sponsor block ---------- */
-.sponsor{margin:64px 0 0;border-top:2px solid var(--ink);padding:34px 0 70px}
-.sponsor h2{font-family:var(--f-display);font-weight:700;font-size:2.1rem;margin:0 0 6px}
-.sponsor .note{color:var(--muted);max-width:62ch}
+/* ---------- what the catalogue covers, closing the page ---------- */
+.closing{margin:64px 0 0;border-top:2px solid var(--ink);padding:34px 0 70px}
+.closing h2{font-family:var(--f-display);font-weight:700;font-size:2.1rem;margin:0 0 6px}
+.closing .note{color:var(--muted);max-width:62ch}
 .srcnote{font-family:var(--f-mono);font-size:.73rem;color:var(--muted);
   border-left:2px solid var(--rule);padding-left:10px;margin:22px 0 0}
 .topics{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:0 26px;
@@ -318,7 +318,7 @@ week's news, recorded live with a rotating table of developers. %(episodes)s epi
 <nav class="listen">
   <a href="%(youtube)s">YouTube</a><a href="%(spotify)s">Spotify</a>
   <a href="%(apple)s">Apple Podcasts</a><a href="%(rss)s">RSS</a>
-  <a href="#sponsor">Sponsor the show</a>
+  <a href="#covers">What it covers</a>
 </nav>
 </div></header>""" % stats
 
@@ -458,9 +458,10 @@ def build_index(episodes, tags, stats):
     } for ep in episodes]
     labels = {t["id"]: t["label"] for t in tags}
 
-    # Sponsor block: every number here is computed from public YouTube data, and the note
-    # under it says so. Nothing about listeners or demographics is claimed, because
-    # nobody has given us any.
+    # Every number here is computed from public YouTube data, and the note under it says
+    # so. Nothing about listeners or demographics is claimed, because nobody has given us
+    # any. This closes the page as a description of the catalogue rather than a pitch: the
+    # same figures do the same work for a sponsor without the page having to sell at them.
     # Episode count and views, not the demand proxy. Ranking a phrase against its own
     # prefix saturates - six topics scored 100 and Godot's twelve episodes sat beside
     # Unity's on the same number, which tells a sponsor nothing and invites the question
@@ -517,18 +518,17 @@ def build_index(episodes, tags, stats):
   </section>
   <section class="rundown" id="rundown" aria-live="polite"></section>
 
-  <section class="sponsor" id="sponsor">
-    <h2>Sponsor the show</h2>
-    <p class="note">The audience is working game developers: the people who choose the
-    engine, buy the tooling and pick the asset store bundle. Episodes run long and get
-    watched long, and the back catalogue keeps earning views years after the stream ends.</p>
+  <section class="closing" id="covers">
+    <h2>What the show covers</h2>
+    <p class="note">Five years of a working developer's podcast, counted by subject. An
+    episode is tagged with everything it really goes into, so the counts overlap; the bar
+    is each topic's views measured against the most watched.</p>
     <ul class="topics">%(topics)s</ul>
     <p class="srcnote">Every figure on this page is public YouTube data for the %(episodes)s
     episodes listed, counted on %(built)s. The channel's non-episode uploads are not
     counted here, so these are the show's own numbers rather than the channel's. Listener
-    and download figures are not shown because they are not public &mdash; ask and we
-    will send them.</p>
-    <p class="note" style="margin-top:22px">Talk to us: <a href="mailto:%(contact)s">%(contact)s</a></p>
+    and download figures are not public and are not shown.</p>
+    <p class="note" style="margin-top:22px">Get in touch: <a href="mailto:%(contact)s">%(contact)s</a></p>
   </section>
 </main>
 <footer class="wrap">The Game Dev Show &middot; hosted by Jason Weimann with a rotating
