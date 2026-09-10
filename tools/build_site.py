@@ -34,6 +34,12 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 SITE = os.path.join(ROOT, "site")
 
+# The panel strip - portraits and channel links above the filters. Off at Jason's
+# request. Set this to True and rebuild to put it back: the avatars are still in site/img,
+# the builder is still people_strip(), and the CSS is still under "the panel, in portrait
+# frames". Nothing else depends on it - "Who's on" reads the episodes, not this.
+SHOW_PANEL = False
+
 SHOW = {
     "name": "The Game Dev Show",
     "spotify": "https://open.spotify.com/show/2aVmqZDsjGOQjC7gR44u1F",
@@ -481,19 +487,17 @@ def build_index(episodes, tags, stats):
     # The strip is the regular panel. A one-off guest with no channel would be a face-less
     # card linking nowhere, so guests live in the "Who's on" filter instead - which is
     # what Jason asked for.
-    strip_html = people_strip(regulars)
-    missing = [p["name"] for p in regulars
-               if not (p.get("link") or p.get("store") or p.get("site"))]
-    if missing:
-        print("no channel on record, shown as initials: %s" % ", ".join(missing))
+    strip_html = ""
+    if SHOW_PANEL:
+        strip_html = people_strip(regulars)
+        missing = [p["name"] for p in regulars
+                   if not (p.get("link") or p.get("store") or p.get("site"))]
+        if missing:
+            print("no channel on record, shown as initials: %s" % ", ".join(missing))
 
     body = """%(mast)s
 <main class="wrap">
-  <section class="people" aria-label="The regular panel">
-    <h2 class="phead">The regular panel</h2>
-    <ul class="pgrid">%(strip)s</ul>
-  </section>
-  <section class="controls" aria-label="Filter episodes">
+%(panelblock)s  <section class="controls" aria-label="Filter episodes">
     <div class="searchrow">
       <input type="search" id="q" placeholder="Search titles, guests and topics" aria-label="Search episodes">
       <select id="guest" aria-label="Filter by who is on the episode"><option value="">Who's on &mdash; anyone</option>%(guests)s</select>
@@ -541,7 +545,10 @@ table of game developers.</footer>
         "allgroups": all_groups,
         "tagcount": len(used),
         "guests": guest_options,
-        "strip": strip_html,
+        "panelblock": ('  <section class="people" aria-label="The regular panel">\n'
+                       '    <h2 class="phead">The regular panel</h2>\n'
+                       '    <ul class="pgrid">%s</ul>\n  </section>\n' % strip_html)
+                      if SHOW_PANEL else "",
         "covered": sum(1 for ep in episodes if ep.get("people")),
         "topics": topics_html,
         "built": stats["built"], "episodes": stats["episodes"],
