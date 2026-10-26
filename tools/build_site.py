@@ -805,7 +805,7 @@ def build_episode(ep, tags_by_id, neighbours):
         "stamps": ("".join(stamps) or
                    ("<p class='hits'>Audio-only episodes have no captions to read, so this "
                     "one carries no topics.</p>" if ep.get("audio_only")
-                    else "<p class='hits'>No captions were available for this episode.</p>"))
+                    else "<p class='hits'>Topic timestamps are not available for this episode yet.</p>"))
                   + ('<p class="srcnote" style="margin-top:16px">Also mentioned: %s</p>'
                      % ", ".join(also) if also else ""),
         "watch": ('<li><a href="%s">Open on Spotify</a></li>' % e(ep.get("listen_link") or SHOW["spotify"]))
