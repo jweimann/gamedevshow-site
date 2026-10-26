@@ -1,0 +1,398 @@
+{
+  "channelId": "UCX_b3NNQN5bzExm-22-NVVg",
+  "channelName": "Jason Weimann (GameDev)",
+  "channelUrl": "https://www.youtube.com/@Unity3dCollege",
+  "checkedAt": "2026-10-26T20:21:39.824Z",
+  "status": "offline",
+  "live": null,
+  "latestStream": {
+    "id": "1wlq12ppPU0",
+    "title": "Talking AI Game Dev & VR — Building Live",
+    "url": "https://www.youtube.com/watch?v=1wlq12ppPU0",
+    "thumbnail": "https://i.ytimg.com/vi/1wlq12ppPU0/hqdefault.jpg",
+    "isLive": false,
+    "byline": "3.8K · Streamed 18h ago",
+    "durationLabel": "2:58:56",
+    "published": "2026-10-26T14:09:48+00:00"
+  },
+  "uploads": [
+    {
+      "id": "1wlq12ppPU0",
+      "title": "Talking AI Game Dev & VR — Building Live",
+      "url": "https://www.youtube.com/watch?v=1wlq12ppPU0",
+      "thumbnail": "https://i.ytimg.com/vi/1wlq12ppPU0/hqdefault.jpg",
+      "published": "2026-10-26T14:09:48+00:00"
+    },
+    {
+      "id": "hA4Eg-4nXgc",
+      "title": "The AI Team I Use to Build Games",
+      "url": "https://www.youtube.com/watch?v=hA4Eg-4nXgc",
+      "thumbnail": "https://i.ytimg.com/vi/hA4Eg-4nXgc/hqdefault.jpg",
+      "published": "2026-10-24T05:31:02+00:00"
+    },
+    {
+      "id": "zUfhJItrwqg",
+      "title": "The New Way to Make Custom Game Characters",
+      "url": "https://www.youtube.com/watch?v=zUfhJItrwqg",
+      "thumbnail": "https://i.ytimg.com/vi/zUfhJItrwqg/hqdefault.jpg",
+      "published": "2026-10-23T15:14:08+00:00"
+    },
+    {
+      "id": "YY28vCh2Wc0",
+      "title": "AI Already Won",
+      "url": "https://www.youtube.com/watch?v=YY28vCh2Wc0",
+      "thumbnail": "https://i.ytimg.com/vi/YY28vCh2Wc0/hqdefault.jpg",
+      "published": "2026-10-18T16:12:40+00:00"
+    },
+    {
+      "id": "pjLhBLA8mps",
+      "title": "His Game Broke on iPhone. AI Fixed It in (Almost) One Shot",
+      "url": "https://www.youtube.com/watch?v=pjLhBLA8mps",
+      "thumbnail": "https://i.ytimg.com/vi/pjLhBLA8mps/hqdefault.jpg",
+      "published": "2026-10-11T21:30:00+00:00"
+    },
+    {
+      "id": "CQH6O1RTdes",
+      "title": "He Built His Wife a Game. Did She Switch?",
+      "url": "https://www.youtube.com/watch?v=CQH6O1RTdes",
+      "thumbnail": "https://i.ytimg.com/vi/CQH6O1RTdes/hqdefault.jpg",
+      "published": "2026-10-11T18:30:22+00:00"
+    },
+    {
+      "id": "bKsUJbGWJ5E",
+      "title": "Hours, Not Weeks? Game Developers Show Their AI Workflow",
+      "url": "https://www.youtube.com/watch?v=bKsUJbGWJ5E",
+      "thumbnail": "https://i.ytimg.com/vi/bKsUJbGWJ5E/hqdefault.jpg",
+      "published": "2026-10-11T16:05:48+00:00"
+    },
+    {
+      "id": "kC4v0A9jXjI",
+      "title": "I Built My Own Recorder Instead of Paying Every Month.",
+      "url": "https://www.youtube.com/watch?v=kC4v0A9jXjI",
+      "thumbnail": "https://i.ytimg.com/vi/kC4v0A9jXjI/hqdefault.jpg",
+      "published": "2026-10-09T22:15:37+00:00"
+    },
+    {
+      "id": "6Q4NkN7zw5I",
+      "title": "Before AI Writes the Game, Make It Question the Design.",
+      "url": "https://www.youtube.com/watch?v=6Q4NkN7zw5I",
+      "thumbnail": "https://i.ytimg.com/vi/6Q4NkN7zw5I/hqdefault.jpg",
+      "published": "2026-10-09T19:15:11+00:00"
+    },
+    {
+      "id": "cOd3AqhIcqI",
+      "title": "My Opus Settings: Max First, Not Ultracode.",
+      "url": "https://www.youtube.com/watch?v=cOd3AqhIcqI",
+      "thumbnail": "https://i.ytimg.com/vi/cOd3AqhIcqI/hqdefault.jpg",
+      "published": "2026-10-09T16:15:34+00:00"
+    },
+    {
+      "id": "uMT4b7JNsRc",
+      "title": "My RTS Prototype Used 60% of My Weekly AI Limit.",
+      "url": "https://www.youtube.com/watch?v=uMT4b7JNsRc",
+      "thumbnail": "https://i.ytimg.com/vi/uMT4b7JNsRc/hqdefault.jpg",
+      "published": "2026-10-09T13:15:31+00:00"
+    },
+    {
+      "id": "OsriO0tmDew",
+      "title": "Stop Copy-Pasting AI Code. This Is How I Build Games With Agents.",
+      "url": "https://www.youtube.com/watch?v=OsriO0tmDew",
+      "thumbnail": "https://i.ytimg.com/vi/OsriO0tmDew/hqdefault.jpg",
+      "published": "2026-10-09T10:00:34+00:00"
+    },
+    {
+      "id": "V3LYbOdon1s",
+      "title": "Stop Copy-Pasting AI Code. Use an Agent.",
+      "url": "https://www.youtube.com/watch?v=V3LYbOdon1s",
+      "thumbnail": "https://i.ytimg.com/vi/V3LYbOdon1s/hqdefault.jpg",
+      "published": "2026-10-09T08:47:48+00:00"
+    },
+    {
+      "id": "F2Tddcho7-Y",
+      "title": "Making Games Isn't the Same as Finding Players",
+      "url": "https://www.youtube.com/watch?v=F2Tddcho7-Y",
+      "thumbnail": "https://i.ytimg.com/vi/F2Tddcho7-Y/hqdefault.jpg",
+      "published": "2026-10-08T22:15:36+00:00"
+    },
+    {
+      "id": "TN1aP9C_6KU",
+      "title": "Playground and Spark Don't Start With the Same Features",
+      "url": "https://www.youtube.com/watch?v=TN1aP9C_6KU",
+      "thumbnail": "https://i.ytimg.com/vi/TN1aP9C_6KU/hqdefault.jpg",
+      "published": "2026-10-08T19:15:24+00:00"
+    }
+  ],
+  "streams": [
+    {
+      "id": "1wlq12ppPU0",
+      "title": "Talking AI Game Dev & VR — Building Live",
+      "url": "https://www.youtube.com/watch?v=1wlq12ppPU0",
+      "thumbnail": "https://i.ytimg.com/vi/1wlq12ppPU0/hqdefault.jpg",
+      "isLive": false,
+      "byline": "3.8K · Streamed 18h ago",
+      "durationLabel": "2:58:56",
+      "published": "2026-10-26T14:09:48+00:00"
+    },
+    {
+      "id": "Rnu7wTHk9lU",
+      "title": "Display Glasses, Bezi AI & Copilot for GameDevs - GameDev Show",
+      "url": "https://www.youtube.com/watch?v=Rnu7wTHk9lU",
+      "thumbnail": "https://i.ytimg.com/vi/Rnu7wTHk9lU/hqdefault.jpg",
+      "isLive": false,
+      "byline": "1.5K · Streamed 1y ago",
+      "durationLabel": "1:04:27"
+    },
+    {
+      "id": "Jx9IuyVcVRM",
+      "title": "Vital Unity Tools, Event Bus Wrap-up, Simple big app, & AI",
+      "url": "https://www.youtube.com/watch?v=Jx9IuyVcVRM",
+      "thumbnail": "https://i.ytimg.com/vi/Jx9IuyVcVRM/hqdefault.jpg",
+      "isLive": false,
+      "byline": "4.5K · Streamed 1y ago",
+      "durationLabel": "1:33:06"
+    },
+    {
+      "id": "xQeDCAR05v8",
+      "title": "Why I Stopped Using Event Buses in Unity – Developer Debate!",
+      "url": "https://www.youtube.com/watch?v=xQeDCAR05v8",
+      "thumbnail": "https://i.ytimg.com/vi/xQeDCAR05v8/hqdefault.jpg",
+      "isLive": false,
+      "byline": "7.2K · Streamed 1y ago",
+      "durationLabel": "1:31:13"
+    },
+    {
+      "id": "JaqgvcKY6Cc",
+      "title": "Game Dev Show - Storey & Humans",
+      "url": "https://www.youtube.com/watch?v=JaqgvcKY6Cc",
+      "thumbnail": "https://i.ytimg.com/vi/JaqgvcKY6Cc/hqdefault.jpg",
+      "isLive": false,
+      "byline": "1.7K · Streamed 1y ago",
+      "durationLabel": "1:27:31"
+    },
+    {
+      "id": "j_kcnFTZZ_o",
+      "title": "Game Dev Show - Automate Game Coding with Unity MCP | Justin",
+      "url": "https://www.youtube.com/watch?v=j_kcnFTZZ_o",
+      "thumbnail": "https://i.ytimg.com/vi/j_kcnFTZZ_o/hqdefault.jpg",
+      "isLive": false,
+      "byline": "12K · Streamed 1y ago",
+      "durationLabel": "1:26:22"
+    },
+    {
+      "id": "MPEqaSHpH8s",
+      "title": "Game Dev Show - LIVE - GameDev Experience in 2025",
+      "url": "https://www.youtube.com/watch?v=MPEqaSHpH8s",
+      "thumbnail": "https://i.ytimg.com/vi/MPEqaSHpH8s/hqdefault.jpg",
+      "isLive": false,
+      "byline": "1.5K · Streamed 1y ago",
+      "durationLabel": "1:19:54"
+    },
+    {
+      "id": "cgsFugy8OPU",
+      "title": "Game Dev Show - LIVE - UNITY 2025 Roadmap + Best of GDC",
+      "url": "https://www.youtube.com/watch?v=cgsFugy8OPU",
+      "thumbnail": "https://i.ytimg.com/vi/cgsFugy8OPU/hqdefault.jpg",
+      "isLive": false,
+      "byline": "1.6K · Streamed 1y ago",
+      "durationLabel": "1:17:38"
+    },
+    {
+      "id": "n2UotBHFaBY",
+      "title": "Game Dev Show - LIVE - GDC 2025, TROLLS",
+      "url": "https://www.youtube.com/watch?v=n2UotBHFaBY",
+      "thumbnail": "https://i.ytimg.com/vi/n2UotBHFaBY/hqdefault.jpg",
+      "isLive": false,
+      "byline": "1.9K · Streamed 1y ago",
+      "durationLabel": "1:06:44"
+    },
+    {
+      "id": "uwULl8l1IYg",
+      "title": "#181 - Crunch Time & Commands",
+      "url": "https://www.youtube.com/watch?v=uwULl8l1IYg",
+      "thumbnail": "https://i.ytimg.com/vi/uwULl8l1IYg/hqdefault.jpg",
+      "isLive": false,
+      "byline": "2.5K · Streamed 2y ago",
+      "durationLabel": "1:28:44"
+    },
+    {
+      "id": "5Ou1z977Gng",
+      "title": "#180 - GameDevShow - Design Patterns for GameDevs - LIVE",
+      "url": "https://www.youtube.com/watch?v=5Ou1z977Gng",
+      "thumbnail": "https://i.ytimg.com/vi/5Ou1z977Gng/hqdefault.jpg",
+      "isLive": false,
+      "byline": "3K · Streamed 2y ago",
+      "durationLabel": "1:43:47"
+    },
+    {
+      "id": "7O-rhUsFALU",
+      "title": "#179 - GameDev Show - WE'RE BACK",
+      "url": "https://www.youtube.com/watch?v=7O-rhUsFALU",
+      "thumbnail": "https://i.ytimg.com/vi/7O-rhUsFALU/hqdefault.jpg",
+      "isLive": false,
+      "byline": "2K · Streamed 2y ago",
+      "durationLabel": "2:08:29"
+    },
+    {
+      "id": "NNU4ZLP827g",
+      "title": "#177 - GameDev Show - Game Modding & Lighting",
+      "url": "https://www.youtube.com/watch?v=NNU4ZLP827g",
+      "thumbnail": "https://i.ytimg.com/vi/NNU4ZLP827g/hqdefault.jpg",
+      "isLive": false,
+      "byline": "2K · Streamed 2y ago",
+      "durationLabel": "2:29:33"
+    },
+    {
+      "id": "Bz_MjHmAhE8",
+      "title": "#176 - The Important Stuff, Art, Mods, Pipelines, Remote Offices - GameDev",
+      "url": "https://www.youtube.com/watch?v=Bz_MjHmAhE8",
+      "thumbnail": "https://i.ytimg.com/vi/Bz_MjHmAhE8/hqdefault.jpg",
+      "isLive": false,
+      "byline": "3.1K · Streamed 2y ago",
+      "durationLabel": "1:57:39"
+    },
+    {
+      "id": "ZX8nGJbossM",
+      "title": "#175 - How do you structure a game?",
+      "url": "https://www.youtube.com/watch?v=ZX8nGJbossM",
+      "thumbnail": "https://i.ytimg.com/vi/ZX8nGJbossM/hqdefault.jpg",
+      "isLive": false,
+      "byline": "5.9K · Streamed 2y ago",
+      "durationLabel": "2:28:50"
+    },
+    {
+      "id": "vajLwk18Pgc",
+      "title": "#174 - The GameDev Show - LIVE - Game Dev Q&A",
+      "url": "https://www.youtube.com/watch?v=vajLwk18Pgc",
+      "thumbnail": "https://i.ytimg.com/vi/vajLwk18Pgc/hqdefault.jpg",
+      "isLive": false,
+      "byline": "1.4K · Streamed 2y ago",
+      "durationLabel": "1:35:22"
+    },
+    {
+      "id": "Qu8tF6mfvFw",
+      "title": "#173 - Robodogs, Encryption, Game Industry Implosion?",
+      "url": "https://www.youtube.com/watch?v=Qu8tF6mfvFw",
+      "thumbnail": "https://i.ytimg.com/vi/Qu8tF6mfvFw/hqdefault.jpg",
+      "isLive": false,
+      "byline": "1.5K · Streamed 2y ago",
+      "durationLabel": "2:17:33"
+    },
+    {
+      "id": "wHD65Vc5OKM",
+      "title": "#172 - Big News - IRL Meetups - World Streaming - Art Updates & More",
+      "url": "https://www.youtube.com/watch?v=wHD65Vc5OKM",
+      "thumbnail": "https://i.ytimg.com/vi/wHD65Vc5OKM/hqdefault.jpg",
+      "isLive": false,
+      "byline": "1.6K · Streamed 2y ago",
+      "durationLabel": "1:52:36"
+    },
+    {
+      "id": "6P6rI6_Mx6M",
+      "title": "GameDevShow #171 - April GameDev Updates",
+      "url": "https://www.youtube.com/watch?v=6P6rI6_Mx6M",
+      "thumbnail": "https://i.ytimg.com/vi/6P6rI6_Mx6M/hqdefault.jpg",
+      "isLive": false,
+      "byline": "1.9K · Streamed 2y ago",
+      "durationLabel": "1:50:23"
+    },
+    {
+      "id": "1cmA2VcIEno",
+      "title": "GameDevShow #170 - It's HERE",
+      "url": "https://www.youtube.com/watch?v=1cmA2VcIEno",
+      "thumbnail": "https://i.ytimg.com/vi/1cmA2VcIEno/hqdefault.jpg",
+      "isLive": false,
+      "byline": "1.7K · Streamed 2y ago",
+      "durationLabel": "2:06:11"
+    },
+    {
+      "id": "lZQXfcMeels",
+      "title": "The difference Experience Makes - GameDevShow #169",
+      "url": "https://www.youtube.com/watch?v=lZQXfcMeels",
+      "thumbnail": "https://i.ytimg.com/vi/lZQXfcMeels/hqdefault.jpg",
+      "isLive": false,
+      "byline": "1.6K · Streamed 2y ago",
+      "durationLabel": "1:25:24"
+    },
+    {
+      "id": "h-iC-XNSzyE",
+      "title": "Game Developer Conference - Tip of the Day - GameDevShow #168",
+      "url": "https://www.youtube.com/watch?v=h-iC-XNSzyE",
+      "thumbnail": "https://i.ytimg.com/vi/h-iC-XNSzyE/hqdefault.jpg",
+      "isLive": false,
+      "byline": "1.9K · Streamed 2y ago",
+      "durationLabel": "2:04:57"
+    },
+    {
+      "id": "cumHOAJjT_4",
+      "title": "GameDevShow #166 - 4 Devs Destroy My Game!",
+      "url": "https://www.youtube.com/watch?v=cumHOAJjT_4",
+      "thumbnail": "https://i.ytimg.com/vi/cumHOAJjT_4/hqdefault.jpg",
+      "isLive": false,
+      "byline": "292 · Streamed 2y ago",
+      "durationLabel": "0:10"
+    },
+    {
+      "id": "KXK6rWkjQFw",
+      "title": "GameDevShow #167 - LIVE FROM UNITY",
+      "url": "https://www.youtube.com/watch?v=KXK6rWkjQFw",
+      "thumbnail": "https://i.ytimg.com/vi/KXK6rWkjQFw/hqdefault.jpg",
+      "isLive": false,
+      "byline": "2.8K · Streamed 2y ago",
+      "durationLabel": "2:02:01"
+    },
+    {
+      "id": "XgX3dBboHP8",
+      "title": "Live from GDC Day 2",
+      "url": "https://www.youtube.com/watch?v=XgX3dBboHP8",
+      "thumbnail": "https://i.ytimg.com/vi/XgX3dBboHP8/hqdefault.jpg",
+      "isLive": false,
+      "byline": "1.4K · Streamed 2y ago",
+      "durationLabel": "9:48"
+    },
+    {
+      "id": "3SXu1_SG72o",
+      "title": "GameDevShow #166 - 4 Devs Destroy My Game!",
+      "url": "https://www.youtube.com/watch?v=3SXu1_SG72o",
+      "thumbnail": "https://i.ytimg.com/vi/3SXu1_SG72o/hqdefault.jpg",
+      "isLive": false,
+      "byline": "1.9K · Streamed 2y ago",
+      "durationLabel": "1:11:47"
+    },
+    {
+      "id": "tJFQifMO9cc",
+      "title": "GameDev LIVE - Q&A + Multiplayer Debugging a MoBa",
+      "url": "https://www.youtube.com/watch?v=tJFQifMO9cc",
+      "thumbnail": "https://i.ytimg.com/vi/tJFQifMO9cc/hqdefault.jpg",
+      "isLive": false,
+      "byline": "1.1K · Streamed 2y ago",
+      "durationLabel": "30:52"
+    },
+    {
+      "id": "GzgyXivQmaI",
+      "title": "GameDev LIVE - Q&A + Multiplayer Programing a MoBa",
+      "url": "https://www.youtube.com/watch?v=GzgyXivQmaI",
+      "thumbnail": "https://i.ytimg.com/vi/GzgyXivQmaI/hqdefault.jpg",
+      "isLive": false,
+      "byline": "2K · Streamed 2y ago",
+      "durationLabel": "52:40"
+    },
+    {
+      "id": "VnkMQYvpIBY",
+      "title": "GameDevShow #165 - AI, GDC, GameDev Resume Reviews",
+      "url": "https://www.youtube.com/watch?v=VnkMQYvpIBY",
+      "thumbnail": "https://i.ytimg.com/vi/VnkMQYvpIBY/hqdefault.jpg",
+      "isLive": false,
+      "byline": "1.7K · Streamed 2y ago",
+      "durationLabel": "2:08:30"
+    },
+    {
+      "id": "7p6B08ESERQ",
+      "title": "GameDevShow #164 - Google AI Game Generation, Castles, Game Engines, & why 60% of devs are wrong :)",
+      "url": "https://www.youtube.com/watch?v=7p6B08ESERQ",
+      "thumbnail": "https://i.ytimg.com/vi/7p6B08ESERQ/hqdefault.jpg",
+      "isLive": false,
+      "byline": "2.2K · Streamed 2y ago",
+      "durationLabel": "1:20:25"
+    }
+  ]
+}

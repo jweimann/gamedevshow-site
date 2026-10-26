@@ -28,6 +28,7 @@ were said. The evidence stored is a TIME AND A TERM, not transcript text: enough
 the claim by clicking into the episode, without republishing what was said.
 """
 
+import argparse
 import glob
 import json
 import os
@@ -56,7 +57,7 @@ GUEST_PATTERNS = [
     re.compile(r"([A-Z][a-z]+\s+[A-Z][a-z]+)\s*[-–]\s*Answers"),
 ]
 NOT_GUESTS = {"Game Dev", "Dev Show", "The Game", "Live With", "New Game", "Unity Solution",
-              "Unity Awards", "Unity CEO", "Game Modules", "Dev Days", "Game Jams"}
+              "Unity Awards", "Unity CEO", "Unity MCP", "Game Modules", "Dev Days", "Game Jams"}
 # Words that mean the capture names a company or a team rather than a person, so the
 # trailing-two-words rule must not turn "Unity's UI Team" into "UI Team".
 ORG_WORDS = {"team", "awards", "ceo", "president", "unity", "unity's", "studio", "studios",
@@ -357,6 +358,15 @@ def episode_number(title):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--reuse-published-tags", action="store_true",
+                        help="Keep existing archive topic evidence during a metadata-only refresh; omit when captions or tags.toml changed")
+    args = parser.parse_args()
+    previous = {}
+    previous_path = os.path.join(DATA, "episodes.json")
+    if args.reuse_published_tags and os.path.exists(previous_path):
+        previous = {ep["id"]: ep for ep in json.load(open(previous_path, encoding="utf-8"))["episodes"]}
+    curated = curation()
     tags = load_tags()
     demand = {}
     demand_path = os.path.join(DATA, "demand.json")
@@ -372,8 +382,15 @@ def main():
         vid = info["id"]
         title = info.get("title") or ""
         number = episode_number(title)
-        cues = transcript_for(vid)
-        applied = tag_episode(cues, tags) if cues else {}
+        existing = previous.get(vid)
+        decision = curated.get(vid, {}).get("decision")
+        eligible = decision == "include" or (decision not in ("exclude", "unreviewed") and
+                   ((IS_SHOW.search(title) and (info.get("duration") or 0) >= MIN_EPISODE_SECONDS) or
+                    (number is not None and number in by_number)))
+        # Excluded uploads have no public topic evidence to derive. A metadata-only
+        # refresh keeps previously derived archive evidence verbatim.
+        cues = [] if existing or not eligible else transcript_for(vid)
+        applied = existing["tags"] if existing else tag_episode(cues, tags) if cues else {}
         upload = info.get("upload_date")
         iso = None
         if upload:
@@ -399,8 +416,8 @@ def main():
                        [{"name": c["name"], "role": "co-host", "link": c["link"]}
                         for c in cohosts(info.get("description"))]),
             "tags": applied,
-            "has_transcript": bool(cues),
-            "transcript_cues": len(cues),
+            "has_transcript": existing["has_transcript"] if existing else bool(cues),
+            "transcript_cues": existing["transcript_cues"] if existing else len(cues),
             "in_feed": bool(matched_feed),
             "feed_title": matched_feed["title"] if matched_feed else None,
         })

@@ -238,3 +238,18 @@ id = "xMnhJ7e-jkw"
 title = "Game Dev Show #22 - How to make a game"
 decision = "exclude"
 reason = "A three-minute clip cut from #22 and posted a week later under the same title. The real #22 (uIwqkfwKUrA) runs 3h12 with 20,054 views; this one has 614."
+
+# Current show episodes with descriptive titles rather than episode numbers.
+# Verified during the 2026-10-26 website refresh from the show's playlists and the
+# upload descriptions, not inferred from the fact that they are on Jason's channel.
+[[entry]]
+id = "DPg_AZ4NUoM"
+title = "AI Can Build the Game. Do You Still Need a Programmer?"
+decision = "include"
+reason = "The upload description explicitly identifies this as the GameDev Show with Jason and co-host Andrew; present in both show playlists. Published 2026-09-25."
+
+[[entry]]
+id = "8td3EagZoMM"
+title = "Claude vs Codex: Two Very Different Ways to Build a Unity Game"
+decision = "include"
+reason = "Present in both show playlists. The description identifies the Jason-and-Andrew game-development discussion, recorded 2026-09-25, with the same show's prototype demos and follow-up links. Published 2026-09-26."

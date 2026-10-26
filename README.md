@@ -4,11 +4,15 @@ A static, sponsor-facing catalogue of every episode of The Game Dev Show, in rel
 order, filterable by topic and guest, with each topic backed by the timestamps where it
 was actually discussed.
 
-Nothing here is hosted yet. `site/` is generated locally and opens straight from disk.
+Live at **https://gamedev.show/** on GitHub Pages. `site/` is generated locally and
+published to the `gh-pages` branch. The current-channel section shows Jason's latest
+uploads and live/replay stream; the curated episode archive remains separate from those
+channel uploads. Build Crew is linked at **https://crew.gamedev.show/**.
 
 ## Run it
 
 ```bash
+node tools/channel-reader.cjs # current uploads and live/replay snapshot
 python tools/collect.py      # public metadata + English captions (paced; resumes)
 python tools/demand.py       # search-interest proxy per topic
 python tools/build_data.py   # merge every source, tag from captions -> data/*.json
@@ -62,8 +66,28 @@ against its own prefix. A phrase offered first is searched more than one offered
 It is a **proxy for demand, not a volume**, there is no free source of true YouTube
 search volume, and the site says so wherever the number appears.
 
-## Not done
+## Current-channel refresh
 
-- Hosting and DNS. No account has been created and nothing has been published.
+`python tools/refresh.py` refreshes the playlists, podcast feed and current-channel snapshot,
+collects missing metadata, then rebuilds the archive and site. The quick refresh keeps
+previously derived topic evidence; run `python tools/build_data.py` without
+`--reuse-published-tags` after changing captions or `tags.toml`.
+
+The browser polls the read-only `https://crew.gamedev.show/api/channel` endpoint once per
+minute. It uses the bundled snapshot if that service is unavailable, stops claiming LIVE
+when status is stale, and always offers YouTube's live-channel link. Videos only load into
+an embedded player after the visitor presses play. A refresh never interrupts a video
+already playing. This does not create a scheduler or change account notifications.
+
+On 2026-10-26 the archive grew from 147 to 170 episodes: 25 YouTube records added and two
+feed-only placeholders replaced by the actual recordings. The two September 2026 episodes
+with descriptive titles are explicitly documented in `curation.toml`; ordinary channel
+uploads remain outside the podcast figures. Historical topic evidence was preserved.
+
+Validate with `node --test tools/channel-reader.test.cjs`, build with Python 3.13 and Node
+24+, then commit the source and `site/`, push `main`, and publish with
+`git subtree push --prefix site origin gh-pages`.
+
+## Not done
 - Listener and download figures. The sponsor section shows public YouTube counts only,
   and says so on the page.

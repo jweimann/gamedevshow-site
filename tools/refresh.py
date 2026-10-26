@@ -23,6 +23,8 @@ import json
 import os
 import subprocess
 import sys
+import re
+import shutil
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -83,14 +85,27 @@ def main():
         print("\n--dry-run: stopping before the fetch and rebuild.")
         return
 
-    if new_ids:
-        print("\n3. Collecting metadata and captions for the new video(s)")
-        run(sys.executable, "tools/collect.py")
-    else:
-        print("\n3. Nothing new to collect; rebuilding anyway so the feed changes land.")
+    print("\n3. Refreshing the current channel and live/replay snapshot")
+    node = shutil.which("node")
+    if not node:
+        raise RuntimeError("Node.js 24+ is required for the current-channel refresh.")
+    run(node, "tools/channel-reader.cjs")
+    channel = json.load(open(os.path.join(ROOT, "data", "channel.json"), encoding="utf-8"))
+    # Recent show-titled streams can be absent from the hand-maintained playlists.
+    # Channel uploads still appear in the live/latest panel without becoming podcast episodes.
+    candidates = known_ids() | {v["id"] for v in channel.get("streams", [])
+                               if re.search(r"game\s*dev\s*show|gamedevshow|#\s*\d|episode\s+\d", v.get("title", ""), re.I)}
+    from collect import fetch, INFO
+    missing = sorted(v for v in candidates if not os.path.exists(os.path.join(INFO, v + ".info.json")))
+    print("   metadata records missing:", len(missing))
+    for vid in missing:
+        code, error = fetch(vid, 90)
+        print("   ", vid, "ok" if code == 0 else error[-160:])
+    # Existing records with unavailable captions are not re-requested on every refresh.
+
 
     print("4. Rebuilding the data")
-    run(sys.executable, "tools/build_data.py")
+    run(sys.executable, "tools/build_data.py", "--reuse-published-tags")
     print("5. Rebuilding the site")
     run(sys.executable, "tools/build_site.py")
 

@@ -1,12 +1,16 @@
 # Publishing gamedev.show
 
-The site is plain static files under `site/`. Nothing here has been run: every command
-below needs credentials that only Jason has, and this is where the automation stops.
+**Current deployment, checked 2026-10-26:** https://gamedev.show/ is live on GitHub Pages
+from `jweimann/gamedevshow-site`, branch `gh-pages`, root folder. Existing Git credentials
+on this machine support publishing. The site is plain static files generated under `site/`.
+The older first-publish notes below are retained as setup history; they do not describe
+the current hosted state.
 
 **The domain.** `gamedev.show` is in Jason's Namecheap account, registered to
 2027-02-12, on Namecheap BasicDNS (`dns1.registrar-servers.com`,
-`dns2.registrar-servers.com`) with no A or CNAME records today. Nothing is live on it,
-so nothing breaks whichever path is picked.
+`dns2.registrar-servers.com`) with the GitHub Pages A records and `www` CNAME listed below. A separate explicit
+`crew` A record now points to Jason's DigitalOcean droplet for Build Crew. Preserve it
+when maintaining the root website.
 
 Pick **one** of the two paths below. Path A is simpler; path B matches the other two
 podcast sites.

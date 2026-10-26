@@ -143,6 +143,19 @@ h1{font-family:var(--f-display);font-weight:700;font-size:clamp(2.6rem,7.4vw,5.4
   border:1px solid var(--rule);background:var(--surface);border-radius:3px}
 .listen a:hover{border-color:var(--accent);color:var(--accent)}
 
+/* ---------- the current channel, separate from curated archive figures ---------- */
+.channel-now{padding:28px 0 24px;border-bottom:1px solid var(--rule)}
+.channel-head{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:18px}
+.channel-head .tally{font-size:10px;margin:0 0 6px}.channel-head h2{font:700 1.7rem/1.2 var(--f-display);margin:0}
+.crew-link{font:500 .75rem var(--f-mono);text-decoration:none;border:1px solid var(--gizmo);padding:9px 12px;border-radius:3px;color:var(--gizmo)}
+.channel-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:28px}.channel-player{aspect-ratio:16/9;background:var(--sunken);overflow:hidden;border:1px solid var(--rule);border-radius:4px}
+.channel-player iframe{border:0;width:100%;height:100%;display:block}.stream-preview{display:block;padding:0;border:0;background:var(--sunken);position:relative;cursor:pointer;width:100%;height:100%;color:white}
+.stream-preview img{width:100%;height:100%;object-fit:cover;display:block}.stream-preview:after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 50%,#000b)}.stream-preview span{position:absolute;bottom:14px;left:16px;z-index:1;font:600 .85rem var(--f-mono);background:#111b;padding:7px 11px;border-radius:3px}
+.stream-feature h3{font:600 1.1rem/1.4 var(--f-display);margin:12px 0 4px}.stream-feature .srcnote{padding:0;margin:0;border:0}.stream-links{display:flex;flex-wrap:wrap;gap:10px 18px;font:500 .72rem var(--f-mono);margin-top:12px}.stream-links a{color:var(--accent);text-decoration:none}.stream-links a:hover{text-decoration:underline}
+.channel-recent>h3{margin:0 0 7px;font:500 .72rem var(--f-mono);color:var(--muted)}.channel-recent ul{list-style:none;padding:0;margin:0}.channel-recent li{border-top:1px solid var(--rule)}.channel-recent li>a{display:flex;align-items:center;gap:12px;padding:9px 0;text-decoration:none}.channel-recent li>a:hover b{color:var(--accent)}
+.channel-recent img{width:90px;height:51px;object-fit:cover;border-radius:3px;flex:none}.channel-recent b{display:block;font:500 .86rem/1.35 var(--f-body)}.channel-recent small{display:block;font:400 .65rem var(--f-mono);color:var(--muted);margin-top:5px}.channel-updated{border:0!important;padding:0!important;font-size:.65rem!important;margin:17px 0 0!important}.is-live #channel-status{color:#d9453a}.is-live #channel-status:before{background:#d9453a}.archive-title{font:600 1.4rem var(--f-display);margin:26px 0 5px}
+@media(max-width:700px){.channel-grid{grid-template-columns:1fr;gap:23px}.channel-head{align-items:flex-start}.channel-head h2{font-size:1.45rem}.crew-link{font-size:.65rem;padding:8px}.channel-recent img{width:100px;height:56px}}
+
 /* ---------- the panel, in portrait frames ---------- */
 .people{padding:24px 0 20px;border-bottom:1px solid var(--rule)}
 .phead{font-family:var(--f-pixel);font-size:.66rem;letter-spacing:.02em;text-transform:uppercase;
@@ -308,6 +321,20 @@ def page(title, description, body, extra_head=""):
             % (e(title), e(description), FONTS, CSS, extra_head, body))
 
 
+def channel_section():
+    path = os.path.join(DATA, "channel.json")
+    if not os.path.exists(path):
+        return ""
+    snapshot = json.load(open(path, encoding="utf-8"))
+    payload = json.dumps(snapshot, ensure_ascii=True).replace("<", "\\u003c")
+    return ("""<section class="channel-now" id="channel-now" aria-label="Latest from Jason's channel">
+<div class="channel-head"><div><p class="tally" id="channel-status">LIVE / LATEST</p><h2 id="channel-title">Catch up with Jason.</h2></div><a href="https://crew.gamedev.show/" class="crew-link">Join Build Crew &rarr;</a></div>
+<div class="channel-grid"><div class="stream-feature"><div id="channel-player" class="channel-player"></div><h3 id="stream-title"></h3><p id="stream-meta" class="srcnote"></p><div class="stream-links"><a id="stream-watch" href="https://www.youtube.com/@Unity3dCollege/live">Watch on YouTube</a><a href="https://www.youtube.com/@Unity3dCollege/live">Check the live channel &rarr;</a></div></div><div class="channel-recent"><h3>Latest from the channel</h3><ul id="channel-uploads"></ul></div></div>
+<p class="srcnote channel-updated" id="channel-updated"></p>
+<noscript><p><a href="https://www.youtube.com/@Unity3dCollege/live">Watch the live stream</a> or <a href="https://www.youtube.com/@Unity3dCollege/videos">browse the latest uploads on YouTube</a>.</p></noscript>
+<script type="application/json" id="channel-data">""" + payload + """</script><script src="channel.js" defer></script></section>""")
+
+
 def masthead(stats):
     return """<header class="mast"><div class="wrap">
 <p class="tally">Live, with a rotating table of developers</p>
@@ -324,7 +351,7 @@ week's news, recorded live with a rotating table of developers. %(episodes)s epi
 <nav class="listen">
   <a href="%(youtube)s">YouTube</a><a href="%(spotify)s">Spotify</a>
   <a href="%(apple)s">Apple Podcasts</a><a href="%(rss)s">RSS</a>
-  <a href="#covers">What it covers</a>
+  <a href="#channel-now">Live &amp; latest</a><a href="https://crew.gamedev.show/">Build Crew</a><a href="#archive">Episode archive</a><a href="#covers">What it covers</a>
 </nav>
 </div></header>""" % stats
 
@@ -497,13 +524,15 @@ def build_index(episodes, tags, stats):
 
     body = """%(mast)s
 <main class="wrap">
+%(channelblock)s
+  <h2 class="archive-title" id="archive">Episode archive</h2>
 %(panelblock)s  <section class="controls" aria-label="Filter episodes">
     <div class="searchrow">
       <input type="search" id="q" placeholder="Search titles, guests and topics" aria-label="Search episodes">
       <select id="guest" aria-label="Filter by who is on the episode"><option value="">Who's on &mdash; anyone</option>%(guests)s</select>
       <select id="sort" aria-label="Sort order">
-        <option value="old">Release order</option>
         <option value="new">Newest first</option>
+        <option value="old">Release order</option>
         <option value="views">Most watched</option>
         <option value="long">Longest</option>
       </select>
@@ -524,7 +553,7 @@ def build_index(episodes, tags, stats):
 
   <section class="closing" id="covers">
     <h2>What the show covers</h2>
-    <p class="note">Five years of a working developer's podcast, counted by subject. An
+    <p class="note">A working developer's podcast, counted by subject. An
     episode is tagged with everything it really goes into, so the counts overlap; the bar
     is each topic's views measured against the most watched.</p>
     <ul class="topics">%(topics)s</ul>
@@ -541,6 +570,7 @@ table of game developers.</footer>
 <script id="labels" type="application/json">%(labels)s</script>
 <script>%(js)s</script>""" % {
         "mast": masthead(stats),
+        "channelblock": channel_section(),
         "topchips": top_chips,
         "allgroups": all_groups,
         "tagcount": len(used),
@@ -844,6 +874,7 @@ def main():
         written.add(os.path.normcase(os.path.abspath(path)))
 
     write("index.html", build_index(episodes, tags, stats))
+    write("channel.js", open(os.path.join(ROOT, "tools", "channel-ui.js"), encoding="utf-8").read())
 
     for i, ep in enumerate(episodes):
         neighbours = (episodes[i - 1] if i else None,
